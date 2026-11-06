@@ -9,11 +9,12 @@ API reference: docs/oriane-openapi.json  (POST /rest/contents/search)
 from __future__ import annotations
 
 from datetime import date, timedelta
+import math
 
 import httpx
 
 from ..config import ORIANE_API_KEY, ORIANE_AUTH_HEADER, ORIANE_BASE_URL, use_fixture
-from ..contracts import Understanding, ViralSet, ViralVideo
+from ..contracts import TextObservation, Understanding, ViralSet, ViralVideo
 from ..fixtures import load
 
 DAYS_BACK = 14
@@ -104,7 +105,31 @@ def to_viral(item: dict, granularity: str) -> ViralVideo:
         hashtags=item.get("hashtags") or [],
         words_per_second=round(words / duration, 2) if duration else 0,
         granularity=granularity,  # type: ignore[arg-type]
+        published_at=item.get("publishedAt") or "",
+        text_observations=_text_observations(media.get("frames") or []),
     )
+
+
+def _text_observations(frames: list[dict]) -> list[TextObservation]:
+    """Keep compact, measured OCR geometry; not font/color/animation guesses."""
+    observations = []
+    # Sample across the full clip and cap prompt size.
+    stride = max(1, len(frames) // 8)
+    for frame in frames[::stride][:8]:
+        for region in (frame.get("onScreenTextRegions") or [])[:3]:
+            text = region.get("text") or ""
+            polygon = region.get("polygon") or []
+            try:
+                ys = [float(p["y"]) for p in polygon]
+                timestamp = float(frame.get("timestampSeconds") or 0)
+                if (not text.strip() or len(ys) < 3 or not math.isfinite(timestamp)
+                        or timestamp < 0 or not all(math.isfinite(y) and 0 <= y <= 1 for y in ys)):
+                    continue
+                observations.append(TextObservation(text=text[:200], timestamp_seconds=timestamp,
+                    center_y=(max(ys) + min(ys)) / 2, height=max(ys) - min(ys)))
+            except (KeyError, TypeError, ValueError):
+                continue
+    return observations
 
 
 def _fuzzy(values: list[str]) -> dict | None:

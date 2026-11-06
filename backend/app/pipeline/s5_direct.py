@@ -9,7 +9,9 @@ gets the exact transcript text of each moment so the hook rewrite is grounded.
 from __future__ import annotations
 
 from ..config import use_fixture
-from ..contracts import ClipSet, Playbook, Transcript, Understanding
+import re
+
+from ..contracts import CaptionStyle, ClipSet, Playbook, Transcript, Understanding
 from ..fixtures import load
 from ..llm import complete_json
 
@@ -37,6 +39,25 @@ def run(t: Transcript, u: Understanding, pb: Playbook) -> ClipSet:
         moments=moments,
         top_n=TOP_N,
     )
+    # Preserve the stage-4 style if stage 5 omits it or suggests invalid settings.
+    for record in data.get("clips", []):
+        base = pb.caption_style or CaptionStyle()
+        raw = record.get("render_style")
+        try:
+            style = CaptionStyle.model_validate({**base.model_dump(), **raw}) if isinstance(raw, dict) else base.model_copy(deep=True)
+        except ValueError:
+            style = base.model_copy(deep=True)
+        # Stage 5 cannot invent evidence or promote text-only evidence to visual measurements.
+        style.evidence_video_ids = list(base.evidence_video_ids)
+        style.evidence_basis = base.evidence_basis
+        record["render_style"] = style.model_dump()
+        text = text_between(t, record["start"], record["end"])
+        vocabulary = set(re.findall(r"\w+", text.casefold()))
+        keywords = record.get("emphasis_keywords")
+        keywords = keywords if isinstance(keywords, list) else []
+        record["emphasis_keywords"] = list(dict.fromkeys(
+            k for k in keywords if isinstance(k, str) and k.casefold() in vocabulary
+        ))[:20]
     clips = ClipSet.model_validate(data)
     clips.clips = sorted(clips.clips, key=lambda c: c.score, reverse=True)[:TOP_N]
     return clips

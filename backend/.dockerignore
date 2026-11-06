@@ -1,0 +1,6 @@
+.env
+.env.*
+work/
+tests/
+__pycache__/
+**/__pycache__/

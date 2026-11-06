@@ -23,3 +23,6 @@ build/
 .DS_Store
 .idea/
 .vscode/
+
+# Downloaded media and generated renders
+backend/work/
