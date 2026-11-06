@@ -27,7 +27,7 @@ GMI_MODEL = os.getenv("GMI_MODEL", "")
 # Oriane
 ORIANE_BASE_URL = os.getenv("ORIANE_BASE_URL", "https://connect.oriane.xyz")
 ORIANE_API_KEY = os.getenv("ORIANE_API_KEY", "")
-ORIANE_AUTH_HEADER = os.getenv("ORIANE_AUTH_HEADER", "x-api-key")  # confirm with the key email
+ORIANE_AUTH_HEADER = os.getenv("ORIANE_AUTH_HEADER", "Authorization")  # verified: "Authorization: Bearer <key>"
 
 # Compound.mov
 COMPOUND_API_KEY = os.getenv("COMPOUND_API_KEY", "")

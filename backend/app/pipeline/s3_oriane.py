@@ -13,7 +13,7 @@ Oriane notes (full spec: docs/oriane-openapi.json):
 - platformType includes: tiktok/video, instagram/reel, youtube/short
 - `full` results carry media[0].transcriptChunks[{startSeconds,endSeconds,text}]
   and media[0].onScreenText — the first chunk (<3 s) is the spoken hook.
-- Auth header name is not in the spec; config.ORIANE_AUTH_HEADER defaults to x-api-key.
+- Auth (verified): header `Authorization: Bearer <ORIANE_API_KEY>`. A 206 status is a normal paginated page.
 """
 
 from __future__ import annotations

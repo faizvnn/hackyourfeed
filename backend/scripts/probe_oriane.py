@@ -4,7 +4,8 @@
     uv run python scripts/probe_oriane.py founder startup --limit 10 --days 14
     uv run python scripts/probe_oriane.py founder startup --download 3 # also yt-dlp the top 3 to work/oriane/videos/
 
-Keywords are matched fuzzily against the transcript (operator "or").
+Keywords are exact-phrase matched against the transcript (operator "or"); --fuzzy for includesFuzzy (very loose).
+Flags: --lang en  --min-followers 1000  --min-views 50000  --sort viewsRatePerFollowers,viewsCount
 Raw response -> backend/work/oriane/raw_<ts>.json so stage 3/4 can look at the real shape.
 Needs ORIANE_API_KEY in backend/.env. Oriane returns no video URL, so we build the
 platform URL from platformId and let yt-dlp fetch it (TikTok/YouTube work, Instagram may need cookies).
@@ -35,7 +36,8 @@ def platform_url(r: dict) -> str:
     }.get(r.get("platform", ""), "")
 
 
-def search(keywords: list[str], limit: int, days: int) -> dict:
+def search(keywords: list[str], limit: int, days: int, exact: bool = True, lang: str = "en",
+           min_followers: int = 1000, min_views: int = 50000, sort: str = "viewsRatePerFollowers,viewsCount") -> dict:
     if not ORIANE_API_KEY:
         raise SystemExit("set ORIANE_API_KEY in backend/.env")
     after = time.strftime("%Y-%m-%d", time.gmtime(time.time() - days * 86400))
@@ -48,12 +50,17 @@ def search(keywords: list[str], limit: int, days: int) -> dict:
                 {"platform": "youtube", "type": "short"},
             ]},
             "publishedAt": {"after": after},
-            "transcript": {"includesFuzzy": {"values": keywords, "operator": "or"}},
+            "transcript": {("includesExactly" if exact else "includesFuzzy"): {"values": keywords, "operator": "or"}},
+            "transcriptLanguage": {"includes": [lang]},
+            "profileFollowersCount": {"min": min_followers},
+            "viewsCount": {"min": min_views},
         },
     }
-    params = {"sort": "viewsRatePerFollowers,viewsCount", "limit": limit, "projection": "full"}
+    print("body:", json.dumps(body), file=sys.stderr)
+    params = {"sort": sort, "limit": limit, "projection": "full"}
+    token = f"Bearer {ORIANE_API_KEY}" if ORIANE_AUTH_HEADER.lower() == "authorization" else ORIANE_API_KEY
     r = httpx.post(f"{ORIANE_BASE_URL}/rest/contents/search", params=params, json=body,
-                   headers={ORIANE_AUTH_HEADER: ORIANE_API_KEY}, timeout=60)
+                   headers={ORIANE_AUTH_HEADER: token}, timeout=60)
     print(f"HTTP {r.status_code}", file=sys.stderr)
     if r.status_code >= 400:
         print(r.text[:2000], file=sys.stderr)
@@ -100,10 +107,13 @@ def main() -> None:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flag = lambda k, d: int(sys.argv[sys.argv.index(k) + 1]) if k in sys.argv else d  # noqa: E731
     limit, days, dl = flag("--limit", 5), flag("--days", 30), flag("--download", 0)
+    sflag = lambda k, d: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d  # noqa: E731
     if not args:
         raise SystemExit(__doc__)
 
-    data = search(args, limit, days)
+    data = search(args, limit, days, exact="--fuzzy" not in sys.argv, lang=sflag("--lang", "en"),
+                  min_followers=flag("--min-followers", 1000), min_views=flag("--min-views", 50000),
+                  sort=sflag("--sort", "viewsRatePerFollowers,viewsCount"))
     OUT.mkdir(parents=True, exist_ok=True)
     raw = OUT / f"raw_{int(time.time())}.json"
     raw.write_text(json.dumps(data, indent=1))
