@@ -1,12 +1,19 @@
 """Stage 2 — UNDERSTAND (team A)
 
 In:  Transcript
-Out: Understanding  (niche, keyword sets for Oriane, 15-20 candidate moments)
+Out: Understanding  (niche, keyword sets for Oriane, topic map)
+
+This stage does NOT pick clips. It runs before we know what is viral, so it
+only describes the episode and produces search terms. Stage 5 picks clips
+with the playbook in hand.
 
 Notes:
 - `llm.complete_json("understand", ...)` fills prompts/understand.md and returns a dict.
-- The keyword sets are the only thing Oriane sees (keyword search, not semantic),
+- Three keyword granularities: niche (broad), topic (specific to this episode),
+  entity (guest / company / product names).
+- Keywords are the only thing Oriane sees (keyword search, not semantic),
   so they should be words people literally say in short-form videos.
+- topic_map = which minutes cover which topic; stage 5 uses it to navigate.
 - A 2h transcript is ~100k chars; thin it before prompting.
 """
 

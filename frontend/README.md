@@ -20,7 +20,7 @@ Each stage fills in one field, so the UI can reveal sections as they arrive:
 | status reached | field filled | show |
 |---|---|---|
 | understand | `job.transcript` | title, duration |
-| trends | `job.understanding` | niche, topics, candidate_moments count |
+| trends | `job.understanding` | niche, topics, topic_map as a timeline |
 | playbook | `job.viral` | grid of viral videos (thumbnail_url, handle, views, hook_text) |
 | direct | `job.playbook` | hook_patterns, takeaways |
 | render | `job.clips` | the 3 clips: title, score, hook_rewrite, on_screen_lines, caption, reason |

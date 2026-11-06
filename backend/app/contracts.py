@@ -27,17 +27,19 @@ class Transcript(BaseModel):
 
 
 # ---------------------------------------------------------------- stage 2 ---
-class Moment(BaseModel):
+# Stage 2 does NOT pick clips. It only describes the episode and produces the
+# search terms for Oriane; clip selection happens in stage 5, once the playbook
+# says what is actually going viral.
+class TopicSection(BaseModel):
     start: float
     end: float
-    summary: str
-    why: str
+    topic: str
 
 
 class KeywordSets(BaseModel):
-    topic: list[str] = Field(default_factory=list)    # "founder burnout", "seed round"
-    niche: list[str] = Field(default_factory=list)    # "startup", "VC", "founder"
-    general: list[str] = Field(default_factory=list)  # "podcast", "podcastclips"
+    niche: list[str] = Field(default_factory=list)   # broad:    "startup", "VC", "founder"
+    topic: list[str] = Field(default_factory=list)   # specific: "founder burnout", "seed round"
+    entity: list[str] = Field(default_factory=list)  # guest / company / product names
 
 
 class Understanding(BaseModel):
@@ -46,7 +48,7 @@ class Understanding(BaseModel):
     topics: list[str]
     competitor_handles: list[str] = Field(default_factory=list)
     keyword_sets: KeywordSets
-    candidate_moments: list[Moment]
+    topic_map: list[TopicSection] = Field(default_factory=list)  # where each topic is discussed
 
 
 # ---------------------------------------------------------------- stage 3 ---
@@ -68,7 +70,7 @@ class ViralVideo(BaseModel):
     caption: str = ""
     hashtags: list[str] = Field(default_factory=list)
     words_per_second: float = 0
-    granularity: Literal["topic", "niche", "general"] = "niche"
+    granularity: Literal["niche", "topic", "entity"] = "niche"
 
 
 class ViralSet(BaseModel):

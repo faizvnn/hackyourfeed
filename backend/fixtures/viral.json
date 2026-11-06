@@ -25,7 +25,7 @@
       "transcript": "Burnout is not about hours. It's about working on something you stopped believing in. Fix the what before the when.",
       "on_screen_text": ["burnout ≠ hours"],
       "caption": "fix the what before the when #podcast #founder",
-      "hashtags": ["podcast", "founder"], "words_per_second": 2.4, "granularity": "general"
+      "hashtags": ["podcast", "founder"], "words_per_second": 2.4, "granularity": "entity"
     }
   ]
 }

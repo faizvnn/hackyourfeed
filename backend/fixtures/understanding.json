@@ -4,14 +4,14 @@
   "topics": ["seed fundraising", "founder burnout", "customer discovery", "cofounder dynamics", "investor relations", "pivoting"],
   "competitor_handles": [],
   "keyword_sets": {
-    "topic": ["founder burnout", "raised a seed round", "talk to customers", "killed the feature", "investor said"],
     "niche": ["startup", "founder", "venture capital", "VC", "raise money"],
-    "general": ["podcast", "podcast clip", "interview"]
+    "topic": ["founder burnout", "raised a seed round", "talk to customers", "killed the feature", "investor said"],
+    "entity": []
   },
-  "candidate_moments": [
-    { "start": 24.5, "end": 66.0, "summary": "Raising money multiplies pressure; the 2am moment with 18 months runway and no plan.", "why": "Contrarian claim plus a vivid, specific scene." },
-    { "start": 66.0, "end": 110.0, "summary": "Fired himself as CEO for a week, talked to 20 customers, killed the funded feature.", "why": "Story with a surprising decision and a number." },
-    { "start": 96.0, "end": 126.0, "summary": "Investors reacted to the killed feature: 'we invested in you, not the slide'.", "why": "Tension then resolution, quotable line." },
-    { "start": 126.0, "end": 158.0, "summary": "Burnout is from working on things you don't believe in, not from hours.", "why": "Strong contrarian take, self-contained advice." }
+  "topic_map": [
+    { "start": 0.0, "end": 24.5, "topic": "intro: raised a seed round in three weeks" },
+    { "start": 24.5, "end": 66.0, "topic": "pressure after fundraising, the 2am moment" },
+    { "start": 66.0, "end": 126.0, "topic": "stepping away, 20 customer calls, killing the funded feature" },
+    { "start": 126.0, "end": 158.0, "topic": "what burnout actually is, advice" }
   ]
 }

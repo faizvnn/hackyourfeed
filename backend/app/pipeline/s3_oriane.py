@@ -1,6 +1,6 @@
 """Stage 3 — TREND PULL (team B)
 
-In:  Understanding  (use keyword_sets.topic / .niche / .general)
+In:  Understanding  (use keyword_sets.niche / .topic / .entity, one search each)
 Out: ViralSet  (compact ViralVideo records, deduped by id)
 
 Oriane notes (full spec: docs/oriane-openapi.json):

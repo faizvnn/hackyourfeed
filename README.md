@@ -34,10 +34,10 @@ hackathon/
 ```
 YouTube URL
   → [1] ingest      yt-dlp            Transcript        team A
-  → [2] understand  LLM               Understanding     team A
+  → [2] understand  LLM               Understanding     team A   (niche + keywords + topic map; no clip picking)
   → [3] trends      Oriane ×3         ViralSet          team B
   → [4] playbook    LLM               Playbook          team B
-  → [5] direct      LLM               ClipSet           team C
+  → [5] direct      LLM               ClipSet           team C   (scans the full transcript WITH the playbook)
   → [6] render      ffmpeg/Compound   ClipSet + mp4     team C
   → [7] UI          Lovable                             team D
 ```
