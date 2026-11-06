@@ -1,50 +1,52 @@
 {
  "hook_patterns": [
   {
-   "name": "Intrigue & Expose",
-   "description": "Calls out hidden truths or controversial claims about well-known entities right away to spark curiosity.",
+   "name": "Shocking Industry Threat",
+   "description": "Exposes an imminent, highly consequential vulnerability, hack, or corporate catastrophe targeting widely used tech or platforms. The first line startles with scale, while the second names the attacker or impact.",
    "examples": [
-    "Something is off about Susan Dell and I think we can all see why.",
-    "Here's what they're not telling you about Muse, Meta's new AI agent. I've been using it for a few"
+    "Did you hear that? That's the sound of Microsoft calling up their lawyers on the weekend. Someone",
+    "PHP is facing one of its most serious security incidents in years, and if you're running a website built with PHP, WordPress, or Laravel, you need to understand what's happening."
    ],
-   "avg_views": 4841000
+   "avg_views": 2736525
   },
   {
-   "name": "Bold Personal Claim",
-   "description": "Presents a high-stakes personal or professional challenge in the first line to establish authority.",
+   "name": "Counterintuitive Fact",
+   "description": "Leads with a bizarre or unbelievable truth about a well-known tech figure, company, or hidden feature that contradicts common assumptions.",
    "examples": [
-    "Fashion trends move fast, but as a founder, I need to move even faster.",
-    "If you could please say 60 seconds, that would mean so much to me."
+    "I bet you had no idea that Justin Bieber changed an entire drug empire in 2014.",
+    "Someone is taking a screenshot of your computer every three seconds,",
+    "You probably don't know that Estonia keeps a copy of its government data in Luxembourg."
    ],
-   "avg_views": 49218200
+   "avg_views": 757820
   },
   {
-   "name": "Counter-Intuitive Observation",
-   "description": "Hooks viewers by stating an unusual or wide-reaching statistic that shifts perspective instantly.",
+   "name": "Impossible Feat Claim",
+   "description": "Teases a massive, highly technical disruption or reverse-engineering feat accomplished by a lone developer or unexpected actor against industry giants.",
    "examples": [
-    "One in five people on Earth live in India, so when something works here, it can have ripple effects everywhere.",
-    "What year is it? 2026, 2019, 1448, Reh, we're 8 or 2686? 115, 115. Taiwan, North Korea, you both agree on the year."
+    "How does one gigabyte folder gets compressed to 400 megabyte zip file?",
+    "Sony wants you to stop owning your games, so the community rebuilt the PS5 in open source.",
+    "This guy just reverse engineered and open sourced every single Adobe product."
    ],
-   "avg_views": 6846581
+   "avg_views": 846157
   },
   {
-   "name": "Direct Interview Question",
-   "description": "Jumps straight into an active conversation or on-the-street interview scenario without an intro.",
+   "name": "Relatable Career Pivot",
+   "description": "Starts with an internal monologue or universal anxiety about software engineering, corporate jobs, or salaries to hook professionals instantly.",
    "examples": [
-    "What course did you just graduate from? I studied computer science with AI.",
-    "Name please."
+    "So I was thinking that I could leave a salary for a job, but I worked in tech.",
+    "So you just landed the software engineering job you dreamed about in university."
    ],
-   "avg_views": 271450
+   "avg_views": 762164
   }
  ],
- "on_screen_text_style": "Short 2-4 word phrase highlights appearing bottom-to-center, bold sans-serif white text with black outline, synced phrase-by-phrase with spoken words to emphasize key nouns.",
- "ideal_duration_s": 65.0,
- "pacing_wps": 3.1,
- "caption_formula": "Short and punchy hook-driven caption under two lines, minimal emojis, 3-5 relevant lowercase niche hashtags.",
+ "on_screen_text_style": "Bold uppercase kinetic captions highlighting key nouns, tech entities, and verbs. Positioned center-screen with high-contrast text (white text with red/yellow highlights for emphasis) syncing directly with spoken audio to retain viewer attention.",
+ "ideal_duration_s": 76.0,
+ "pacing_wps": 3.3,
+ "caption_formula": "Concise, punchy hook in the first sentence explaining why it matters. Moderate length with 1-2 relevant emojis, followed by 3-5 targeted niche hashtags (#opensource, #tech, #cybersecurity) and a clear CTA.",
  "takeaways": [
-  "Lead with a high-stakes question or an expose hook within the first 3 seconds.",
-  "Maintain a fast speaking pace around 3.1 words per second with dead air trimmed aggressively.",
-  "Use bold, phrase-synced animated captions at the bottom center to hold attention.",
-  "Incorporate rapid b-roll or screen recording cutaways every few seconds to prevent drop-off."
+  "Lead every video by attacking a major tech titan, platform, or exposing an urgent security flaw in the first 3 seconds.",
+  "Maintain a brisk pacing of around 3.3 words per second with zero dead air to maximize audience retention.",
+  "Use prominent, high-contrast kinetic on-screen text to highlight specific codebases, companies, or tools as they are spoken.",
+  "Anchor abstract technical explanations (like reverse engineering or active directory) to tangible real-world consequences."
  ]
 }
