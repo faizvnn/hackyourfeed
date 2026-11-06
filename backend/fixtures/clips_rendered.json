@@ -1,0 +1,34 @@
+{
+  "clips": [
+    {
+      "start": 24.5, "end": 66.0, "score": 92, "title": "Money multiplies pressure",
+      "hook_rewrite": "Nobody tells you this about raising money.",
+      "on_screen_lines": ["nobody tells you", "every dollar is a promise", "2am. 18 months runway. no plan."],
+      "caption": "the part of fundraising nobody posts about #startup #founder #vc",
+      "matched_pattern": "nobody tells you",
+      "reason": "Matches the top pattern in the playbook and contains a specific 2am scene, which the top performers all have.",
+      "render_path": null,
+      "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+    },
+    {
+      "start": 66.0, "end": 110.0, "score": 88, "title": "Fired myself for a week",
+      "hook_rewrite": "I fired myself as CEO for a week.",
+      "on_screen_lines": ["fired myself", "20 customers later", "killed the funded feature"],
+      "caption": "would you kill the feature investors paid for? #founderlife #startups",
+      "matched_pattern": "shocking decision + payoff",
+      "reason": "Unusual decision with a measurable payoff, same structure as the second-best pattern.",
+      "render_path": null,
+      "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+    },
+    {
+      "start": 126.0, "end": 158.0, "score": 81, "title": "Burnout isn't hours",
+      "hook_rewrite": "Burnout isn't from working too much.",
+      "on_screen_lines": ["burnout ≠ hours", "fix the what first"],
+      "caption": "fix what you work on before your calendar #podcast #founder",
+      "matched_pattern": "redefine the word",
+      "reason": "Self-contained advice that negates a common belief, matching the redefine pattern.",
+      "render_path": null,
+      "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+    }
+  ]
+}

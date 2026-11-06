@@ -1,0 +1,31 @@
+{
+  "hook_patterns": [
+    {
+      "name": "nobody tells you",
+      "description": "Open by promising a hidden truth about a common experience, then state it bluntly in the next sentence.",
+      "examples": ["Nobody tells you this about raising money."],
+      "avg_views": 1850000
+    },
+    {
+      "name": "shocking decision + payoff",
+      "description": "First line is an unusual action the creator took, second half is the result.",
+      "examples": ["I fired myself for a week and it saved the company."],
+      "avg_views": 920000
+    },
+    {
+      "name": "redefine the word",
+      "description": "Negate the common definition of a familiar problem, then give the real one.",
+      "examples": ["Burnout is not about hours."],
+      "avg_views": 410000
+    }
+  ],
+  "on_screen_text_style": "2-3 words that restate the hook, shown in the first second, lowercase, with one line reused as the punchline.",
+  "ideal_duration_s": 40,
+  "pacing_wps": 2.7,
+  "caption_formula": "one lowercase sentence that teases the clip, no emoji, 2-3 niche hashtags.",
+  "takeaways": [
+    "Open with the claim, never with context.",
+    "Keep clips between 30 and 50 seconds.",
+    "Put the hook on screen in 2-3 words within the first second."
+  ]
+}

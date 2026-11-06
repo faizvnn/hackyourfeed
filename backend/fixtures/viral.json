@@ -1,0 +1,31 @@
+{
+  "videos": [
+    {
+      "id": "fx_001", "platform": "tiktok", "handle": "founderdiaries", "thumbnail_url": "",
+      "views": 1850000, "likes": 142000, "followers": 48000, "views_rate_per_followers": 3854,
+      "duration": 41, "hook_text": "Nobody tells you this about raising money.",
+      "transcript": "Nobody tells you this about raising money. The day the wire hits is the worst day of your life because now every dollar is someone else's expectation.",
+      "on_screen_text": ["nobody tells you this", "every dollar = a promise"],
+      "caption": "the part of fundraising nobody posts about #startup #founder #vc",
+      "hashtags": ["startup", "founder", "vc"], "words_per_second": 2.9, "granularity": "topic"
+    },
+    {
+      "id": "fx_002", "platform": "instagram", "handle": "vcclips", "thumbnail_url": "",
+      "views": 920000, "likes": 61000, "followers": 210000, "views_rate_per_followers": 438,
+      "duration": 34, "hook_text": "I fired myself for a week and it saved the company.",
+      "transcript": "I fired myself for a week and it saved the company. My cofounder ran everything and I just talked to users.",
+      "on_screen_text": ["I fired myself", "for 7 days"],
+      "caption": "would you do this? #founderlife #startups",
+      "hashtags": ["founderlife", "startups"], "words_per_second": 2.6, "granularity": "niche"
+    },
+    {
+      "id": "fx_003", "platform": "youtube", "handle": "thestartupshow", "thumbnail_url": "",
+      "views": 410000, "likes": 23000, "followers": 95000, "views_rate_per_followers": 431,
+      "duration": 52, "hook_text": "Burnout is not about hours.",
+      "transcript": "Burnout is not about hours. It's about working on something you stopped believing in. Fix the what before the when.",
+      "on_screen_text": ["burnout ≠ hours"],
+      "caption": "fix the what before the when #podcast #founder",
+      "hashtags": ["podcast", "founder"], "words_per_second": 2.4, "granularity": "general"
+    }
+  ]
+}

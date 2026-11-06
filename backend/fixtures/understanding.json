@@ -1,0 +1,17 @@
+{
+  "niche": "startup / founder podcast",
+  "summary": "A founder describes raising a seed round in three weeks, burning out, and recovering by stepping away to talk to customers. The conversation centers on pressure after fundraising and killing a roadmap investors funded.",
+  "topics": ["seed fundraising", "founder burnout", "customer discovery", "cofounder dynamics", "investor relations", "pivoting"],
+  "competitor_handles": [],
+  "keyword_sets": {
+    "topic": ["founder burnout", "raised a seed round", "talk to customers", "killed the feature", "investor said"],
+    "niche": ["startup", "founder", "venture capital", "VC", "raise money"],
+    "general": ["podcast", "podcast clip", "interview"]
+  },
+  "candidate_moments": [
+    { "start": 24.5, "end": 66.0, "summary": "Raising money multiplies pressure; the 2am moment with 18 months runway and no plan.", "why": "Contrarian claim plus a vivid, specific scene." },
+    { "start": 66.0, "end": 110.0, "summary": "Fired himself as CEO for a week, talked to 20 customers, killed the funded feature.", "why": "Story with a surprising decision and a number." },
+    { "start": 96.0, "end": 126.0, "summary": "Investors reacted to the killed feature: 'we invested in you, not the slide'.", "why": "Tension then resolution, quotable line." },
+    { "start": 126.0, "end": 158.0, "summary": "Burnout is from working on things you don't believe in, not from hours.", "why": "Strong contrarian take, self-contained advice." }
+  ]
+}

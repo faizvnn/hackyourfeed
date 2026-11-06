@@ -1,25 +1,7 @@
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-*.egg-info/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# Env / secrets
 .env
-.env.*
-!.env.example
-
-# Node
-node_modules/
-dist/
-build/
-.next/
-
-# OS / editor
+backend/.env
+backend/work/
+.venv/
+__pycache__/
+*.pyc
 .DS_Store
-.idea/
-.vscode/

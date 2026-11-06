@@ -1,0 +1,20 @@
+{
+  "source_url": "https://www.youtube.com/watch?v=FIXTURE",
+  "title": "Fixture: founder interview on burnout and fundraising",
+  "duration": 420,
+  "video_path": null,
+  "segments": [
+    { "start": 0.0, "end": 6.2, "text": "Welcome back to the show. Today I'm sitting down with a founder who raised a seed round in three weeks and then almost quit." },
+    { "start": 6.2, "end": 14.0, "text": "Thanks for having me. Yeah, the three weeks part sounds great until you hear what happened after." },
+    { "start": 14.0, "end": 24.5, "text": "So walk me through it. You close the round, money's in the bank, and what, you just stopped sleeping?" },
+    { "start": 24.5, "end": 38.0, "text": "Pretty much. Here's the thing nobody tells you: raising money doesn't reduce pressure, it multiplies it. Every dollar is a promise to someone." },
+    { "start": 38.0, "end": 52.0, "text": "I remember sitting in the office at 2am thinking, I have eighteen months of runway and zero idea what to build next week." },
+    { "start": 52.0, "end": 66.0, "text": "That's the part people don't post about on LinkedIn. What did you actually do?" },
+    { "start": 66.0, "end": 82.0, "text": "I fired myself as CEO for a week. Literally. I told my cofounder, you make every decision, I'm going to go talk to twenty customers and not open Slack." },
+    { "start": 82.0, "end": 96.0, "text": "And those twenty conversations changed the roadmap completely. We killed the feature we'd raised the round on." },
+    { "start": 96.0, "end": 110.0, "text": "Wait, you killed the thing investors gave you money to build?" },
+    { "start": 110.0, "end": 126.0, "text": "Yes. And every single investor said the same thing: we invested in you, not the slide. Which is a cliché until it saves your company." },
+    { "start": 126.0, "end": 140.0, "text": "What's your advice to a founder who's in that 2am moment right now?" },
+    { "start": 140.0, "end": 158.0, "text": "Burnout isn't from working too much. It's from working on things you don't believe in. Fix what you're working on before you fix your calendar." }
+  ]
+}

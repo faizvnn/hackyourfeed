@@ -1,0 +1,301 @@
+{
+ "id": "demo1234",
+ "url": "https://www.youtube.com/watch?v=FIXTURE",
+ "status": "done",
+ "error": null,
+ "transcript": {
+  "source_url": "https://www.youtube.com/watch?v=FIXTURE",
+  "title": "Fixture: founder interview on burnout and fundraising",
+  "duration": 420,
+  "video_path": null,
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 6.2,
+    "text": "Welcome back to the show. Today I'm sitting down with a founder who raised a seed round in three weeks and then almost quit."
+   },
+   {
+    "start": 6.2,
+    "end": 14.0,
+    "text": "Thanks for having me. Yeah, the three weeks part sounds great until you hear what happened after."
+   },
+   {
+    "start": 14.0,
+    "end": 24.5,
+    "text": "So walk me through it. You close the round, money's in the bank, and what, you just stopped sleeping?"
+   },
+   {
+    "start": 24.5,
+    "end": 38.0,
+    "text": "Pretty much. Here's the thing nobody tells you: raising money doesn't reduce pressure, it multiplies it. Every dollar is a promise to someone."
+   },
+   {
+    "start": 38.0,
+    "end": 52.0,
+    "text": "I remember sitting in the office at 2am thinking, I have eighteen months of runway and zero idea what to build next week."
+   },
+   {
+    "start": 52.0,
+    "end": 66.0,
+    "text": "That's the part people don't post about on LinkedIn. What did you actually do?"
+   },
+   {
+    "start": 66.0,
+    "end": 82.0,
+    "text": "I fired myself as CEO for a week. Literally. I told my cofounder, you make every decision, I'm going to go talk to twenty customers and not open Slack."
+   },
+   {
+    "start": 82.0,
+    "end": 96.0,
+    "text": "And those twenty conversations changed the roadmap completely. We killed the feature we'd raised the round on."
+   },
+   {
+    "start": 96.0,
+    "end": 110.0,
+    "text": "Wait, you killed the thing investors gave you money to build?"
+   },
+   {
+    "start": 110.0,
+    "end": 126.0,
+    "text": "Yes. And every single investor said the same thing: we invested in you, not the slide. Which is a clich\u00e9 until it saves your company."
+   },
+   {
+    "start": 126.0,
+    "end": 140.0,
+    "text": "What's your advice to a founder who's in that 2am moment right now?"
+   },
+   {
+    "start": 140.0,
+    "end": 158.0,
+    "text": "Burnout isn't from working too much. It's from working on things you don't believe in. Fix what you're working on before you fix your calendar."
+   }
+  ]
+ },
+ "understanding": {
+  "niche": "startup / founder podcast",
+  "summary": "A founder describes raising a seed round in three weeks, burning out, and recovering by stepping away to talk to customers. The conversation centers on pressure after fundraising and killing a roadmap investors funded.",
+  "topics": [
+   "seed fundraising",
+   "founder burnout",
+   "customer discovery",
+   "cofounder dynamics",
+   "investor relations",
+   "pivoting"
+  ],
+  "competitor_handles": [],
+  "keyword_sets": {
+   "topic": [
+    "founder burnout",
+    "raised a seed round",
+    "talk to customers",
+    "killed the feature",
+    "investor said"
+   ],
+   "niche": [
+    "startup",
+    "founder",
+    "venture capital",
+    "VC",
+    "raise money"
+   ],
+   "general": [
+    "podcast",
+    "podcast clip",
+    "interview"
+   ]
+  },
+  "candidate_moments": [
+   {
+    "start": 24.5,
+    "end": 66.0,
+    "summary": "Raising money multiplies pressure; the 2am moment with 18 months runway and no plan.",
+    "why": "Contrarian claim plus a vivid, specific scene."
+   },
+   {
+    "start": 66.0,
+    "end": 110.0,
+    "summary": "Fired himself as CEO for a week, talked to 20 customers, killed the funded feature.",
+    "why": "Story with a surprising decision and a number."
+   },
+   {
+    "start": 96.0,
+    "end": 126.0,
+    "summary": "Investors reacted to the killed feature: 'we invested in you, not the slide'.",
+    "why": "Tension then resolution, quotable line."
+   },
+   {
+    "start": 126.0,
+    "end": 158.0,
+    "summary": "Burnout is from working on things you don't believe in, not from hours.",
+    "why": "Strong contrarian take, self-contained advice."
+   }
+  ]
+ },
+ "viral": {
+  "videos": [
+   {
+    "id": "fx_001",
+    "platform": "tiktok",
+    "handle": "founderdiaries",
+    "thumbnail_url": "",
+    "views": 1850000,
+    "likes": 142000,
+    "followers": 48000,
+    "views_rate_per_followers": 3854,
+    "duration": 41,
+    "hook_text": "Nobody tells you this about raising money.",
+    "transcript": "Nobody tells you this about raising money. The day the wire hits is the worst day of your life because now every dollar is someone else's expectation.",
+    "on_screen_text": [
+     "nobody tells you this",
+     "every dollar = a promise"
+    ],
+    "caption": "the part of fundraising nobody posts about #startup #founder #vc",
+    "hashtags": [
+     "startup",
+     "founder",
+     "vc"
+    ],
+    "words_per_second": 2.9,
+    "granularity": "topic"
+   },
+   {
+    "id": "fx_002",
+    "platform": "instagram",
+    "handle": "vcclips",
+    "thumbnail_url": "",
+    "views": 920000,
+    "likes": 61000,
+    "followers": 210000,
+    "views_rate_per_followers": 438,
+    "duration": 34,
+    "hook_text": "I fired myself for a week and it saved the company.",
+    "transcript": "I fired myself for a week and it saved the company. My cofounder ran everything and I just talked to users.",
+    "on_screen_text": [
+     "I fired myself",
+     "for 7 days"
+    ],
+    "caption": "would you do this? #founderlife #startups",
+    "hashtags": [
+     "founderlife",
+     "startups"
+    ],
+    "words_per_second": 2.6,
+    "granularity": "niche"
+   },
+   {
+    "id": "fx_003",
+    "platform": "youtube",
+    "handle": "thestartupshow",
+    "thumbnail_url": "",
+    "views": 410000,
+    "likes": 23000,
+    "followers": 95000,
+    "views_rate_per_followers": 431,
+    "duration": 52,
+    "hook_text": "Burnout is not about hours.",
+    "transcript": "Burnout is not about hours. It's about working on something you stopped believing in. Fix the what before the when.",
+    "on_screen_text": [
+     "burnout \u2260 hours"
+    ],
+    "caption": "fix the what before the when #podcast #founder",
+    "hashtags": [
+     "podcast",
+     "founder"
+    ],
+    "words_per_second": 2.4,
+    "granularity": "general"
+   }
+  ]
+ },
+ "playbook": {
+  "hook_patterns": [
+   {
+    "name": "nobody tells you",
+    "description": "Open by promising a hidden truth about a common experience, then state it bluntly in the next sentence.",
+    "examples": [
+     "Nobody tells you this about raising money."
+    ],
+    "avg_views": 1850000
+   },
+   {
+    "name": "shocking decision + payoff",
+    "description": "First line is an unusual action the creator took, second half is the result.",
+    "examples": [
+     "I fired myself for a week and it saved the company."
+    ],
+    "avg_views": 920000
+   },
+   {
+    "name": "redefine the word",
+    "description": "Negate the common definition of a familiar problem, then give the real one.",
+    "examples": [
+     "Burnout is not about hours."
+    ],
+    "avg_views": 410000
+   }
+  ],
+  "on_screen_text_style": "2-3 words that restate the hook, shown in the first second, lowercase, with one line reused as the punchline.",
+  "ideal_duration_s": 40,
+  "pacing_wps": 2.7,
+  "caption_formula": "one lowercase sentence that teases the clip, no emoji, 2-3 niche hashtags.",
+  "takeaways": [
+   "Open with the claim, never with context.",
+   "Keep clips between 30 and 50 seconds.",
+   "Put the hook on screen in 2-3 words within the first second."
+  ]
+ },
+ "clips": {
+  "clips": [
+   {
+    "start": 24.5,
+    "end": 66.0,
+    "score": 92,
+    "title": "Money multiplies pressure",
+    "hook_rewrite": "Nobody tells you this about raising money.",
+    "on_screen_lines": [
+     "nobody tells you",
+     "every dollar is a promise",
+     "2am. 18 months runway. no plan."
+    ],
+    "caption": "the part of fundraising nobody posts about #startup #founder #vc",
+    "matched_pattern": "nobody tells you",
+    "reason": "Matches the top pattern in the playbook and contains a specific 2am scene, which the top performers all have.",
+    "render_path": null,
+    "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+   },
+   {
+    "start": 66.0,
+    "end": 110.0,
+    "score": 88,
+    "title": "Fired myself for a week",
+    "hook_rewrite": "I fired myself as CEO for a week.",
+    "on_screen_lines": [
+     "fired myself",
+     "20 customers later",
+     "killed the funded feature"
+    ],
+    "caption": "would you kill the feature investors paid for? #founderlife #startups",
+    "matched_pattern": "shocking decision + payoff",
+    "reason": "Unusual decision with a measurable payoff, same structure as the second-best pattern.",
+    "render_path": null,
+    "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+   },
+   {
+    "start": 126.0,
+    "end": 158.0,
+    "score": 81,
+    "title": "Burnout isn't hours",
+    "hook_rewrite": "Burnout isn't from working too much.",
+    "on_screen_lines": [
+     "burnout \u2260 hours",
+     "fix the what first"
+    ],
+    "caption": "fix what you work on before your calendar #podcast #founder",
+    "matched_pattern": "redefine the word",
+    "reason": "Self-contained advice that negates a common belief, matching the redefine pattern.",
+    "render_path": null,
+    "render_url": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4"
+   }
+  ]
+ }
+}
