@@ -1,17 +1,95 @@
 {
-  "niche": "startup / founder podcast",
-  "summary": "A founder describes raising a seed round in three weeks, burning out, and recovering by stepping away to talk to customers. The conversation centers on pressure after fundraising and killing a roadmap investors funded.",
-  "topics": ["seed fundraising", "founder burnout", "customer discovery", "cofounder dynamics", "investor relations", "pivoting"],
-  "competitor_handles": [],
-  "keyword_sets": {
-    "niche": ["startup", "founder", "venture capital", "VC", "raise money"],
-    "topic": ["founder burnout", "raised a seed round", "talk to customers", "killed the feature", "investor said"],
-    "entity": []
-  },
-  "topic_map": [
-    { "start": 0.0, "end": 24.5, "topic": "intro: raised a seed round in three weeks" },
-    { "start": 24.5, "end": 66.0, "topic": "pressure after fundraising, the 2am moment" },
-    { "start": 66.0, "end": 126.0, "topic": "stepping away, 20 customer calls, killing the funded feature" },
-    { "start": 126.0, "end": 158.0, "topic": "what burnout actually is, advice" }
+ "niche": "tech careers",
+ "summary": "Scott Hanselman, VP at Microsoft and GitHub, discusses how AI coding agents are changing software engineering and what still matters for developers. The episode covers treating AI like an untrusted contributor, the importance of fundamentals and junior hires, and building real personal projects.",
+ "topics": [
+  "AI transitions and history of programmer panic",
+  "Trusting but verifying AI-generated code",
+  "AI overuse as 'caffeine' and the slop cannon",
+  "Hiring juniors before the senior pipeline collapses",
+  "Mentorship: the nurse preceptor model",
+  "Fundamentals and communication for new developers",
+  "Building unique personal projects instead of clones",
+  "Tiny Tool Town and fast static software"
+ ],
+ "competitor_handles": [
+  "tiffintech",
+  "forrestknight"
+ ],
+ "keyword_sets": {
+  "niche": [
+   "software engineering",
+   "tech career",
+   "programming",
+   "coding",
+   "career advice",
+   "software developer",
+   "developer jobs",
+   "tech jobs"
+  ],
+  "topic": [
+   "ai coding",
+   "learn to code",
+   "junior developer",
+   "coding fundamentals",
+   "side projects",
+   "ai tools for developers",
+   "software engineer skills",
+   "hiring developers"
+  ],
+  "entity": [
+   "scott hanselman",
+   "microsoft",
+   "github",
+   "github copilot",
+   "tiny tool town",
+   "hanselminutes"
   ]
+ },
+ "topic_map": [
+  {
+   "start": 0.0,
+   "end": 180.0,
+   "topic": "AI panic history and why the craft hasn't changed"
+  },
+  {
+   "start": 180.0,
+   "end": 340.0,
+   "topic": "AI as anonymous contributor: trust but verify through SDLC and human responsibility"
+  },
+  {
+   "start": 340.0,
+   "end": 520.0,
+   "topic": "Real GitHub Copilot workflow: session juggling and energy-based project triage"
+  },
+  {
+   "start": 520.0,
+   "end": 680.0,
+   "topic": "Junior hiring crisis and nurse preceptor mentorship model"
+  },
+  {
+   "start": 680.0,
+   "end": 800.0,
+   "topic": "Microsoft's teaching model and advice to master fundamentals to land a job"
+  },
+  {
+   "start": 800.0,
+   "end": 930.0,
+   "topic": "Fundamentals, clear communication, and why one-shot Minecraft fails"
+  },
+  {
+   "start": 930.0,
+   "end": 1110.0,
+   "topic": "Unique personal projects attract attention; Tiny Tool Town demo begins"
+  },
+  {
+   "start": 1110.0,
+   "end": 1370.0,
+   "topic": "Agent-managed Tiny Tool Town, static architecture, and calm project management"
+  },
+  {
+   "start": 1370.0,
+   "end": 1492.0,
+   "topic": "Rapid-fire: T-shaped, English, Copilot, whiteboards, medical tech, AI replacement"
+  }
+ ]
 }

@@ -1,20 +1,3983 @@
 {
-  "source_url": "https://www.youtube.com/watch?v=FIXTURE",
-  "title": "Fixture: founder interview on burnout and fundraising",
-  "duration": 420,
-  "video_path": null,
-  "segments": [
-    { "start": 0.0, "end": 6.2, "text": "Welcome back to the show. Today I'm sitting down with a founder who raised a seed round in three weeks and then almost quit." },
-    { "start": 6.2, "end": 14.0, "text": "Thanks for having me. Yeah, the three weeks part sounds great until you hear what happened after." },
-    { "start": 14.0, "end": 24.5, "text": "So walk me through it. You close the round, money's in the bank, and what, you just stopped sleeping?" },
-    { "start": 24.5, "end": 38.0, "text": "Pretty much. Here's the thing nobody tells you: raising money doesn't reduce pressure, it multiplies it. Every dollar is a promise to someone." },
-    { "start": 38.0, "end": 52.0, "text": "I remember sitting in the office at 2am thinking, I have eighteen months of runway and zero idea what to build next week." },
-    { "start": 52.0, "end": 66.0, "text": "That's the part people don't post about on LinkedIn. What did you actually do?" },
-    { "start": 66.0, "end": 82.0, "text": "I fired myself as CEO for a week. Literally. I told my cofounder, you make every decision, I'm going to go talk to twenty customers and not open Slack." },
-    { "start": 82.0, "end": 96.0, "text": "And those twenty conversations changed the roadmap completely. We killed the feature we'd raised the round on." },
-    { "start": 96.0, "end": 110.0, "text": "Wait, you killed the thing investors gave you money to build?" },
-    { "start": 110.0, "end": 126.0, "text": "Yes. And every single investor said the same thing: we invested in you, not the slide. Which is a cliché until it saves your company." },
-    { "start": 126.0, "end": 140.0, "text": "What's your advice to a founder who's in that 2am moment right now?" },
-    { "start": 140.0, "end": 158.0, "text": "Burnout isn't from working too much. It's from working on things you don't believe in. Fix what you're working on before you fix your calendar." }
-  ]
+ "source_url": "https://www.youtube.com/watch?v=W6aOdLlEz1w",
+ "title": "Should You Still Become a Software Engineer in 2026? GitHub VP",
+ "duration": 1500.0,
+ "video_path": "/Users/faizan/Desktop/hackyourfeed/backend/work/ingest/W6aOdLlEz1w/video.mp4",
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 2.48,
+   "text": "Every era panics. Now we're in the"
+  },
+  {
+   "start": 2.48,
+   "end": 5.68,
+   "text": "fourth decade of panic. The craft hasn't"
+  },
+  {
+   "start": 5.68,
+   "end": 7.44,
+   "text": "changed. AI does not generate"
+  },
+  {
+   "start": 7.44,
+   "end": 8.16,
+   "text": "architecture."
+  },
+  {
+   "start": 8.16,
+   "end": 9.68,
+   "text": ">> Still on us to do."
+  },
+  {
+   "start": 9.68,
+   "end": 12.52,
+   "text": ">> This is Scott Hanselman, VP and member"
+  },
+  {
+   "start": 12.52,
+   "end": 14.68,
+   "text": "of technical staff at Microsoft and"
+  },
+  {
+   "start": 14.68,
+   "end": 17.08,
+   "text": "GitHub, where he works on AI coding"
+  },
+  {
+   "start": 17.08,
+   "end": 19.56,
+   "text": "agents for developers. He has spent"
+  },
+  {
+   "start": 19.56,
+   "end": 21.76,
+   "text": "decades as one of the most influential"
+  },
+  {
+   "start": 21.76,
+   "end": 24.24,
+   "text": "voices in developer education, from"
+  },
+  {
+   "start": 24.24,
+   "end": 26.32,
+   "text": "helping shape [music] the .NET community"
+  },
+  {
+   "start": 26.32,
+   "end": 28.48,
+   "text": "to leading Microsoft's developer"
+  },
+  {
+   "start": 28.48,
+   "end": 31.16,
+   "text": "community and open source programs. I"
+  },
+  {
+   "start": 31.16,
+   "end": 33.6,
+   "text": "asked him how AI coding agents are"
+  },
+  {
+   "start": 33.6,
+   "end": 35.8,
+   "text": "reshaping software engineering and what"
+  },
+  {
+   "start": 35.8,
+   "end": 38.04,
+   "text": "actually still matters when AI [music]"
+  },
+  {
+   "start": 38.04,
+   "end": 38.96,
+   "text": "can write code."
+  },
+  {
+   "start": 38.96,
+   "end": 41.48,
+   "text": ">> The software engineering"
+  },
+  {
+   "start": 41.48,
+   "end": 43.92,
+   "text": "will collapse if we don't keep hiring"
+  },
+  {
+   "start": 43.92,
+   "end": 45.56,
+   "text": "early in career developers. Where are"
+  },
+  {
+   "start": 45.56,
+   "end": 47.32,
+   "text": "the seniors coming from? The basics, the"
+  },
+  {
+   "start": 47.32,
+   "end": 48.72,
+   "text": "basics, the [music] basics. Make"
+  },
+  {
+   "start": 48.72,
+   "end": 49.76,
+   "text": "something fun, make something"
+  },
+  {
+   "start": 49.76,
+   "end": 51.76,
+   "text": "interesting, make it real, and care"
+  },
+  {
+   "start": 51.76,
+   "end": 53.68,
+   "text": "about it. It's more than five."
+  },
+  {
+   "start": 53.68,
+   "end": 55.68,
+   "text": ">> Thank you, Scott, for being here. We're"
+  },
+  {
+   "start": 55.68,
+   "end": 57.72,
+   "text": "really excited to have you on channel."
+  },
+  {
+   "start": 57.72,
+   "end": 59.28,
+   "text": ">> It's absolutely my pleasure. I just love"
+  },
+  {
+   "start": 59.28,
+   "end": 60.28,
+   "text": "doing this kind of work."
+  },
+  {
+   "start": 60.28,
+   "end": 62.16,
+   "text": ">> Yeah, great seeing you on keynote as"
+  },
+  {
+   "start": 62.16,
+   "end": 63.76,
+   "text": "well yesterday on stage."
+  },
+  {
+   "start": 63.76,
+   "end": 65.4,
+   "text": ">> It was fun. We tried to bring a kind of"
+  },
+  {
+   "start": 65.4,
+   "end": 66.48,
+   "text": "a different energy."
+  },
+  {
+   "start": 66.48,
+   "end": 67.96,
+   "text": ">> Yeah, that was that was funny. So you've"
+  },
+  {
+   "start": 67.96,
+   "end": 70.16,
+   "text": "been a developer through multiple"
+  },
+  {
+   "start": 70.16,
+   "end": 73.68,
+   "text": "shifts, web, mobile, cloud, and now AI."
+  },
+  {
+   "start": 73.68,
+   "end": 73.92,
+   "text": ">> Yeah."
+  },
+  {
+   "start": 73.92,
+   "end": 76.24,
+   "text": ">> How do you think this transition is"
+  },
+  {
+   "start": 76.24,
+   "end": 77.76,
+   "text": "compared to previous ones?"
+  },
+  {
+   "start": 77.76,
+   "end": 82.04,
+   "text": ">> I feel like every era panics."
+  },
+  {
+   "start": 82.04,
+   "end": 85.52,
+   "text": "And I started coding in 1984."
+  },
+  {
+   "start": 85.52,
+   "end": 87.44,
+   "text": "And someone told me in late in somewhere"
+  },
+  {
+   "start": 87.44,
+   "end": 89.88,
+   "text": "in like 1989 or 1990 that I wasn't a"
+  },
+  {
+   "start": 89.88,
+   "end": 91.4,
+   "text": "real programmer because I wasn't using"
+  },
+  {
+   "start": 91.4,
+   "end": 92.48,
+   "text": "assembler."
+  },
+  {
+   "start": 92.48,
+   "end": 93.32,
+   "text": ">> Oh."
+  },
+  {
+   "start": 93.32,
+   "end": 96.08,
+   "text": ">> And then later in the late '90s, I got"
+  },
+  {
+   "start": 96.08,
+   "end": 97.76,
+   "text": "like syntax highlighting and color, and"
+  },
+  {
+   "start": 97.76,
+   "end": 99.16,
+   "text": "I went from literally coding in black"
+  },
+  {
+   "start": 99.16,
+   "end": 101.2,
+   "text": "and white to coding with like individual"
+  },
+  {
+   "start": 101.2,
+   "end": 102.64,
+   "text": "keywords being in color. And then they"
+  },
+  {
+   "start": 102.64,
+   "end": 103.72,
+   "text": "were like, \"Oh, that's going to rot your"
+  },
+  {
+   "start": 103.72,
+   "end": 106.08,
+   "text": "brain. It'll make you weak.\" And then"
+  },
+  {
+   "start": 106.08,
+   "end": 107.44,
+   "text": "you get like auto complete, and then"
+  },
+  {
+   "start": 107.44,
+   "end": 109.36,
+   "text": "Stack Overflow happened in like the"
+  },
+  {
+   "start": 109.36,
+   "end": 111.0,
+   "text": "middle 2000s, and everyone was like,"
+  },
+  {
+   "start": 111.0,
+   "end": 112.76,
+   "text": "\"Oh, it's over. Programming is over."
+  },
+  {
+   "start": 112.76,
+   "end": 114.36,
+   "text": "It's the death of coding. We just copy"
+  },
+  {
+   "start": 114.36,
+   "end": 116.04,
+   "text": "paste from Stack Overflow.\" So now we're"
+  },
+  {
+   "start": 116.04,
+   "end": 119.8,
+   "text": "in the fourth decade of panic and I'm"
+  },
+  {
+   "start": 119.8,
+   "end": 120.88,
+   "text": "just going to"
+  },
+  {
+   "start": 120.88,
+   "end": 122.88,
+   "text": "be positive. I just feel like maybe it's"
+  },
+  {
+   "start": 122.88,
+   "end": 125.32,
+   "text": "toxic positivity, but like another power"
+  },
+  {
+   "start": 125.32,
+   "end": 127.96,
+   "text": "tool has happened whether I got color or"
+  },
+  {
+   "start": 127.96,
+   "end": 130.88,
+   "text": "I got intellisense or I got AI, the"
+  },
+  {
+   "start": 130.88,
+   "end": 132.28,
+   "text": "craft"
+  },
+  {
+   "start": 132.28,
+   "end": 134.52,
+   "text": "hasn't changed. Just because power tools"
+  },
+  {
+   "start": 134.52,
+   "end": 137.28,
+   "text": "got made doesn't mean that like bespoke"
+  },
+  {
+   "start": 137.28,
+   "end": 139.6,
+   "text": "really cool furniture can't be created"
+  },
+  {
+   "start": 139.6,
+   "end": 142.52,
+   "text": "by craftspeople. So I'm choosing to make"
+  },
+  {
+   "start": 142.52,
+   "end": 145.08,
+   "text": "the craft the goal regardless of the"
+  },
+  {
+   "start": 145.08,
+   "end": 145.92,
+   "text": "tool that I'm using."
+  },
+  {
+   "start": 145.92,
+   "end": 147.6,
+   "text": ">> I like that a lot of the panic sounds"
+  },
+  {
+   "start": 147.6,
+   "end": 149.84,
+   "text": "very familiar. You use a lot of the AI"
+  },
+  {
+   "start": 149.84,
+   "end": 151.36,
+   "text": "assistant coding in your day-to-day"
+  },
+  {
+   "start": 151.36,
+   "end": 154.32,
+   "text": "life. What percentage would you say is"
+  },
+  {
+   "start": 154.32,
+   "end": 156.959,
+   "text": "AI assistant in your workflow?"
+  },
+  {
+   "start": 156.959,
+   "end": 159.2,
+   "text": ">> That's a great question. I I I imagine a"
+  },
+  {
+   "start": 159.2,
+   "end": 161.8,
+   "text": "spectrum like a slider bar from like"
+  },
+  {
+   "start": 161.8,
+   "end": 165.52,
+   "text": "slop cannon vibes AI augmented software"
+  },
+  {
+   "start": 165.52,
+   "end": 167.52,
+   "text": "engineering and when I started doing"
+  },
+  {
+   "start": 167.52,
+   "end": 168.56,
+   "text": "this"
+  },
+  {
+   "start": 168.56,
+   "end": 170.88,
+   "text": "maybe a year or two ago, I thought it"
+  },
+  {
+   "start": 170.88,
+   "end": 172.52,
+   "text": "was vibes and I was like, hey man, it's"
+  },
+  {
+   "start": 172.52,
+   "end": 175.68,
+   "text": "just vibes, but that falls apart very"
+  },
+  {
+   "start": 175.68,
+   "end": 177.84,
+   "text": "quickly as you know, right?"
+  },
+  {
+   "start": 177.84,
+   "end": 181.28,
+   "text": "AI loves to be a sycophant. It loves to"
+  },
+  {
+   "start": 181.28,
+   "end": 183.64,
+   "text": "make a feature. AI does not generate"
+  },
+  {
+   "start": 183.64,
+   "end": 186.519,
+   "text": "architecture. So it will create god"
+  },
+  {
+   "start": 186.519,
+   "end": 190.2,
+   "text": "objects. It'll be large and messy. So I"
+  },
+  {
+   "start": 190.2,
+   "end": 191.519,
+   "text": "found that having a good software"
+  },
+  {
+   "start": 191.519,
+   "end": 193.16,
+   "text": "development life cycle up front really"
+  },
+  {
+   "start": 193.16,
+   "end": 195.68,
+   "text": "mattered to me. So everything that I do"
+  },
+  {
+   "start": 195.68,
+   "end": 198.8,
+   "text": "has code signing and testing and GitHub"
+  },
+  {
+   "start": 198.8,
+   "end": 200.239,
+   "text": "actions and all those kind of things."
+  },
+  {
+   "start": 200.239,
+   "end": 203.0,
+   "text": "Probably 70% of the code that I'm"
+  },
+  {
+   "start": 203.0,
+   "end": 205.72,
+   "text": "writing right now is AI augmented, but"
+  },
+  {
+   "start": 205.72,
+   "end": 208.28,
+   "text": "it all flows into the same SDLC, the"
+  },
+  {
+   "start": 208.28,
+   "end": 210.04,
+   "text": "same software development life cycle. So"
+  },
+  {
+   "start": 210.04,
+   "end": 213.0,
+   "text": "the downstream insertion point remains"
+  },
+  {
+   "start": 213.0,
+   "end": 214.6,
+   "text": "the same. So if you think about where"
+  },
+  {
+   "start": 214.6,
+   "end": 216.04,
+   "text": "code can come from, it can come come"
+  },
+  {
+   "start": 216.04,
+   "end": 217.72,
+   "text": "from my hands, it can come from an open"
+  },
+  {
+   "start": 217.72,
+   "end": 220.32,
+   "text": "source PR or it can come from an AI. Now"
+  },
+  {
+   "start": 220.32,
+   "end": 221.92,
+   "text": "when open source started happening, it"
+  },
+  {
+   "start": 221.92,
+   "end": 223.32,
+   "text": "was like all these anonymous people"
+  },
+  {
+   "start": 223.32,
+   "end": 224.88,
+   "text": "started giving me code. If I treat the"
+  },
+  {
+   "start": 224.88,
+   "end": 226.88,
+   "text": "AI as this random anonymous person"
+  },
+  {
+   "start": 226.88,
+   "end": 228.239,
+   "text": "that's giving me code, well I don't"
+  },
+  {
+   "start": 228.239,
+   "end": 230.4,
+   "text": "trust the rando on the internet, I'm not"
+  },
+  {
+   "start": 230.4,
+   "end": 232.6,
+   "text": "going to trust the AI and I barely trust"
+  },
+  {
+   "start": 232.6,
+   "end": 235.0,
+   "text": "myself. So, because I have a good"
+  },
+  {
+   "start": 235.0,
+   "end": 237.12,
+   "text": "ingress point, I have Dependabot, and I"
+  },
+  {
+   "start": 237.12,
+   "end": 238.64,
+   "text": "have agentic workflows checking the"
+  },
+  {
+   "start": 238.64,
+   "end": 241.12,
+   "text": "code, I can trust but verify and make"
+  },
+  {
+   "start": 241.12,
+   "end": 242.4,
+   "text": "sure that it all flows through the same"
+  },
+  {
+   "start": 242.4,
+   "end": 243.48,
+   "text": "thing. Does that make sense?"
+  },
+  {
+   "start": 243.48,
+   "end": 244.6,
+   "text": ">> Yeah, that's the that's a great"
+  },
+  {
+   "start": 244.6,
+   "end": 246.24,
+   "text": "perspective. I often compare it to I"
+  },
+  {
+   "start": 246.24,
+   "end": 248.04,
+   "text": "used to be an engineering manager. It's"
+  },
+  {
+   "start": 248.04,
+   "end": 250.48,
+   "text": "kind of like working with a bunch of"
+  },
+  {
+   "start": 250.48,
+   "end": 252.32,
+   "text": "engineers. You still want to check their"
+  },
+  {
+   "start": 252.32,
+   "end": 253.76,
+   "text": "code and"
+  },
+  {
+   "start": 253.76,
+   "end": 256.28,
+   "text": "manage project manage all that. So, AI"
+  },
+  {
+   "start": 256.28,
+   "end": 258.0,
+   "text": "agents are kind of working for you."
+  },
+  {
+   "start": 258.0,
+   "end": 259.44,
+   "text": ">> There's a dopamine hit, and I don't"
+  },
+  {
+   "start": 259.44,
+   "end": 262.32,
+   "text": "think that enough people talk about the"
+  },
+  {
+   "start": 262.32,
+   "end": 265.56,
+   "text": "fact that this is a drug like caffeine."
+  },
+  {
+   "start": 265.56,
+   "end": 267.2,
+   "text": "Right? Like I'm having a Diet Coke, and"
+  },
+  {
+   "start": 267.2,
+   "end": 269.68,
+   "text": "that's fine. If this were my 10th, you"
+  },
+  {
+   "start": 269.68,
+   "end": 271.36,
+   "text": "might be like, \"Whoa, hey, it's it's"
+  },
+  {
+   "start": 271.36,
+   "end": 273.04,
+   "text": "9:00, Scott. You know, like you need to"
+  },
+  {
+   "start": 273.04,
+   "end": 274.24,
+   "text": "slow down.\""
+  },
+  {
+   "start": 274.24,
+   "end": 276.96,
+   "text": "So, we see people like kind of vibrating"
+  },
+  {
+   "start": 276.96,
+   "end": 279.72,
+   "text": "with the caffeine of AI. I think we need"
+  },
+  {
+   "start": 279.72,
+   "end": 281.04,
+   "text": "to kind of slow down for a second and"
+  },
+  {
+   "start": 281.04,
+   "end": 282.8,
+   "text": "think, \"Why am I making this? Am I"
+  },
+  {
+   "start": 282.8,
+   "end": 284.36,
+   "text": "solving the problem? And am I doing it"
+  },
+  {
+   "start": 284.36,
+   "end": 286.8,
+   "text": "in a healthy way?\" So, I always try to"
+  },
+  {
+   "start": 286.8,
+   "end": 288.64,
+   "text": "remind myself, \"Did the AI do the right"
+  },
+  {
+   "start": 288.64,
+   "end": 290.12,
+   "text": "thing?\" And then I look at the code."
+  },
+  {
+   "start": 290.12,
+   "end": 291.52,
+   "text": "People are just vibrating with AI"
+  },
+  {
+   "start": 291.52,
+   "end": 293.36,
+   "text": "enthusiasm, and that that's when you"
+  },
+  {
+   "start": 293.36,
+   "end": 295.72,
+   "text": "become a slop cannon. And and I I reject"
+  },
+  {
+   "start": 295.72,
+   "end": 296.2,
+   "text": "that."
+  },
+  {
+   "start": 296.2,
+   "end": 298.16,
+   "text": ">> So, it's still on us to do the thinking"
+  },
+  {
+   "start": 298.16,
+   "end": 298.76,
+   "text": "part."
+  },
+  {
+   "start": 298.76,
+   "end": 299.88,
+   "text": ">> Well, that's a great question. So, let's"
+  },
+  {
+   "start": 299.88,
+   "end": 302.36,
+   "text": "say that an anonymous person does a PR,"
+  },
+  {
+   "start": 302.36,
+   "end": 304.08,
+   "text": "and you merge it without looking, and it"
+  },
+  {
+   "start": 304.08,
+   "end": 305.64,
+   "text": "breaks something for your users. Was it"
+  },
+  {
+   "start": 305.64,
+   "end": 306.96,
+   "text": "the anonymous person's fault, or was it"
+  },
+  {
+   "start": 306.96,
+   "end": 308.6,
+   "text": "your fault for clicking squash merge?"
+  },
+  {
+   "start": 308.6,
+   "end": 309.163,
+   "text": "Your fault,"
+  },
+  {
+   "start": 309.163,
+   "end": 309.24,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 309.24,
+   "end": 310.56,
+   "text": ">> right? It's your fault cuz it's your"
+  },
+  {
+   "start": 310.56,
+   "end": 311.24,
+   "text": "product."
+  },
+  {
+   "start": 311.24,
+   "end": 311.56,
+   "text": ">> Yes."
+  },
+  {
+   "start": 311.56,
+   "end": 314.2,
+   "text": ">> So, AIs make mistakes. Humans make"
+  },
+  {
+   "start": 314.2,
+   "end": 316.4,
+   "text": "mistakes. Random internet people make"
+  },
+  {
+   "start": 316.4,
+   "end": 319.48,
+   "text": "mistakes. So, that's why human agency,"
+  },
+  {
+   "start": 319.48,
+   "end": 320.84,
+   "text": "human in the loop,"
+  },
+  {
+   "start": 320.84,
+   "end": 322.6,
+   "text": "human responsibility like matters more"
+  },
+  {
+   "start": 322.6,
+   "end": 323.2,
+   "text": "than ever."
+  },
+  {
+   "start": 323.2,
+   "end": 325.8,
+   "text": ">> Well, you also have some um demos that"
+  },
+  {
+   "start": 325.8,
+   "end": 327.32,
+   "text": "you showed us yesterday, but you have"
+  },
+  {
+   "start": 327.32,
+   "end": 329.16,
+   "text": "more. What type of projects are you"
+  },
+  {
+   "start": 329.16,
+   "end": 330.0,
+   "text": "working on?"
+  },
+  {
+   "start": 330.0,
+   "end": 332.8,
+   "text": ">> So, um I'm currently using the GitHub"
+  },
+  {
+   "start": 332.8,
+   "end": 335.56,
+   "text": "app. So, this is the GitHub app. And um"
+  },
+  {
+   "start": 335.56,
+   "end": 337.6,
+   "text": "initially, it felt like it was a session"
+  },
+  {
+   "start": 337.6,
+   "end": 339.68,
+   "text": "multiplexer. And I say that by for the"
+  },
+  {
+   "start": 339.68,
+   "end": 341.28,
+   "text": "last 6-plus months, I've been using"
+  },
+  {
+   "start": 341.28,
+   "end": 342.68,
+   "text": "Windows Terminal. So, here I am in"
+  },
+  {
+   "start": 342.68,
+   "end": 343.919,
+   "text": "Windows Terminal, and you can see I've"
+  },
+  {
+   "start": 343.919,
+   "end": 346.28,
+   "text": "got like six terminals going doing"
+  },
+  {
+   "start": 346.28,
+   "end": 347.96,
+   "text": "different stuff. And you know, there's"
+  },
+  {
+   "start": 347.96,
+   "end": 350.44,
+   "text": "Ubuntu, and there's a dual pane web"
+  },
+  {
+   "start": 350.44,
+   "end": 351.6,
+   "text": "server that's running. Here's"
+  },
+  {
+   "start": 351.6,
+   "end": 352.84,
+   "text": "PowerShell. I've got PowerShell,"
+  },
+  {
+   "start": 352.84,
+   "end": 355.16,
+   "text": "PowerShell, and Ubuntu. That's terminal"
+  },
+  {
+   "start": 355.16,
+   "end": 357.0,
+   "text": "jumping around, and that didn't kind of"
+  },
+  {
+   "start": 357.0,
+   "end": 359.88,
+   "text": "feel healthy, again. I keep coming back"
+  },
+  {
+   "start": 359.88,
+   "end": 362.0,
+   "text": "to grounding it in like, do I feel okay?"
+  },
+  {
+   "start": 362.0,
+   "end": 363.52,
+   "text": "Am I doing what's right? The GitHub"
+  },
+  {
+   "start": 363.52,
+   "end": 366.28,
+   "text": "Copilot app is more task-based. So,"
+  },
+  {
+   "start": 366.28,
+   "end": 367.92,
+   "text": "these are sessions."
+  },
+  {
+   "start": 367.92,
+   "end": 370.36,
+   "text": "Here, I've got the Open Claw node that"
+  },
+  {
+   "start": 370.36,
+   "end": 372.6,
+   "text": "I'm working on, and within it, I've got"
+  },
+  {
+   "start": 372.6,
+   "end": 376.04,
+   "text": "three PRs that I'm currently working on."
+  },
+  {
+   "start": 376.04,
+   "end": 378.12,
+   "text": "So, I can go and see one. This was emoji"
+  },
+  {
+   "start": 378.12,
+   "end": 380.24,
+   "text": "bake problem that Christine was helping"
+  },
+  {
+   "start": 380.24,
+   "end": 383.24,
+   "text": "me with. Emoji bake is when emoji gets"
+  },
+  {
+   "start": 383.24,
+   "end": 385.04,
+   "text": "corrupted because of double encoding."
+  },
+  {
+   "start": 385.04,
+   "end": 386.2,
+   "text": "So, here you go. There's some emoji"
+  },
+  {
+   "start": 386.2,
+   "end": 388.44,
+   "text": "bake. So, that"
+  },
+  {
+   "start": 388.44,
+   "end": 390.68,
+   "text": "was, you know, the settings connection"
+  },
+  {
+   "start": 390.68,
+   "end": 392.08,
+   "text": "header, and it got corrupted, so it got"
+  },
+  {
+   "start": 392.08,
+   "end": 393.6,
+   "text": "double encoded. So, when I look at this"
+  },
+  {
+   "start": 393.6,
+   "end": 396.52,
+   "text": "PR initially, I'm like, \"Hang on. 2,000"
+  },
+  {
+   "start": 396.52,
+   "end": 399.2,
+   "text": "removes and 2,000 adds? That's a lot."
+  },
+  {
+   "start": 399.2,
+   "end": 401.72,
+   "text": "That's a aggressive PR.\" But, then I"
+  },
+  {
+   "start": 401.72,
+   "end": 403.28,
+   "text": "realized, \"Oh, what she's doing is she's"
+  },
+  {
+   "start": 403.28,
+   "end": 406.28,
+   "text": "fixing emoji bake decoding issue.\" And,"
+  },
+  {
+   "start": 406.28,
+   "end": 408.28,
+   "text": "more importantly, she's adding tests."
+  },
+  {
+   "start": 408.28,
+   "end": 410.12,
+   "text": "So, she's added 100 lines of tests. So,"
+  },
+  {
+   "start": 410.12,
+   "end": 411.68,
+   "text": "I'm going to go and spend time reading"
+  },
+  {
+   "start": 411.68,
+   "end": 413.68,
+   "text": "these tests, figuring out what she did."
+  },
+  {
+   "start": 413.68,
+   "end": 415.16,
+   "text": "There's a test dictionary to watch this"
+  },
+  {
+   "start": 415.16,
+   "end": 417.24,
+   "text": "for baking. This is a emoji bake"
+  },
+  {
+   "start": 417.24,
+   "end": 419.0,
+   "text": "detector and things like that. So, I'm"
+  },
+  {
+   "start": 419.0,
+   "end": 420.56,
+   "text": "going to read the code that she"
+  },
+  {
+   "start": 420.56,
+   "end": 422.68,
+   "text": "presumably used an AI on, and then I"
+  },
+  {
+   "start": 422.68,
+   "end": 425.2,
+   "text": "could go off and do what I call"
+  },
+  {
+   "start": 425.2,
+   "end": 427.84,
+   "text": "adversarial reviews with three or more"
+  },
+  {
+   "start": 427.84,
+   "end": 430.16,
+   "text": "models, and then run off to another"
+  },
+  {
+   "start": 430.16,
+   "end": 431.8,
+   "text": "task, and then this one's going to pop"
+  },
+  {
+   "start": 431.8,
+   "end": 433.28,
+   "text": "up and let me know when it's done. So, I"
+  },
+  {
+   "start": 433.28,
+   "end": 436.08,
+   "text": "can juggle. Multitasking is a lie. But,"
+  },
+  {
+   "start": 436.08,
+   "end": 437.64,
+   "text": "I can juggle, you know, three to five,"
+  },
+  {
+   "start": 437.64,
+   "end": 440.04,
+   "text": "or in this case, 10 or or more sessions."
+  },
+  {
+   "start": 440.04,
+   "end": 441.72,
+   "text": ">> That That's a lot of sessions."
+  },
+  {
+   "start": 441.72,
+   "end": 443.96,
+   "text": ">> I think three is optimal. Again, human"
+  },
+  {
+   "start": 443.96,
+   "end": 445.88,
+   "text": "beings can handle three things. I don't"
+  },
+  {
+   "start": 445.88,
+   "end": 447.44,
+   "text": "think more than that is is reasonable,"
+  },
+  {
+   "start": 447.44,
+   "end": 449.16,
+   "text": "unless one is long running. Then, I can"
+  },
+  {
+   "start": 449.16,
+   "end": 450.48,
+   "text": "send it off for a couple of hours and"
+  },
+  {
+   "start": 450.48,
+   "end": 451.24,
+   "text": "come back."
+  },
+  {
+   "start": 451.24,
+   "end": 453.64,
+   "text": ">> So, people who are extensively using the"
+  },
+  {
+   "start": 453.64,
+   "end": 456.6,
+   "text": "AI tools for coding, what's your advice"
+  },
+  {
+   "start": 456.6,
+   "end": 457.72,
+   "text": "for best practices?"
+  },
+  {
+   "start": 457.72,
+   "end": 459.2,
+   "text": ">> I know I'm going to keep hitting this"
+  },
+  {
+   "start": 459.2,
+   "end": 462.08,
+   "text": "drum, like, take a second and breathe."
+  },
+  {
+   "start": 462.08,
+   "end": 464.64,
+   "text": "Like, vibrating with tokens is"
+  },
+  {
+   "start": 464.64,
+   "end": 466.8,
+   "text": "unhealthy. Like, too much caffeine is"
+  },
+  {
+   "start": 466.8,
+   "end": 469.8,
+   "text": "not okay. So, I try to"
+  },
+  {
+   "start": 469.8,
+   "end": 472.56,
+   "text": "use the AI to make me a better human."
+  },
+  {
+   "start": 472.56,
+   "end": 474.24,
+   "text": "For example, this is a kind of a silly"
+  },
+  {
+   "start": 474.24,
+   "end": 476.04,
+   "text": "app that I made for myself, but it's"
+  },
+  {
+   "start": 476.04,
+   "end": 478.24,
+   "text": "called um Hansel projects today, cuz my"
+  },
+  {
+   "start": 478.24,
+   "end": 480.6,
+   "text": "last name is Hanselman. If you wake up"
+  },
+  {
+   "start": 480.6,
+   "end": 482.92,
+   "text": "in the morning and you have 125 to-do's,"
+  },
+  {
+   "start": 482.92,
+   "end": 484.08,
+   "text": "that would probably stress you out."
+  },
+  {
+   "start": 484.08,
+   "end": 484.68,
+   "text": ">> That's a lot."
+  },
+  {
+   "start": 484.68,
+   "end": 486.72,
+   "text": ">> Right, that's a lot. I have 125 125"
+  },
+  {
+   "start": 486.72,
+   "end": 489.28,
+   "text": "to-do's, actionable ones. I've got 111"
+  },
+  {
+   "start": 489.28,
+   "end": 491.6,
+   "text": "PRs across my portfolio. So, that that's"
+  },
+  {
+   "start": 491.6,
+   "end": 493.4,
+   "text": "overwhelming. But, if I look at it"
+  },
+  {
+   "start": 493.4,
+   "end": 495.12,
+   "text": "through an emotional lens and I use the"
+  },
+  {
+   "start": 495.12,
+   "end": 496.72,
+   "text": "AI to help me do that, it actually"
+  },
+  {
+   "start": 496.72,
+   "end": 498.44,
+   "text": "knows, because I've taught it about"
+  },
+  {
+   "start": 498.44,
+   "end": 499.96,
+   "text": "like, oh, I feel this way this kind of"
+  },
+  {
+   "start": 499.96,
+   "end": 502.68,
+   "text": "this today. I'm also um type 1 diabetic,"
+  },
+  {
+   "start": 502.68,
+   "end": 504.72,
+   "text": "so I'm managing my blood sugar. And some"
+  },
+  {
+   "start": 504.72,
+   "end": 505.96,
+   "text": "days I have good blood sugar days and"
+  },
+  {
+   "start": 505.96,
+   "end": 507.44,
+   "text": "some days I have bad blood sugar days."
+  },
+  {
+   "start": 507.44,
+   "end": 508.6,
+   "text": "Some people might have, you know, they"
+  },
+  {
+   "start": 508.6,
+   "end": 509.84,
+   "text": "didn't work out that day or they're"
+  },
+  {
+   "start": 509.84,
+   "end": 512.479,
+   "text": "having problems at home. So, I have this"
+  },
+  {
+   "start": 512.479,
+   "end": 514.68,
+   "text": "focused project set based on emotional"
+  },
+  {
+   "start": 514.68,
+   "end": 517.12,
+   "text": "energy. So, I actually pick the kind of"
+  },
+  {
+   "start": 517.12,
+   "end": 518.84,
+   "text": "work that I have the energy for. I might"
+  },
+  {
+   "start": 518.84,
+   "end": 520.88,
+   "text": "want to say, today's a release day."
+  },
+  {
+   "start": 520.88,
+   "end": 522.32,
+   "text": "Today's a day I'm going to go and fix"
+  },
+  {
+   "start": 522.32,
+   "end": 523.88,
+   "text": "some builds or maybe I'm going to go and"
+  },
+  {
+   "start": 523.88,
+   "end": 526.16,
+   "text": "do the backlog. So, here I've got and I"
+  },
+  {
+   "start": 526.16,
+   "end": 528.4,
+   "text": "notice that I call out human PRs versus"
+  },
+  {
+   "start": 528.4,
+   "end": 530.04,
+   "text": "bot PRs. Like, maybe I want to think"
+  },
+  {
+   "start": 530.04,
+   "end": 531.72,
+   "text": "about humans today or maybe I'm going to"
+  },
+  {
+   "start": 531.72,
+   "end": 533.839,
+   "text": "go and fix some Dependabot automations."
+  },
+  {
+   "start": 533.839,
+   "end": 535.48,
+   "text": "I might not get 100 things done today,"
+  },
+  {
+   "start": 535.48,
+   "end": 537.4,
+   "text": "but I might get 40 and that's pretty"
+  },
+  {
+   "start": 537.4,
+   "end": 539.2,
+   "text": "productive. And then I will feel good"
+  },
+  {
+   "start": 539.2,
+   "end": 541.12,
+   "text": "about the that at the end of the day."
+  },
+  {
+   "start": 541.12,
+   "end": 542.72,
+   "text": "And I've even got whole sections"
+  },
+  {
+   "start": 542.72,
+   "end": 545.48,
+   "text": "explaining why things need attention and"
+  },
+  {
+   "start": 545.48,
+   "end": 547.56,
+   "text": "why I need to go and focus on them. And"
+  },
+  {
+   "start": 547.56,
+   "end": 550.28,
+   "text": "that helps me with my day, because this"
+  },
+  {
+   "start": 550.28,
+   "end": 552.32,
+   "text": "doesn't feel like an AI did it. It feels"
+  },
+  {
+   "start": 552.32,
+   "end": 554.56,
+   "text": "like I have an assistant who knows me"
+  },
+  {
+   "start": 554.56,
+   "end": 556.8,
+   "text": "and set my space up for me, so I can be,"
+  },
+  {
+   "start": 556.8,
+   "end": 557.8,
+   "text": "you know, successful today."
+  },
+  {
+   "start": 557.8,
+   "end": 560.28,
+   "text": ">> So, for experienced engineers, I think"
+  },
+  {
+   "start": 560.28,
+   "end": 562.48,
+   "text": "AI tools are great. It helps us to do"
+  },
+  {
+   "start": 562.48,
+   "end": 564.6,
+   "text": "code faster. For people who are starting"
+  },
+  {
+   "start": 564.6,
+   "end": 566.8,
+   "text": "out, maybe who are new to coding, there"
+  },
+  {
+   "start": 566.8,
+   "end": 568.72,
+   "text": "are also concerns about like, how are"
+  },
+  {
+   "start": 568.72,
+   "end": 570.6,
+   "text": "they supposed to learn to code with AI"
+  },
+  {
+   "start": 570.6,
+   "end": 571.56,
+   "text": "tools?"
+  },
+  {
+   "start": 571.56,
+   "end": 573.2,
+   "text": ">> that is a great point. And that's a huge"
+  },
+  {
+   "start": 573.2,
+   "end": 575.6,
+   "text": "problem. And I I wrote a paper that's in"
+  },
+  {
+   "start": 575.6,
+   "end": 578.44,
+   "text": "the ACM. We believe that"
+  },
+  {
+   "start": 578.44,
+   "end": 581.16,
+   "text": "the software engineering profession will"
+  },
+  {
+   "start": 581.16,
+   "end": 584.4,
+   "text": "collapse if we don't keep hiring early"
+  },
+  {
+   "start": 584.4,
+   "end": 586.8,
+   "text": "in career developers. Because where are"
+  },
+  {
+   "start": 586.8,
+   "end": 588.8,
+   "text": "the seniors coming from? And if you have"
+  },
+  {
+   "start": 588.8,
+   "end": 590.04,
+   "text": "a business and you need to hire a bunch"
+  },
+  {
+   "start": 590.04,
+   "end": 591.4,
+   "text": "of seniors, the only place you're going"
+  },
+  {
+   "start": 591.4,
+   "end": 593.72,
+   "text": "to find them is from your competition."
+  },
+  {
+   "start": 593.72,
+   "end": 595.24,
+   "text": "And if they train them better, then"
+  },
+  {
+   "start": 595.24,
+   "end": 596.2,
+   "text": "they'll probably want to stay there"
+  },
+  {
+   "start": 596.2,
+   "end": 597.4,
+   "text": "because they got good training. You've"
+  },
+  {
+   "start": 597.4,
+   "end": 598.88,
+   "text": "probably taught interns, you probably"
+  },
+  {
+   "start": 598.88,
+   "end": 600.52,
+   "text": "had apprentices and things like that."
+  },
+  {
+   "start": 600.52,
+   "end": 603.52,
+   "text": "This is an opinion, but when you bring"
+  },
+  {
+   "start": 603.52,
+   "end": 604.6,
+   "text": "someone into your organization and then"
+  },
+  {
+   "start": 604.6,
+   "end": 606.4,
+   "text": "you declare that they're an intern or"
+  },
+  {
+   "start": 606.4,
+   "end": 607.88,
+   "text": "they're an apprentice, you've made them"
+  },
+  {
+   "start": 607.88,
+   "end": 609.8,
+   "text": "less than. And they're probably just"
+  },
+  {
+   "start": 609.8,
+   "end": 612.8,
+   "text": "missing context. So, in the world of"
+  },
+  {
+   "start": 612.8,
+   "end": 615.32,
+   "text": "nursing, rather than having baby nurses"
+  },
+  {
+   "start": 615.32,
+   "end": 617.48,
+   "text": "and apprentice nurses, we actually take"
+  },
+  {
+   "start": 617.48,
+   "end": 620.0,
+   "text": "the senior and we name them a preceptor."
+  },
+  {
+   "start": 620.0,
+   "end": 621.92,
+   "text": "And a nurse preceptor has a name tag"
+  },
+  {
+   "start": 621.92,
+   "end": 623.28,
+   "text": "that says nurse trainer, nurse"
+  },
+  {
+   "start": 623.28,
+   "end": 625.64,
+   "text": "preceptor. My wife is a nurse, my son is"
+  },
+  {
+   "start": 625.64,
+   "end": 627.6,
+   "text": "training to be a nurse. That person is a"
+  },
+  {
+   "start": 627.6,
+   "end": 629.92,
+   "text": "safe person. So, if you see another"
+  },
+  {
+   "start": 629.92,
+   "end": 631.76,
+   "text": "nurse preceptor, you can go to them with"
+  },
+  {
+   "start": 631.76,
+   "end": 634.12,
+   "text": "questions. But if I went to you,"
+  },
+  {
+   "start": 634.12,
+   "end": 636.36,
+   "text": "and you're a senior engineer and I'm I'm"
+  },
+  {
+   "start": 636.36,
+   "end": 639.12,
+   "text": "scared of you, and I say, \"Um, what does"
+  },
+  {
+   "start": 639.12,
+   "end": 641.4,
+   "text": "DNS stand for again?\" And Jean's like,"
+  },
+  {
+   "start": 641.4,
+   "end": 644.16,
+   "text": "\"Oh my god. Hanselman doesn't know DNS?"
+  },
+  {
+   "start": 644.16,
+   "end": 645.36,
+   "text": "Oh, what are we Where are we hiring"
+  },
+  {
+   "start": 645.36,
+   "end": 647.6,
+   "text": "these kids?\" Right? Like there's a power"
+  },
+  {
+   "start": 647.6,
+   "end": 649.12,
+   "text": "dynamic there. But like, no, I"
+  },
+  {
+   "start": 649.12,
+   "end": 650.32,
+   "text": "understand why you would get confused"
+  },
+  {
+   "start": 650.32,
+   "end": 651.72,
+   "text": "about that DNS. You remember the Oh, I"
+  },
+  {
+   "start": 651.72,
+   "end": 653.52,
+   "text": "remember DNS. Like that's supportive"
+  },
+  {
+   "start": 653.52,
+   "end": 655.4,
+   "text": "kind of environment. It shifts the"
+  },
+  {
+   "start": 655.4,
+   "end": 657.2,
+   "text": "pressure so that the young person"
+  },
+  {
+   "start": 657.2,
+   "end": 659.0,
+   "text": "doesn't dig themselves out of a hole"
+  },
+  {
+   "start": 659.0,
+   "end": 660.44,
+   "text": "that you put them in, but that the"
+  },
+  {
+   "start": 660.44,
+   "end": 662.48,
+   "text": "senior person's job is to make more"
+  },
+  {
+   "start": 662.48,
+   "end": 664.24,
+   "text": "seniors. So, imagine a world where you"
+  },
+  {
+   "start": 664.24,
+   "end": 666.64,
+   "text": "and I are both um working at Microsoft,"
+  },
+  {
+   "start": 666.64,
+   "end": 668.44,
+   "text": "we're both senior engineers, and then at"
+  },
+  {
+   "start": 668.44,
+   "end": 670.24,
+   "text": "the end of maybe a 5-year period, you've"
+  },
+  {
+   "start": 670.24,
+   "end": 672.839,
+   "text": "minted 10 new seniors, and I have made"
+  },
+  {
+   "start": 672.839,
+   "end": 675.52,
+   "text": "none. That's probably a me problem. And"
+  },
+  {
+   "start": 675.52,
+   "end": 676.4,
+   "text": "then we'd acknowledge that you're a"
+  },
+  {
+   "start": 676.4,
+   "end": 677.44,
+   "text": "better teacher and then you need to go"
+  },
+  {
+   "start": 677.44,
+   "end": 678.839,
+   "text": "and change train the trainer. We are"
+  },
+  {
+   "start": 678.839,
+   "end": 681.64,
+   "text": "putting together a program at Microsoft"
+  },
+  {
+   "start": 681.64,
+   "end": 683.92,
+   "text": "that is a preceptorship that formally"
+  },
+  {
+   "start": 683.92,
+   "end": 685.76,
+   "text": "trains senior engineers on making"
+  },
+  {
+   "start": 685.76,
+   "end": 687.68,
+   "text": "juniors, make space for them, and then"
+  },
+  {
+   "start": 687.68,
+   "end": 689.72,
+   "text": "we're trying to come up with ways both"
+  },
+  {
+   "start": 689.72,
+   "end": 691.839,
+   "text": "um with actually scientific method."
+  },
+  {
+   "start": 691.839,
+   "end": 693.56,
+   "text": "We've got some folks at Microsoft"
+  },
+  {
+   "start": 693.56,
+   "end": 695.12,
+   "text": "Research that are helping us to like,"
+  },
+  {
+   "start": 695.12,
+   "end": 697.52,
+   "text": "how could we make a model that"
+  },
+  {
+   "start": 697.52,
+   "end": 699.76,
+   "text": "encourages learning? Could the model"
+  },
+  {
+   "start": 699.76,
+   "end": 701.04,
+   "text": "stop,"
+  },
+  {
+   "start": 701.04,
+   "end": 703.32,
+   "text": "require them to do some coding, could it"
+  },
+  {
+   "start": 703.32,
+   "end": 706.0,
+   "text": "make them pause and explain it to"
+  },
+  {
+   "start": 706.0,
+   "end": 708.04,
+   "text": "themselves? You could actually have"
+  },
+  {
+   "start": 708.04,
+   "end": 709.48,
+   "text": "quizzes. We're trying to figure out what"
+  },
+  {
+   "start": 709.48,
+   "end": 710.8,
+   "text": "a training model looks like because"
+  },
+  {
+   "start": 710.8,
+   "end": 713.36,
+   "text": "should a junior and a senior interact"
+  },
+  {
+   "start": 713.36,
+   "end": 715.32,
+   "text": "with the same model in the same way? And"
+  },
+  {
+   "start": 715.32,
+   "end": 717.08,
+   "text": "and we know with the research that we've"
+  },
+  {
+   "start": 717.08,
+   "end": 718.36,
+   "text": "been doing that they just they just"
+  },
+  {
+   "start": 718.36,
+   "end": 721.44,
+   "text": "don't. So why don't we accelerate their"
+  },
+  {
+   "start": 721.44,
+   "end": 722.96,
+   "text": "learning with these these teaching"
+  },
+  {
+   "start": 722.96,
+   "end": 723.4,
+   "text": "models?"
+  },
+  {
+   "start": 723.4,
+   "end": 724.88,
+   "text": ">> That's really great to hear because some"
+  },
+  {
+   "start": 724.88,
+   "end": 727.52,
+   "text": "companies I hear are really downsizing"
+  },
+  {
+   "start": 727.52,
+   "end": 729.4,
+   "text": "on junior hiring. It's rare to see"
+  },
+  {
+   "start": 729.4,
+   "end": 731.12,
+   "text": "companies invest really"
+  },
+  {
+   "start": 731.12,
+   "end": 731.84,
+   "text": ">> Yeah."
+  },
+  {
+   "start": 731.84,
+   "end": 732.64,
+   "text": ">> in cultivating"
+  },
+  {
+   "start": 732.64,
+   "end": 734.36,
+   "text": ">> I recognize that we're pushing against"
+  },
+  {
+   "start": 734.36,
+   "end": 736.28,
+   "text": "this avalanche and you know, maybe we'll"
+  },
+  {
+   "start": 736.28,
+   "end": 738.92,
+   "text": "win and maybe we won't, but like where"
+  },
+  {
+   "start": 738.92,
+   "end": 740.32,
+   "text": "is the next generation going to come"
+  },
+  {
+   "start": 740.32,
+   "end": 742.12,
+   "text": "from, right? Like you were an engineer"
+  },
+  {
+   "start": 742.12,
+   "end": 743.92,
+   "text": "for a long time. You're not an engineer"
+  },
+  {
+   "start": 743.92,
+   "end": 745.64,
+   "text": "right now, you're doing this full-time."
+  },
+  {
+   "start": 745.64,
+   "end": 747.16,
+   "text": "Does that worry you? Maybe you could be"
+  },
+  {
+   "start": 747.16,
+   "end": 748.4,
+   "text": "spending time. You probably mentor"
+  },
+  {
+   "start": 748.4,
+   "end": 750.84,
+   "text": "people on the side, right? So don't you"
+  },
+  {
+   "start": 750.84,
+   "end": 754.32,
+   "text": "want to leave 10 more genes or 20,"
+  },
+  {
+   "start": 754.32,
+   "end": 756.28,
+   "text": "right? Or actually hundreds of thousands"
+  },
+  {
+   "start": 756.28,
+   "end": 758.2,
+   "text": "from watching your shows. Like that"
+  },
+  {
+   "start": 758.2,
+   "end": 760.2,
+   "text": "feeling of like, I'm going to make more"
+  },
+  {
+   "start": 760.2,
+   "end": 762.12,
+   "text": "people make them generational wealth,"
+  },
+  {
+   "start": 762.12,
+   "end": 763.76,
+   "text": "make them comfortable in being able to"
+  },
+  {
+   "start": 763.76,
+   "end": 767.04,
+   "text": "build. Um for me AI is an opportunity to"
+  },
+  {
+   "start": 767.04,
+   "end": 769.44,
+   "text": "take my confidence in my ability to"
+  },
+  {
+   "start": 769.44,
+   "end": 772.4,
+   "text": "build and transfer it to the next"
+  },
+  {
+   "start": 772.4,
+   "end": 773.12,
+   "text": "generation."
+  },
+  {
+   "start": 773.12,
+   "end": 776.48,
+   "text": ">> So if you were back in your 20s starting"
+  },
+  {
+   "start": 776.48,
+   "end": 778.08,
+   "text": "all over again,"
+  },
+  {
+   "start": 778.08,
+   "end": 780.12,
+   "text": "what would you do if you wanted to land"
+  },
+  {
+   "start": 780.12,
+   "end": 781.72,
+   "text": "a job tomorrow? Maybe not tomorrow,"
+  },
+  {
+   "start": 781.72,
+   "end": 784.043,
+   "text": "maybe let's say 12 12 months."
+  },
+  {
+   "start": 784.043,
+   "end": 784.76,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 784.76,
+   "end": 787.4,
+   "text": ">> The basics, the basics, the basics. Like"
+  },
+  {
+   "start": 787.4,
+   "end": 788.92,
+   "text": "you've got to know HTTP, you've got to"
+  },
+  {
+   "start": 788.92,
+   "end": 790.32,
+   "text": "know DNS, you've got to know distributed"
+  },
+  {
+   "start": 790.32,
+   "end": 791.68,
+   "text": "systems, you've got to know deadlocks,"
+  },
+  {
+   "start": 791.68,
+   "end": 792.88,
+   "text": "you know how to got to know like you've"
+  },
+  {
+   "start": 792.88,
+   "end": 794.4,
+   "text": "got to know the basics. You've got to be"
+  },
+  {
+   "start": 794.4,
+   "end": 796.0,
+   "text": "able to drive stick shift cuz when your"
+  },
+  {
+   "start": 796.0,
+   "end": 797.8,
+   "text": "Waymo breaks down, who's changing the"
+  },
+  {
+   "start": 797.8,
+   "end": 799.16,
+   "text": "tire? You're going to just wait for a"
+  },
+  {
+   "start": 799.16,
+   "end": 800.08,
+   "text": "pickup, you're going to wait for a tow"
+  },
+  {
+   "start": 800.08,
+   "end": 801.52,
+   "text": "truck? Somebody's got to know the"
+  },
+  {
+   "start": 801.52,
+   "end": 803.44,
+   "text": "basics. So I would have just really"
+  },
+  {
+   "start": 803.44,
+   "end": 805.0,
+   "text": "strong understandings of the"
+  },
+  {
+   "start": 805.0,
+   "end": 808.2,
+   "text": "fundamentals and you can learn that from"
+  },
+  {
+   "start": 808.2,
+   "end": 809.84,
+   "text": "AI, you can learn that from people, you"
+  },
+  {
+   "start": 809.84,
+   "end": 812.24,
+   "text": "can dig in. That's thing number one. And"
+  },
+  {
+   "start": 812.24,
+   "end": 814.44,
+   "text": "thing number two is communication and"
+  },
+  {
+   "start": 814.44,
+   "end": 817.6,
+   "text": "clarity. Like programming is expressing"
+  },
+  {
+   "start": 817.6,
+   "end": 819.44,
+   "text": "intent clearly."
+  },
+  {
+   "start": 819.44,
+   "end": 821.4,
+   "text": "So that it compiles and runs and tests."
+  },
+  {
+   "start": 821.4,
+   "end": 823.76,
+   "text": "But then we see people in the way that"
+  },
+  {
+   "start": 823.76,
+   "end": 825.56,
+   "text": "they they do their turns, they do their"
+  },
+  {
+   "start": 825.56,
+   "end": 827.52,
+   "text": "AI turns, and you can see that they're"
+  },
+  {
+   "start": 827.52,
+   "end": 829.04,
+   "text": "thrashing. It's cuz they fundamentally"
+  },
+  {
+   "start": 829.04,
+   "end": 830.8,
+   "text": "don't understand becoming a clear"
+  },
+  {
+   "start": 830.8,
+   "end": 833.08,
+   "text": "communicator, one that can look a person"
+  },
+  {
+   "start": 833.08,
+   "end": 834.84,
+   "text": "in the eye, shake their hands, give a"
+  },
+  {
+   "start": 834.84,
+   "end": 837.4,
+   "text": "presentation, and explain the code is"
+  },
+  {
+   "start": 837.4,
+   "end": 838.48,
+   "text": "important as well. So we have our"
+  },
+  {
+   "start": 838.48,
+   "end": 840.48,
+   "text": "juniors try to do code reviews and"
+  },
+  {
+   "start": 840.48,
+   "end": 842.76,
+   "text": "justify. This is what the AI made, this"
+  },
+  {
+   "start": 842.76,
+   "end": 844.32,
+   "text": "is what I pushed back on, here are my"
+  },
+  {
+   "start": 844.32,
+   "end": 846.28,
+   "text": "turns. We're starting to explore, maybe"
+  },
+  {
+   "start": 846.28,
+   "end": 848.44,
+   "text": "they check in the conversation. Might do"
+  },
+  {
+   "start": 848.44,
+   "end": 849.72,
+   "text": "it anonymized, we might do it not"
+  },
+  {
+   "start": 849.72,
+   "end": 851.08,
+   "text": "anonymized. There's a really cool"
+  },
+  {
+   "start": 851.08,
+   "end": 853.04,
+   "text": "feature called Copilot Chronicle that"
+  },
+  {
+   "start": 853.04,
+   "end": 855.24,
+   "text": "takes all of your session data, private,"
+  },
+  {
+   "start": 855.24,
+   "end": 857.44,
+   "text": "local, and puts it into a SQLite. And"
+  },
+  {
+   "start": 857.44,
+   "end": 858.8,
+   "text": "then you can go and query it, and you"
+  },
+  {
+   "start": 858.8,
+   "end": 860.8,
+   "text": "can ask for tips. So at the beginning"
+  },
+  {
+   "start": 860.8,
+   "end": 861.88,
+   "text": "and at the end of the week you can come"
+  },
+  {
+   "start": 861.88,
+   "end": 863.32,
+   "text": "in with fresh eyes, and you can say,"
+  },
+  {
+   "start": 863.32,
+   "end": 864.52,
+   "text": "\"What could I do to be a more effective"
+  },
+  {
+   "start": 864.52,
+   "end": 866.8,
+   "text": "user of tokens? How can I save money?"
+  },
+  {
+   "start": 866.8,
+   "end": 868.52,
+   "text": "And how can I be a better programmer?\""
+  },
+  {
+   "start": 868.52,
+   "end": 870.08,
+   "text": ">> And you you showed off some of your"
+  },
+  {
+   "start": 870.08,
+   "end": 872.16,
+   "text": "projects. Do you think juniors who are"
+  },
+  {
+   "start": 872.16,
+   "end": 874.12,
+   "text": "working on personal projects like this,"
+  },
+  {
+   "start": 874.12,
+   "end": 876.24,
+   "text": "would that would that help them also"
+  },
+  {
+   "start": 876.24,
+   "end": 876.96,
+   "text": "land jobs?"
+  },
+  {
+   "start": 876.96,
+   "end": 878.68,
+   "text": ">> You know, that's so important. That's a"
+  },
+  {
+   "start": 878.68,
+   "end": 880.64,
+   "text": "great point. So many juniors will come"
+  },
+  {
+   "start": 880.64,
+   "end": 882.88,
+   "text": "to me and show me their portfolio, and"
+  },
+  {
+   "start": 882.88,
+   "end": 884.96,
+   "text": "it's like a tic-tac-toe game. That's"
+  },
+  {
+   "start": 884.96,
+   "end": 887.8,
+   "text": "fine, but it's been done, right?"
+  },
+  {
+   "start": 887.8,
+   "end": 890.28,
+   "text": "Uh one young person, God bless him,"
+  },
+  {
+   "start": 890.28,
+   "end": 891.32,
+   "text": "said,"
+  },
+  {
+   "start": 891.32,
+   "end": 893.44,
+   "text": "\"Uh bro, I uh"
+  },
+  {
+   "start": 893.44,
+   "end": 895.08,
+   "text": "I one-shotted Minecraft.\" And I was"
+  },
+  {
+   "start": 895.08,
+   "end": 896.12,
+   "text": "like, \"What do you mean you one-shotted"
+  },
+  {
+   "start": 896.12,
+   "end": 897.96,
+   "text": "Minecraft?\" Like he did it in one shot."
+  },
+  {
+   "start": 897.96,
+   "end": 899.32,
+   "text": "Like what did you say? What was the"
+  },
+  {
+   "start": 899.32,
+   "end": 901.36,
+   "text": "prompt? Uh \"Make me a clone of"
+  },
+  {
+   "start": 901.36,
+   "end": 902.6,
+   "text": "Minecraft.\""
+  },
+  {
+   "start": 902.6,
+   "end": 903.04,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 903.04,
+   "end": 904.36,
+   "text": ">> Like I said, \"Well look at that"
+  },
+  {
+   "start": 904.36,
+   "end": 906.4,
+   "text": "sentence, make me a clone of Minecraft.\""
+  },
+  {
+   "start": 906.4,
+   "end": 908.32,
+   "text": "Like what is what word what words are"
+  },
+  {
+   "start": 908.32,
+   "end": 910.44,
+   "text": "doing this semantic heavy lifting there?"
+  },
+  {
+   "start": 910.44,
+   "end": 912.4,
+   "text": "It's Minecraft, like within the word"
+  },
+  {
+   "start": 912.4,
+   "end": 914.32,
+   "text": "Minecraft. Imagine make me a clone of"
+  },
+  {
+   "start": 914.32,
+   "end": 915.839,
+   "text": "Minecraft. There's hanging off of that"
+  },
+  {
+   "start": 915.839,
+   "end": 917.72,
+   "text": "as a specification. I said, \"Do you"
+  },
+  {
+   "start": 917.72,
+   "end": 918.839,
+   "text": "think you could make me a clone of"
+  },
+  {
+   "start": 918.839,
+   "end": 920.28,
+   "text": "Minecraft except you're not allowed to"
+  },
+  {
+   "start": 920.28,
+   "end": 922.56,
+   "text": "use the word Minecraft?\" He couldn't do"
+  },
+  {
+   "start": 922.56,
+   "end": 925.08,
+   "text": "it. He tried you know, he tried using"
+  },
+  {
+   "start": 925.08,
+   "end": 927.04,
+   "text": "the word voxel. Like he tried like the"
+  },
+  {
+   "start": 927.04,
+   "end": 930.6,
+   "text": "the amount of words required exploded"
+  },
+  {
+   "start": 930.6,
+   "end": 932.56,
+   "text": "hugely. He's like, \"I didn't realize"
+  },
+  {
+   "start": 932.56,
+   "end": 934.04,
+   "text": "that the weight of these words was"
+  },
+  {
+   "start": 934.04,
+   "end": 936.64,
+   "text": "such.\" So, when applying to your main"
+  },
+  {
+   "start": 936.64,
+   "end": 938.48,
+   "text": "project, make something that you care"
+  },
+  {
+   "start": 938.48,
+   "end": 940.08,
+   "text": "about that's uniquely you. Make a"
+  },
+  {
+   "start": 940.08,
+   "end": 941.72,
+   "text": "website for your church or your mosque."
+  },
+  {
+   "start": 941.72,
+   "end": 943.04,
+   "text": "Make a website for your kids little"
+  },
+  {
+   "start": 943.04,
+   "end": 944.92,
+   "text": "league. Make a website for your Pokémon"
+  },
+  {
+   "start": 944.92,
+   "end": 946.16,
+   "text": "collection. Like don't show me"
+  },
+  {
+   "start": 946.16,
+   "end": 948.08,
+   "text": "Tic-Tac-Toe. Don't show me that you can"
+  },
+  {
+   "start": 948.08,
+   "end": 950.04,
+   "text": "one shot a clone of Minecraft. Make"
+  },
+  {
+   "start": 950.04,
+   "end": 951.32,
+   "text": "something that's that you're passionate"
+  },
+  {
+   "start": 951.32,
+   "end": 952.44,
+   "text": "about that makes your health better,"
+  },
+  {
+   "start": 952.44,
+   "end": 953.68,
+   "text": "your family better, your life better,"
+  },
+  {
+   "start": 953.68,
+   "end": 955.76,
+   "text": "your community better. And do that and"
+  },
+  {
+   "start": 955.76,
+   "end": 957.72,
+   "text": "make those things and those are people"
+  },
+  {
+   "start": 957.72,
+   "end": 959.0,
+   "text": "that will get our attention. And when"
+  },
+  {
+   "start": 959.0,
+   "end": 960.96,
+   "text": "they bring their portfolio in, it shows"
+  },
+  {
+   "start": 960.96,
+   "end": 963.52,
+   "text": "that this is a person of high agency"
+  },
+  {
+   "start": 963.52,
+   "end": 965.56,
+   "text": "who's excited to solve problems for"
+  },
+  {
+   "start": 965.56,
+   "end": 967.4,
+   "text": "humans. I'm not interested in your clone"
+  },
+  {
+   "start": 967.4,
+   "end": 968.8,
+   "text": "of Minecraft."
+  },
+  {
+   "start": 968.8,
+   "end": 971.96,
+   "text": ">> I like I like that. Um you have more"
+  },
+  {
+   "start": 971.96,
+   "end": 974.8,
+   "text": "demos that maybe you can show us to as"
+  },
+  {
+   "start": 974.8,
+   "end": 976.0,
+   "text": "inspiration for people."
+  },
+  {
+   "start": 976.0,
+   "end": 977.52,
+   "text": ">> Yeah, actually I have a really fun"
+  },
+  {
+   "start": 977.52,
+   "end": 979.08,
+   "text": "website that you might get a kick out. I"
+  },
+  {
+   "start": 979.08,
+   "end": 980.84,
+   "text": "made all these dumb tools, right? You"
+  },
+  {
+   "start": 980.84,
+   "end": 982.28,
+   "text": "probably vibe some tools for yourself,"
+  },
+  {
+   "start": 982.28,
+   "end": 984.24,
+   "text": "right? So, I made a website called Tiny"
+  },
+  {
+   "start": 984.24,
+   "end": 985.4,
+   "text": "Tool Town."
+  },
+  {
+   "start": 985.4,
+   "end": 987.16,
+   "text": "And Tiny Tool Town right now currently"
+  },
+  {
+   "start": 987.16,
+   "end": 990.68,
+   "text": "has 500 451 tiny tools. And this is a"
+  },
+  {
+   "start": 990.68,
+   "end": 993.16,
+   "text": "place, a catalog like GeoCities for dumb"
+  },
+  {
+   "start": 993.16,
+   "end": 995.44,
+   "text": "tools to live. So, if you have made a"
+  },
+  {
+   "start": 995.44,
+   "end": 997.88,
+   "text": "tool for an audience of one, then you"
+  },
+  {
+   "start": 997.88,
+   "end": 999.96,
+   "text": "could put it up here. They and what's"
+  },
+  {
+   "start": 999.96,
+   "end": 1001.72,
+   "text": "cool about it is that they are just"
+  },
+  {
+   "start": 1001.72,
+   "end": 1005.08,
+   "text": "GitHub issues. So, the entire database"
+  },
+  {
+   "start": 1005.08,
+   "end": 1007.2,
+   "text": "for the app is GitHub itself. So, if you"
+  },
+  {
+   "start": 1007.2,
+   "end": 1008.839,
+   "text": "have a GitHub, you can just go and"
+  },
+  {
+   "start": 1008.839,
+   "end": 1010.04,
+   "text": "submit an issue to my thing, put it in"
+  },
+  {
+   "start": 1010.04,
+   "end": 1011.839,
+   "text": "your GitHub. I'll suck it all in. The"
+  },
+  {
+   "start": 1011.839,
+   "end": 1014.04,
+   "text": "whole site is generated. So, there's all"
+  },
+  {
+   "start": 1014.04,
+   "end": 1017.16,
+   "text": "kinds of fun stuff here. Someone made um"
+  },
+  {
+   "start": 1017.16,
+   "end": 1019.2,
+   "text": "a click light that like lights up when"
+  },
+  {
+   "start": 1019.2,
+   "end": 1020.4,
+   "text": "they click in"
+  },
+  {
+   "start": 1020.4,
+   "end": 1022.56,
+   "text": "AI. When they click on a Mac rather."
+  },
+  {
+   "start": 1022.56,
+   "end": 1024.28,
+   "text": "This one said"
+  },
+  {
+   "start": 1024.28,
+   "end": 1026.079,
+   "text": "confetti. Like these are dumb. And"
+  },
+  {
+   "start": 1026.079,
+   "end": 1027.52,
+   "text": "what's great about it is that now"
+  },
+  {
+   "start": 1027.52,
+   "end": 1029.319,
+   "text": "they're dumb and we can all be dumb"
+  },
+  {
+   "start": 1029.319,
+   "end": 1031.28,
+   "text": "together. Check this out. My friend made"
+  },
+  {
+   "start": 1031.28,
+   "end": 1033.8,
+   "text": "a coloring book that was super cool. So,"
+  },
+  {
+   "start": 1033.8,
+   "end": 1036.48,
+   "text": "Maria here went and wanted to color"
+  },
+  {
+   "start": 1036.48,
+   "end": 1038.16,
+   "text": "through your stress. So, it's got a"
+  },
+  {
+   "start": 1038.16,
+   "end": 1040.0,
+   "text": "GitHub, it's got a license, and then I"
+  },
+  {
+   "start": 1040.0,
+   "end": 1042.52,
+   "text": "can go up here and color my list, you"
+  },
+  {
+   "start": 1042.52,
+   "end": 1044.72,
+   "text": "know, and then I can pick Yeah, it's"
+  },
+  {
+   "start": 1044.72,
+   "end": 1046.76,
+   "text": "like it's chill. Look, different accents"
+  },
+  {
+   "start": 1046.76,
+   "end": 1048.36,
+   "text": "and stuff. You can pick different"
+  },
+  {
+   "start": 1048.36,
+   "end": 1049.48,
+   "text": "patterns. Like, well, that's not"
+  },
+  {
+   "start": 1049.48,
+   "end": 1050.76,
+   "text": "actually dumb, that's actually amazing."
+  },
+  {
+   "start": 1050.76,
+   "end": 1052.48,
+   "text": "But You know what I'm saying? [laughter]"
+  },
+  {
+   "start": 1052.48,
+   "end": 1054.8,
+   "text": "Like, how freaking cool is that? I mean,"
+  },
+  {
+   "start": 1054.8,
+   "end": 1057.4,
+   "text": "come on. And that was probably just for"
+  },
+  {
+   "start": 1057.4,
+   "end": 1059.2,
+   "text": "her, but now it's for everybody. And if"
+  },
+  {
+   "start": 1059.2,
+   "end": 1061.08,
+   "text": "you go to Tiny Tool Town, I'm managing"
+  },
+  {
+   "start": 1061.08,
+   "end": 1064.4,
+   "text": "it all through agents. So, if I go back"
+  },
+  {
+   "start": 1064.4,
+   "end": 1066.68,
+   "text": "over and find Tiny Tool Town and I go"
+  },
+  {
+   "start": 1066.68,
+   "end": 1069.16,
+   "text": "and do Let's do a get pull to see if we"
+  },
+  {
+   "start": 1069.16,
+   "end": 1072.04,
+   "text": "have any new tools from yesterday. Okay."
+  },
+  {
+   "start": 1072.04,
+   "end": 1074.12,
+   "text": "And then we'll do a Tiny Tool Town"
+  },
+  {
+   "start": 1074.12,
+   "end": 1076.44,
+   "text": "triage, which is a skill. And that skill"
+  },
+  {
+   "start": 1076.44,
+   "end": 1079.6,
+   "text": "now is going to go off and explore, see"
+  },
+  {
+   "start": 1079.6,
+   "end": 1081.32,
+   "text": "if there's any new issues, any new PRs,"
+  },
+  {
+   "start": 1081.32,
+   "end": 1083.12,
+   "text": "or anything that I need to manage. And"
+  },
+  {
+   "start": 1083.12,
+   "end": 1086.4,
+   "text": "then, because I I I want to keep this"
+  },
+  {
+   "start": 1086.4,
+   "end": 1088.72,
+   "text": "this garden like free of weeds, there's"
+  },
+  {
+   "start": 1088.72,
+   "end": 1090.64,
+   "text": "all these requirements that I have to"
+  },
+  {
+   "start": 1090.64,
+   "end": 1092.0,
+   "text": "make sure that it's healthy, cuz you"
+  },
+  {
+   "start": 1092.0,
+   "end": 1093.4,
+   "text": "don't want to like have the neighborhood"
+  },
+  {
+   "start": 1093.4,
+   "end": 1095.16,
+   "text": "get get messed up. [laughter] So, if we"
+  },
+  {
+   "start": 1095.16,
+   "end": 1096.96,
+   "text": "go and look at our"
+  },
+  {
+   "start": 1096.96,
+   "end": 1099.4,
+   "text": "our issues, they're actually being"
+  },
+  {
+   "start": 1099.4,
+   "end": 1101.44,
+   "text": "managed by agents, cuz I want to know"
+  },
+  {
+   "start": 1101.44,
+   "end": 1103.16,
+   "text": "that they have an image, they have a"
+  },
+  {
+   "start": 1103.16,
+   "end": 1105.48,
+   "text": "license, they're made by a human. I have"
+  },
+  {
+   "start": 1105.48,
+   "end": 1107.52,
+   "text": "the agent go and like pre-check them to"
+  },
+  {
+   "start": 1107.52,
+   "end": 1109.52,
+   "text": "see if they're approval appropriate, and"
+  },
+  {
+   "start": 1109.52,
+   "end": 1111.32,
+   "text": "if they're not, then I'll reject them or"
+  },
+  {
+   "start": 1111.32,
+   "end": 1112.72,
+   "text": "I'll have a conversation and I'll say,"
+  },
+  {
+   "start": 1112.72,
+   "end": 1114.64,
+   "text": "\"Hey, this is a commercial product, not"
+  },
+  {
+   "start": 1114.64,
+   "end": 1116.84,
+   "text": "a tiny tool.\" Or it doesn't have a"
+  },
+  {
+   "start": 1116.84,
+   "end": 1118.6,
+   "text": "license. And then if it doesn't have a"
+  },
+  {
+   "start": 1118.6,
+   "end": 1120.28,
+   "text": "license, the bot will go and do all that"
+  },
+  {
+   "start": 1120.28,
+   "end": 1121.68,
+   "text": "kind of stuff. And then it builds, and"
+  },
+  {
+   "start": 1121.68,
+   "end": 1123.48,
+   "text": "then a new tool appears, and I've got"
+  },
+  {
+   "start": 1123.48,
+   "end": 1126.28,
+   "text": "light mode, dark mode, and I've got"
+  },
+  {
+   "start": 1126.28,
+   "end": 1128.08,
+   "text": "GeoCities mode, which looks like that."
+  },
+  {
+   "start": 1128.08,
+   "end": 1129.96,
+   "text": ">> I mean, it sounds really simple, but"
+  },
+  {
+   "start": 1129.96,
+   "end": 1131.56,
+   "text": "when you actually go into the details,"
+  },
+  {
+   "start": 1131.56,
+   "end": 1133.16,
+   "text": "it does get pretty complex."
+  },
+  {
+   "start": 1133.16,
+   "end": 1134.32,
+   "text": ">> It's funny that you mentioned that,"
+  },
+  {
+   "start": 1134.32,
+   "end": 1137.32,
+   "text": "because I I really This is unrelated to"
+  },
+  {
+   "start": 1137.32,
+   "end": 1139.92,
+   "text": "like AI, but people use databases too"
+  },
+  {
+   "start": 1139.92,
+   "end": 1140.44,
+   "text": "much."
+  },
+  {
+   "start": 1140.44,
+   "end": 1141.12,
+   "text": ">> Mhm."
+  },
+  {
+   "start": 1141.12,
+   "end": 1142.28,
+   "text": ">> You just don't need a database."
+  },
+  {
+   "start": 1142.28,
+   "end": 1142.88,
+   "text": ">> Mhm."
+  },
+  {
+   "start": 1142.88,
+   "end": 1145.44,
+   "text": ">> So, like this GitHub issues is a"
+  },
+  {
+   "start": 1145.44,
+   "end": 1148.04,
+   "text": "database. So, then do I call the GitHub"
+  },
+  {
+   "start": 1148.04,
+   "end": 1149.48,
+   "text": "issue API? No, of course not. It's a"
+  },
+  {
+   "start": 1149.48,
+   "end": 1150.92,
+   "text": "static website. It's generated with"
+  },
+  {
+   "start": 1150.92,
+   "end": 1152.96,
+   "text": "Astro. And then I just regenerate the"
+  },
+  {
+   "start": 1152.96,
+   "end": 1154.68,
+   "text": "site when a new tool comes in."
+  },
+  {
+   "start": 1154.68,
+   "end": 1156.0,
+   "text": "Everything's static, everything's on a"
+  },
+  {
+   "start": 1156.0,
+   "end": 1158.76,
+   "text": "CDN, it's infinitely scalable. Uh it's"
+  },
+  {
+   "start": 1158.76,
+   "end": 1161.64,
+   "text": "got quick searches. You can see as I'm"
+  },
+  {
+   "start": 1161.64,
+   "end": 1163.16,
+   "text": "searching everything's lightning fast."
+  },
+  {
+   "start": 1163.16,
+   "end": 1165.0,
+   "text": "All my websites are incredibly"
+  },
+  {
+   "start": 1165.0,
+   "end": 1166.92,
+   "text": "lightweight. This is a podcast that I do"
+  },
+  {
+   "start": 1166.92,
+   "end": 1169.8,
+   "text": "called Azure Friday. If I all of this is"
+  },
+  {
+   "start": 1169.8,
+   "end": 1171.28,
+   "text": "run out of a single JSON file and"
+  },
+  {
+   "start": 1171.28,
+   "end": 1173.44,
+   "text": "storage. I've got another podcast called"
+  },
+  {
+   "start": 1173.44,
+   "end": 1175.6,
+   "text": "Hanselminutes that I've done uh almost a"
+  },
+  {
+   "start": 1175.6,
+   "end": 1177.0,
+   "text": "thousand"
+  },
+  {
+   "start": 1177.0,
+   "end": 1180.16,
+   "text": "and 46 a thousand 46 episodes over the"
+  },
+  {
+   "start": 1180.16,
+   "end": 1183.0,
+   "text": "last 20 plus years. This entire thing is"
+  },
+  {
+   "start": 1183.0,
+   "end": 1184.56,
+   "text": "run out of three JSON files."
+  },
+  {
+   "start": 1184.56,
+   "end": 1185.12,
+   "text": ">> Wow."
+  },
+  {
+   "start": 1185.12,
+   "end": 1187.2,
+   "text": ">> Like what did I need Oh, I put a"
+  },
+  {
+   "start": 1187.2,
+   "end": 1188.84,
+   "text": "Postgres behind You don't need Postgres."
+  },
+  {
+   "start": 1188.84,
+   "end": 1191.12,
+   "text": "Come on. It's ridiculous. It's fast,"
+  },
+  {
+   "start": 1191.12,
+   "end": 1193.68,
+   "text": "right? Static Like this is this is fast"
+  },
+  {
+   "start": 1193.68,
+   "end": 1195.84,
+   "text": "and simple and easy. So why overthink"
+  },
+  {
+   "start": 1195.84,
+   "end": 1197.84,
+   "text": "it? And then I have a back end"
+  },
+  {
+   "start": 1197.84,
+   "end": 1199.32,
+   "text": "administration site that edits those"
+  },
+  {
+   "start": 1199.32,
+   "end": 1201.4,
+   "text": "JSON files. People get this idea that"
+  },
+  {
+   "start": 1201.4,
+   "end": 1202.88,
+   "text": "you need It's got to be real time. Like"
+  },
+  {
+   "start": 1202.88,
+   "end": 1205.64,
+   "text": "what is real time? Once an hour?"
+  },
+  {
+   "start": 1205.64,
+   "end": 1208.16,
+   "text": "Right? Cache it all. Like my blog, for"
+  },
+  {
+   "start": 1208.16,
+   "end": 1209.84,
+   "text": "example, I've got a blog that I've been"
+  },
+  {
+   "start": 1209.84,
+   "end": 1212.72,
+   "text": "working on since 2002. I ask people like"
+  },
+  {
+   "start": 1212.72,
+   "end": 1214.56,
+   "text": "what database do you think my blog runs"
+  },
+  {
+   "start": 1214.56,
+   "end": 1216.56,
+   "text": "on? Cuz I've got, you know, I go back to"
+  },
+  {
+   "start": 1216.56,
+   "end": 1218.56,
+   "text": "2007 and find something that I wrote"
+  },
+  {
+   "start": 1218.56,
+   "end": 1221.28,
+   "text": "about in 2000 I would say 2012 2007."
+  },
+  {
+   "start": 1221.28,
+   "end": 1223.4,
+   "text": "It's you know, it's instantaneous."
+  },
+  {
+   "start": 1223.4,
+   "end": 1225.76,
+   "text": "That's 22 years of my life. How much"
+  },
+  {
+   "start": 1225.76,
+   "end": 1227.52,
+   "text": "memory do you think that this takes up?"
+  },
+  {
+   "start": 1227.52,
+   "end": 1228.96,
+   "text": ">> Terabyte?"
+  },
+  {
+   "start": 1228.96,
+   "end": 1229.88,
+   "text": ">> 300 megs."
+  },
+  {
+   "start": 1229.88,
+   "end": 1230.68,
+   "text": ">> Oh, wow."
+  },
+  {
+   "start": 1230.68,
+   "end": 1233.04,
+   "text": ">> It's 300 megs of XML. I hold the entire"
+  },
+  {
+   "start": 1233.04,
+   "end": 1235.16,
+   "text": "thing in memory as a DOM. I cache it and"
+  },
+  {
+   "start": 1235.16,
+   "end": 1236.84,
+   "text": "the and I only cache I only"
+  },
+  {
+   "start": 1236.84,
+   "end": 1238.32,
+   "text": "I only invalidate the cache when I write"
+  },
+  {
+   "start": 1238.32,
+   "end": 1239.72,
+   "text": "a new blog post. It's effectively a"
+  },
+  {
+   "start": 1239.72,
+   "end": 1241.96,
+   "text": "static website. But it's not. I just"
+  },
+  {
+   "start": 1241.96,
+   "end": 1244.28,
+   "text": "hold the entire database in memory cuz"
+  },
+  {
+   "start": 1244.28,
+   "end": 1245.04,
+   "text": "it's just text."
+  },
+  {
+   "start": 1245.04,
+   "end": 1247.32,
+   "text": ">> I'm very fascinated by all the projects"
+  },
+  {
+   "start": 1247.32,
+   "end": 1249.28,
+   "text": "that you have. You have your blog, your"
+  },
+  {
+   "start": 1249.28,
+   "end": 1251.12,
+   "text": "multiple podcasts, and all your"
+  },
+  {
+   "start": 1251.12,
+   "end": 1253.48,
+   "text": "projects. How do you manage your time?"
+  },
+  {
+   "start": 1253.48,
+   "end": 1255.28,
+   "text": ">> Well, I mean I manage it"
+  },
+  {
+   "start": 1255.28,
+   "end": 1256.304,
+   "text": "calmly."
+  },
+  {
+   "start": 1256.304,
+   "end": 1256.68,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1256.68,
+   "end": 1258.48,
+   "text": ">> I manage it with things like my, you"
+  },
+  {
+   "start": 1258.48,
+   "end": 1260.92,
+   "text": "know, my Hansel projects. Like it's it's"
+  },
+  {
+   "start": 1260.92,
+   "end": 1262.52,
+   "text": "okay to not want to work on something"
+  },
+  {
+   "start": 1262.52,
+   "end": 1264.44,
+   "text": "today. It's okay to think about these"
+  },
+  {
+   "start": 1264.44,
+   "end": 1266.08,
+   "text": "are the projects I care more about."
+  },
+  {
+   "start": 1266.08,
+   "end": 1267.96,
+   "text": ">> Is that your actual studio?"
+  },
+  {
+   "start": 1267.96,
+   "end": 1268.094,
+   "text": ">> Okay,"
+  },
+  {
+   "start": 1268.094,
+   "end": 1268.36,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1268.36,
+   "end": 1269.0,
+   "text": ">> so it's all real."
+  },
+  {
+   "start": 1269.0,
+   "end": 1271.6,
+   "text": ">> I don't do like fake demos. Anyone"
+  },
+  {
+   "start": 1271.6,
+   "end": 1273.52,
+   "text": "Anyone will tell you. We can actually"
+  },
+  {
+   "start": 1273.52,
+   "end": 1275.28,
+   "text": "like rerun the app and refresh it. This"
+  },
+  {
+   "start": 1275.28,
+   "end": 1277.52,
+   "text": "one here is from the first um you know,"
+  },
+  {
+   "start": 1277.52,
+   "end": 1280.24,
+   "text": "rebuild and run. Um"
+  },
+  {
+   "start": 1280.24,
+   "end": 1281.88,
+   "text": "So, yeah, this is real. This is this"
+  },
+  {
+   "start": 1281.88,
+   "end": 1283.48,
+   "text": "this literally you are my maintenance"
+  },
+  {
+   "start": 1283.48,
+   "end": 1285.68,
+   "text": "agents. It it has a daily brief. It"
+  },
+  {
+   "start": 1285.68,
+   "end": 1287.28,
+   "text": "sends me my actions."
+  },
+  {
+   "start": 1287.28,
+   "end": 1288.64,
+   "text": "Yeah, this is my real computer. This is"
+  },
+  {
+   "start": 1288.64,
+   "end": 1290.28,
+   "text": "not like [laughter] a not a demo"
+  },
+  {
+   "start": 1290.28,
+   "end": 1291.44,
+   "text": "computer."
+  },
+  {
+   "start": 1291.44,
+   "end": 1292.6,
+   "text": "But yeah, like I've got all kinds of"
+  },
+  {
+   "start": 1292.6,
+   "end": 1294.0,
+   "text": "dumb stuff that I'm doing. Those are the"
+  },
+  {
+   "start": 1294.0,
+   "end": 1296.16,
+   "text": "podcasts, this Tiny Tool Town. This is a"
+  },
+  {
+   "start": 1296.16,
+   "end": 1298.04,
+   "text": "2E that I'm working on for getting"
+  },
+  {
+   "start": 1298.04,
+   "end": 1299.88,
+   "text": "applications. Mac has this really cool"
+  },
+  {
+   "start": 1299.88,
+   "end": 1302.48,
+   "text": "feature where you click on the desktop"
+  },
+  {
+   "start": 1302.48,
+   "end": 1303.96,
+   "text": "and everything runs away and then you"
+  },
+  {
+   "start": 1303.96,
+   "end": 1305.12,
+   "text": "can access your desktop and then"
+  },
+  {
+   "start": 1305.12,
+   "end": 1306.8,
+   "text": "everything comes back. So, I wanted that"
+  },
+  {
+   "start": 1306.8,
+   "end": 1308.64,
+   "text": "on Windows, so I wrote an app called"
+  },
+  {
+   "start": 1308.64,
+   "end": 1310.8,
+   "text": "Peak Desktop that lets you do that. I'm"
+  },
+  {
+   "start": 1310.8,
+   "end": 1312.76,
+   "text": "working on the Open Claw Windows node"
+  },
+  {
+   "start": 1312.76,
+   "end": 1314.56,
+   "text": "right now. So, yeah, you can go and look"
+  },
+  {
+   "start": 1314.56,
+   "end": 1315.84,
+   "text": "at my like everything I do is in the"
+  },
+  {
+   "start": 1315.84,
+   "end": 1318.52,
+   "text": "open, so we can go to GitHub and and see"
+  },
+  {
+   "start": 1318.52,
+   "end": 1321.32,
+   "text": "that yeah. How do you manage it? You"
+  },
+  {
+   "start": 1321.32,
+   "end": 1323.52,
+   "text": "realize that it's okay to not manage it,"
+  },
+  {
+   "start": 1323.52,
+   "end": 1324.425,
+   "text": "if that makes sense."
+  },
+  {
+   "start": 1324.425,
+   "end": 1325.2,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1325.2,
+   "end": 1327.0,
+   "text": ">> Let stuff go. All these games, all these"
+  },
+  {
+   "start": 1327.0,
+   "end": 1328.8,
+   "text": "toys, they're digitally signed, they"
+  },
+  {
+   "start": 1328.8,
+   "end": 1331.4,
+   "text": "have a proper CI/CD, I do formal"
+  },
+  {
+   "start": 1331.4,
+   "end": 1333.96,
+   "text": "releases. I can even go back to that"
+  },
+  {
+   "start": 1333.96,
+   "end": 1337.08,
+   "text": "project and tell you when stuff was"
+  },
+  {
+   "start": 1337.08,
+   "end": 1339.96,
+   "text": "released and um some of them are stale."
+  },
+  {
+   "start": 1339.96,
+   "end": 1340.96,
+   "text": "I think I had There you go. Look at this"
+  },
+  {
+   "start": 1340.96,
+   "end": 1343.04,
+   "text": "one here. This was an app I wrote called"
+  },
+  {
+   "start": 1343.04,
+   "end": 1345.52,
+   "text": "Toasty that would pop up the little"
+  },
+  {
+   "start": 1345.52,
+   "end": 1347.8,
+   "text": "notification toast when your agent was"
+  },
+  {
+   "start": 1347.8,
+   "end": 1349.48,
+   "text": "finished. But you can see I haven't"
+  },
+  {
+   "start": 1349.48,
+   "end": 1351.0,
+   "text": "released uh"
+  },
+  {
+   "start": 1351.0,
+   "end": 1353.44,
+   "text": "it's been 0.5 for the last the last 100"
+  },
+  {
+   "start": 1353.44,
+   "end": 1354.36,
+   "text": "days."
+  },
+  {
+   "start": 1354.36,
+   "end": 1355.76,
+   "text": "So, like oh, maybe I need to go and"
+  },
+  {
+   "start": 1355.76,
+   "end": 1357.92,
+   "text": "refresh that. I would have forgotten"
+  },
+  {
+   "start": 1357.92,
+   "end": 1360.84,
+   "text": "that that has become stale. Baby Smash,"
+  },
+  {
+   "start": 1360.84,
+   "end": 1363.48,
+   "text": "last release was 2 months ago. So, maybe"
+  },
+  {
+   "start": 1363.48,
+   "end": 1365.52,
+   "text": "it's time to go and check the PRs and"
+  },
+  {
+   "start": 1365.52,
+   "end": 1366.24,
+   "text": "cut a release."
+  },
+  {
+   "start": 1366.24,
+   "end": 1369.0,
+   "text": ">> So, I guess the the takeaway I'm I'm"
+  },
+  {
+   "start": 1369.0,
+   "end": 1370.72,
+   "text": "getting from here is that if you're"
+  },
+  {
+   "start": 1370.72,
+   "end": 1372.76,
+   "text": "working on projects, make it actually"
+  },
+  {
+   "start": 1372.76,
+   "end": 1374.92,
+   "text": "work instead of doing just a clone."
+  },
+  {
+   "start": 1374.92,
+   "end": 1376.52,
+   "text": ">> Oh, yeah. Make something fun, make"
+  },
+  {
+   "start": 1376.52,
+   "end": 1378.64,
+   "text": "something interesting, make it real and"
+  },
+  {
+   "start": 1378.64,
+   "end": 1381.44,
+   "text": "um care about it. Like weed your garden."
+  },
+  {
+   "start": 1381.44,
+   "end": 1384.4,
+   "text": ">> Love it. Before we wrap up, I have some"
+  },
+  {
+   "start": 1384.4,
+   "end": 1387.305,
+   "text": "rapid-fire short questions."
+  },
+  {
+   "start": 1387.305,
+   "end": 1387.8,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1387.8,
+   "end": 1388.4,
+   "text": ">> Uh"
+  },
+  {
+   "start": 1388.4,
+   "end": 1390.4,
+   "text": "how many do we have? 1 2 3 4 We have"
+  },
+  {
+   "start": 1390.4,
+   "end": 1392.2,
+   "text": "seven questions. So, it can be quick"
+  },
+  {
+   "start": 1392.2,
+   "end": 1393.32,
+   "text": "one-phrase answers."
+  },
+  {
+   "start": 1393.32,
+   "end": 1393.52,
+   "text": ">> All right."
+  },
+  {
+   "start": 1393.52,
+   "end": 1394.52,
+   "text": ">> Yeah, are you ready for this?"
+  },
+  {
+   "start": 1394.52,
+   "end": 1395.12,
+   "text": ">> Let's do it."
+  },
+  {
+   "start": 1395.12,
+   "end": 1397.8,
+   "text": ">> Okay. Generalist or specialist?"
+  },
+  {
+   "start": 1397.8,
+   "end": 1398.88,
+   "text": ">> T-shaped."
+  },
+  {
+   "start": 1398.88,
+   "end": 1400.12,
+   "text": ">> T-shaped, so both."
+  },
+  {
+   "start": 1400.12,
+   "end": 1402.56,
+   "text": ">> Yes. Uh pick pick specialization in one"
+  },
+  {
+   "start": 1402.56,
+   "end": 1403.96,
+   "text": "area, but you have to be a Swiss Army"
+  },
+  {
+   "start": 1403.96,
+   "end": 1405.6,
+   "text": "knife across the top of the T."
+  },
+  {
+   "start": 1405.6,
+   "end": 1408.32,
+   "text": ">> Should we study computer science or AI?"
+  },
+  {
+   "start": 1408.32,
+   "end": 1409.8,
+   "text": ">> You should study software engineering."
+  },
+  {
+   "start": 1409.8,
+   "end": 1411.16,
+   "text": "Computer science is the science of"
+  },
+  {
+   "start": 1411.16,
+   "end": 1413.88,
+   "text": "computing, and AI is machine learning,"
+  },
+  {
+   "start": 1413.88,
+   "end": 1415.48,
+   "text": "but I am have a degree in software"
+  },
+  {
+   "start": 1415.48,
+   "end": 1416.92,
+   "text": "engineering, which is the actual"
+  },
+  {
+   "start": 1416.92,
+   "end": 1417.76,
+   "text": "shipping part."
+  },
+  {
+   "start": 1417.76,
+   "end": 1418.72,
+   "text": ">> Okay."
+  },
+  {
+   "start": 1418.72,
+   "end": 1418.8,
+   "text": "Um"
+  },
+  {
+   "start": 1418.8,
+   "end": 1419.6,
+   "text": ">> Controversial controversial?"
+  },
+  {
+   "start": 1419.6,
+   "end": 1420.92,
+   "text": ">> Controversial."
+  },
+  {
+   "start": 1420.92,
+   "end": 1423.12,
+   "text": "What's the one language everyone should"
+  },
+  {
+   "start": 1423.12,
+   "end": 1423.48,
+   "text": "learn?"
+  },
+  {
+   "start": 1423.48,
+   "end": 1425.32,
+   "text": ">> This is going to be another spicy one."
+  },
+  {
+   "start": 1425.32,
+   "end": 1427.04,
+   "text": "Uh and this is bad, and I apologize."
+  },
+  {
+   "start": 1427.04,
+   "end": 1427.84,
+   "text": "English."
+  },
+  {
+   "start": 1427.84,
+   "end": 1428.571,
+   "text": ">> Oh."
+  },
+  {
+   "start": 1428.571,
+   "end": 1429.4,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1429.4,
+   "end": 1430.76,
+   "text": ">> I I I"
+  },
+  {
+   "start": 1430.76,
+   "end": 1432.4,
+   "text": "People who don't have English fluency"
+  },
+  {
+   "start": 1432.4,
+   "end": 1433.52,
+   "text": "will struggle right now, and I think"
+  },
+  {
+   "start": 1433.52,
+   "end": 1435.0,
+   "text": "that is unfortunate. I think English is"
+  },
+  {
+   "start": 1435.0,
+   "end": 1436.8,
+   "text": "a lot like JavaScript. It's not the"
+  },
+  {
+   "start": 1436.8,
+   "end": 1438.88,
+   "text": "language that we deserve, but it is the"
+  },
+  {
+   "start": 1438.88,
+   "end": 1439.76,
+   "text": "language that we have."
+  },
+  {
+   "start": 1439.76,
+   "end": 1442.44,
+   "text": ">> One AI tool developers should try out."
+  },
+  {
+   "start": 1442.44,
+   "end": 1443.636,
+   "text": ">> Oh, get GitHub Copilot."
+  },
+  {
+   "start": 1443.636,
+   "end": 1443.92,
+   "text": ">> [laughter]"
+  },
+  {
+   "start": 1443.92,
+   "end": 1446.4,
+   "text": ">> Sorry, got to pay the bills."
+  },
+  {
+   "start": 1446.4,
+   "end": 1448.4,
+   "text": ">> Whiteboard interviews, are they useful"
+  },
+  {
+   "start": 1448.4,
+   "end": 1449.52,
+   "text": "or or outdated?"
+  },
+  {
+   "start": 1449.52,
+   "end": 1451.32,
+   "text": ">> I love whiteboard interviews because"
+  },
+  {
+   "start": 1451.32,
+   "end": 1453.04,
+   "text": "they're personal. I'm not interested in"
+  },
+  {
+   "start": 1453.04,
+   "end": 1454.44,
+   "text": "what you put on the whiteboard. I'm"
+  },
+  {
+   "start": 1454.44,
+   "end": 1456.28,
+   "text": "interested in watching you think. I want"
+  },
+  {
+   "start": 1456.28,
+   "end": 1457.84,
+   "text": "to ask you hard questions, and I want"
+  },
+  {
+   "start": 1457.84,
+   "end": 1459.36,
+   "text": "you to not know the answer, and that's"
+  },
+  {
+   "start": 1459.36,
+   "end": 1460.16,
+   "text": "okay."
+  },
+  {
+   "start": 1460.16,
+   "end": 1461.72,
+   "text": ">> And communicate your answers, right?"
+  },
+  {
+   "start": 1461.72,
+   "end": 1462.88,
+   "text": ">> 100% agree."
+  },
+  {
+   "start": 1462.88,
+   "end": 1464.56,
+   "text": ">> What's the most exciting thing happening"
+  },
+  {
+   "start": 1464.56,
+   "end": 1465.56,
+   "text": "in tech right now?"
+  },
+  {
+   "start": 1465.56,
+   "end": 1468.16,
+   "text": ">> Um medical technology. Like I have uh an"
+  },
+  {
+   "start": 1468.16,
+   "end": 1470.76,
+   "text": "insulin pump, and I have uh a sensor"
+  },
+  {
+   "start": 1470.76,
+   "end": 1471.96,
+   "text": "embedded in my arm, and I have an"
+  },
+  {
+   "start": 1471.96,
+   "end": 1473.92,
+   "text": "open-source artificial pancreas. That is"
+  },
+  {
+   "start": 1473.92,
+   "end": 1475.84,
+   "text": "an open-source project that is based on"
+  },
+  {
+   "start": 1475.84,
+   "end": 1477.64,
+   "text": "the open artificial pancreas project"
+  },
+  {
+   "start": 1477.64,
+   "end": 1479.6,
+   "text": "started by Dana Lewis, and uh it has"
+  },
+  {
+   "start": 1479.6,
+   "end": 1480.92,
+   "text": "made my life easier."
+  },
+  {
+   "start": 1480.92,
+   "end": 1482.24,
+   "text": ">> Becoming a bionic"
+  },
+  {
+   "start": 1482.24,
+   "end": 1483.96,
+   "text": ">> I've been bionic [laughter] for so many"
+  },
+  {
+   "start": 1483.96,
+   "end": 1485.36,
+   "text": "years. So many years."
+  },
+  {
+   "start": 1485.36,
+   "end": 1487.48,
+   "text": ">> And last question, will AI replace"
+  },
+  {
+   "start": 1487.48,
+   "end": 1488.4,
+   "text": "software engineers?"
+  },
+  {
+   "start": 1488.4,
+   "end": 1489.44,
+   "text": ">> It better not."
+  },
+  {
+   "start": 1489.44,
+   "end": 1490.36,
+   "text": ">> I hope not, too."
+  },
+  {
+   "start": 1490.36,
+   "end": 1492.0,
+   "text": ">> not. That would That would be bad. That"
+  },
+  {
+   "start": 1492.0,
+   "end": 1494.16,
+   "text": "is not That is not my goal."
+  },
+  {
+   "start": 1494.16,
+   "end": 1495.8,
+   "text": ">> Well, thank you so much for your time."
+  },
+  {
+   "start": 1495.8,
+   "end": 1497.8,
+   "text": "It was great having a conversation with"
+  },
+  {
+   "start": 1497.8,
+   "end": 1498.08,
+   "text": "you."
+  },
+  {
+   "start": 1498.08,
+   "end": 1500.88,
+   "text": ">> Thank you for hanging out with me."
+  }
+ ]
 }
