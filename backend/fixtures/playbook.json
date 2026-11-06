@@ -1,31 +1,50 @@
 {
-  "hook_patterns": [
-    {
-      "name": "nobody tells you",
-      "description": "Open by promising a hidden truth about a common experience, then state it bluntly in the next sentence.",
-      "examples": ["Nobody tells you this about raising money."],
-      "avg_views": 1850000
-    },
-    {
-      "name": "shocking decision + payoff",
-      "description": "First line is an unusual action the creator took, second half is the result.",
-      "examples": ["I fired myself for a week and it saved the company."],
-      "avg_views": 920000
-    },
-    {
-      "name": "redefine the word",
-      "description": "Negate the common definition of a familiar problem, then give the real one.",
-      "examples": ["Burnout is not about hours."],
-      "avg_views": 410000
-    }
-  ],
-  "on_screen_text_style": "2-3 words that restate the hook, shown in the first second, lowercase, with one line reused as the punchline.",
-  "ideal_duration_s": 40,
-  "pacing_wps": 2.7,
-  "caption_formula": "one lowercase sentence that teases the clip, no emoji, 2-3 niche hashtags.",
-  "takeaways": [
-    "Open with the claim, never with context.",
-    "Keep clips between 30 and 50 seconds.",
-    "Put the hook on screen in 2-3 words within the first second."
-  ]
+ "hook_patterns": [
+  {
+   "name": "Intrigue & Expose",
+   "description": "Calls out hidden truths or controversial claims about well-known entities right away to spark curiosity.",
+   "examples": [
+    "Something is off about Susan Dell and I think we can all see why.",
+    "Here's what they're not telling you about Muse, Meta's new AI agent. I've been using it for a few"
+   ],
+   "avg_views": 4841000
+  },
+  {
+   "name": "Bold Personal Claim",
+   "description": "Presents a high-stakes personal or professional challenge in the first line to establish authority.",
+   "examples": [
+    "Fashion trends move fast, but as a founder, I need to move even faster.",
+    "If you could please say 60 seconds, that would mean so much to me."
+   ],
+   "avg_views": 49218200
+  },
+  {
+   "name": "Counter-Intuitive Observation",
+   "description": "Hooks viewers by stating an unusual or wide-reaching statistic that shifts perspective instantly.",
+   "examples": [
+    "One in five people on Earth live in India, so when something works here, it can have ripple effects everywhere.",
+    "What year is it? 2026, 2019, 1448, Reh, we're 8 or 2686? 115, 115. Taiwan, North Korea, you both agree on the year."
+   ],
+   "avg_views": 6846581
+  },
+  {
+   "name": "Direct Interview Question",
+   "description": "Jumps straight into an active conversation or on-the-street interview scenario without an intro.",
+   "examples": [
+    "What course did you just graduate from? I studied computer science with AI.",
+    "Name please."
+   ],
+   "avg_views": 271450
+  }
+ ],
+ "on_screen_text_style": "Short 2-4 word phrase highlights appearing bottom-to-center, bold sans-serif white text with black outline, synced phrase-by-phrase with spoken words to emphasize key nouns.",
+ "ideal_duration_s": 65.0,
+ "pacing_wps": 3.1,
+ "caption_formula": "Short and punchy hook-driven caption under two lines, minimal emojis, 3-5 relevant lowercase niche hashtags.",
+ "takeaways": [
+  "Lead with a high-stakes question or an expose hook within the first 3 seconds.",
+  "Maintain a fast speaking pace around 3.1 words per second with dead air trimmed aggressively.",
+  "Use bold, phrase-synced animated captions at the bottom center to hold attention.",
+  "Incorporate rapid b-roll or screen recording cutaways every few seconds to prevent drop-off."
+ ]
 }

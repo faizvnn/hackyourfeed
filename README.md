@@ -62,14 +62,14 @@ Needs `ffmpeg` on PATH for stage 6 (`brew install ffmpeg`).
 | Team | Files | Done when |
 |---|---|---|
 | A — [1,2] | `pipeline/s1_ingest.py`, `s2_understand.py`, `prompts/understand.md` | `make stage N=1 URL=<demo podcast> SAVE=1` then `make stage N=2 SAVE=1` produce real `transcript.json` / `understanding.json` |
-| B — [3,4] | `pipeline/s3_oriane.py`, `s4_playbook.py`, `prompts/playbook.md` | `make stage N=3 SAVE=1` returns ≥30 real videos with `hook_text` filled; `make stage N=4 SAVE=1` gives 4–6 patterns |
+| B — [3,4] | `pipeline/s3_oriane.py`, `s4_playbook.py`, `prompts/playbook.md` | **Done (Nov 6):** `make stage N=3 SAVE=1` returns ≥30 real videos with `hook_text` filled; `make stage N=4 SAVE=1` gives 4–6 patterns. Quality now depends on stage 2 emitting spoken phrases, not nouns |
 | C — [5,6] | `pipeline/s5_direct.py`, `s6_render.py`, `prompts/direct.md` | `make stage N=5 SAVE=1` then `make stage N=6` writes 3 playable 9:16 mp4s to `backend/work/renders/` |
 | D — [7] | `frontend/` (Lovable) | UI runs the full flow against `make dev` with fixtures, shows each section as it arrives |
 
 ## Keys
 
-- GMI Cloud: `GMI_BASE_URL`, `GMI_API_KEY`, `GMI_MODEL` — OpenAI-compatible, confirm model id from the credits email.
-- Oriane: `ORIANE_API_KEY`; header name defaults to `x-api-key`, confirm. Spec: `docs/oriane-openapi.json`, endpoint `POST https://connect.oriane.xyz/rest/contents/search`.
+- GMI Cloud: `GMI_BASE_URL`, `GMI_API_KEY`, `GMI_MODEL` — OpenAI-compatible. Use `google/gemini-3.5-flash-lite` (verified for stage 4, ~4 s per playbook, and for video in `analyze_clip.py`). `google/gemini-3.5-flash` returns 400 on long prompts through GMI; see `docs/clip-analysis-notes.md`.
+- Oriane: `ORIANE_API_KEY`, sent as `Authorization: Bearer` (`x-api-key` is rejected). Spec: `docs/oriane-openapi.json`, endpoint `POST https://connect.oriane.xyz/rest/contents/search`.
 - Compound.mov: `COMPOUND_API_KEY`, used in `s6_render.compound_polish()` (TODO).
 
 ## Integration plan
