@@ -17,7 +17,7 @@ import math
 import os
 import re
 import subprocess
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from ..config import PUBLIC_BASE_URL, RENDER_DIR, use_fixture
@@ -38,8 +38,10 @@ class RenderOptions:
     font: str = "Arial" if os.name == "nt" else "DejaVu Sans"
     hook_seconds: float = 2.0
     timeout: float = 300
-    ffmpeg: str = "ffmpeg"
-    ffprobe: str = "ffprobe"
+    # Honour FFMPEG_BIN/FFPROBE_BIN even when options are built directly (tests, library use), so a
+    # libass-capable build configured in .env is used instead of whatever `ffmpeg` is on PATH.
+    ffmpeg: str = field(default_factory=lambda: os.getenv("FFMPEG_BIN", "ffmpeg"))
+    ffprobe: str = field(default_factory=lambda: os.getenv("FFPROBE_BIN", "ffprobe"))
 
     @classmethod
     def from_env(cls) -> RenderOptions:
@@ -82,6 +84,15 @@ def _execute(args: list[str], *, timeout: float, cwd: Path | None = None) -> str
         raise RuntimeError(f"{Path(args[0]).name} failed: {(exc.stderr or '')[-1800:]}") from exc
 
 
+def has_libass(ffmpeg: str = "ffmpeg") -> bool:
+    """True when this ffmpeg build has the libass `ass` filter the captions need."""
+    try:
+        r = subprocess.run([ffmpeg, "-hide_banner", "-h", "filter=ass"], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return r.stdout.lstrip().startswith("Filter ass")
+
+
 def probe(path: Path, options: RenderOptions) -> dict:
     data = json.loads(_execute([
         options.ffprobe, "-v", "error", "-show_format", "-show_streams",
@@ -108,6 +119,11 @@ def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | 
         raise ValueError("stage 5 returned no clips")
     options = options or RenderOptions.from_env()
     options.validate()
+    if not has_libass(options.ffmpeg):
+        raise RuntimeError(
+            f"{options.ffmpeg} has no libass ('ass' filter), which the adaptive captions need. Point FFMPEG_BIN "
+            "(and FFPROBE_BIN) at a build that has it, e.g. brew install ffmpeg-full -> "
+            "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg, or set RENDER_ENGINE=classic.")
     src = Path(t.video_path).resolve()
     source = probe(src, options)
     out_dir = (RENDER_DIR / job_id).resolve()
@@ -160,7 +176,9 @@ def ffmpeg_cut(src: Path, clip: Clip, subtitles: Path, out: Path, *, options: Re
         center = options.crop_center_x
         graph = (f"[0:v]setpts=PTS-STARTPTS,scale={w}:{h}:force_original_aspect_ratio=increase,"
                  f"crop={w}:{h}:x='max(0,min(iw-ow,iw*{center}-ow/2))'[framed];")
-    graph += f"[framed]setsar=1,ass={subtitles.name},fps={options.fps},format=yuv420p[v]"
+    # Named option: a build without libass then fails with "No such filter: 'ass'" instead of the
+    # misleading "No option name near '<file>'" the positional form produces.
+    graph += f"[framed]setsar=1,ass=filename={subtitles.name},fps={options.fps},format=yuv420p[v]"
     _execute([
         options.ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
         "-ss", str(clip.start), "-i", str(src.resolve()), "-t", str(clip.end - clip.start),

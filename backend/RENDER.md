@@ -5,7 +5,10 @@
 > (`RENDER_ENGINE=classic`) is the Pillow-overlay render in `app/pipeline/s6_render.py`.
 > `python -m app.render_cli` always uses this engine, flag or not, so you can test it
 > in isolation. It needs ffmpeg built with libass (`ffmpeg -filters | grep ass`); the
-> homebrew build on at least one team Mac lacks it.
+> homebrew build on at least one team Mac lacks it, so point `FFMPEG_BIN`/`FFPROBE_BIN`
+> in `backend/.env` at a build that has it (e.g. `/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg`).
+> The engine checks for the `ass` filter at start and fails with that hint; the
+> integration tests skip instead.
 >
 > Not yet wired: the stage 3→4→5 caption-style plumbing described under
 > "Contract with stages 1 and 5" (OCR observations, `Playbook.caption_style`,

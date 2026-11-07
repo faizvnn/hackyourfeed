@@ -74,7 +74,9 @@ class SubtitleTests(unittest.TestCase):
         self.assertTrue(all(0 <= a < b <= 6.001 for g in groups for a, b, _ in g))
 
 
-@unittest.skipUnless(shutil.which("ffmpeg") and shutil.which("ffprobe"), "FFmpeg/FFprobe required")
+@unittest.skipUnless(shutil.which(renderer.RenderOptions().ffmpeg) and shutil.which(renderer.RenderOptions().ffprobe)
+                     and renderer.has_libass(renderer.RenderOptions().ffmpeg),
+                     "FFmpeg with libass required (set FFMPEG_BIN/FFPROBE_BIN)")
 class RenderIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

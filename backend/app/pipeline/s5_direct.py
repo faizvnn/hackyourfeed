@@ -13,9 +13,11 @@ How:
   chars it is split into chunks and each chunk is directed separately; the
   candidates are then pooled.
 - One LLM call per chunk fills prompts/direct.md, asking for CANDIDATES clips.
-- Output is cleaned before validation: times snapped to segment boundaries,
-  lengths bounded by MIN_LEN..MAX_LEN, overlaps resolved by score, pattern
-  names matched back to the playbook. The top TOP_N by score are returned.
+- Output is cleaned before validation: the span is realigned to open where
+  the hook is actually spoken (the model's [mm:ss] arithmetic is unreliable
+  and its start/end often miss the lines it quotes), times snapped to segment
+  boundaries, lengths bounded by MIN_LEN..MAX_LEN, overlaps resolved by score,
+  pattern names matched back to the playbook. The top TOP_N by score are returned.
 
 Env knobs (optional):
   DIRECT_TOP_N=3     how many clips to return
@@ -28,6 +30,7 @@ import os
 import re
 
 from .. import llm
+from ..align import LEAD_IN_SEC, locate
 from ..config import use_fixture
 from ..contracts import Clip, ClipSet, Playbook, Segment, Transcript, Understanding
 from ..fixtures import load
@@ -153,6 +156,25 @@ def _snap_end(segs: list[Segment], x: float) -> float:
     return prev_end if prev_end is not None else segs[0].end
 
 
+def _align(segs: list[Segment], start: float, end: float, hook: str, lines: list[str],
+           duration: float) -> tuple[float, float]:
+    """Open the clip where `hook` is actually spoken (or on the on-screen line said just before
+    it, usually the setup question) and make sure the other lines fall inside it, keeping the
+    model's chosen length. The model's span is kept when the hook cannot be found at all."""
+    hook_at = locate(segs, hook, near=start)
+    if hook_at is None:
+        return start, end
+    new_start, last = hook_at
+    for line in lines:
+        at = locate(segs, line, lo=hook_at[0] - LEAD_IN_SEC, hi=hook_at[0] + MAX_LEN, near=hook_at[0])
+        if at:
+            new_start, last = min(new_start, at[0]), max(last, at[1])
+    new_end = min(max(last + 3.0, new_start + (end - start)), new_start + MAX_LEN, duration)
+    if abs(new_start - start) >= 1.0 or abs(new_end - end) >= 1.0:
+        print(f"[direct] realign {_mmss(start)}-{_mmss(end)} -> {_mmss(new_start)}-{_mmss(new_end)}: {hook[:50]!r}")
+    return new_start, new_end
+
+
 def _pattern(name: str, pb: Playbook) -> str:
     n = " ".join(str(name).split()).strip()
     low = n.lower()
@@ -186,8 +208,10 @@ def clean(raw: list[dict], t: Transcript, pb: Playbook, duration: float) -> list
             continue
         if not hook:
             continue
-        start = _snap_start(segs, max(0.0, min(start, duration)))
-        end = _snap_end(segs, max(0.0, min(end, duration)))
+        lines = _strs(c.get("on_screen_lines"), 5)
+        start, end = _align(segs, max(0.0, min(start, duration)), max(0.0, min(end, duration)), hook, lines, duration)
+        start = _snap_start(segs, start)
+        end = _snap_end(segs, end)
         if end - start > MAX_LEN:
             end = _snap_end(segs, start + MAX_LEN)
             if end - start > MAX_LEN + 5:  # a single huge segment; hard cut
@@ -205,7 +229,7 @@ def clean(raw: list[dict], t: Transcript, pb: Playbook, duration: float) -> list
             score=max(0, min(100, score)),
             title=" ".join(str(c.get("title") or "").split()).strip() or hook[:40],
             hook_rewrite=hook,
-            on_screen_lines=_strs(c.get("on_screen_lines"), 5),
+            on_screen_lines=lines,
             caption=" ".join(str(c.get("caption") or "").split()).strip(),
             matched_pattern=_pattern(c.get("matched_pattern") or "", pb),
             reason=" ".join(str(c.get("reason") or "").split()).strip(),

@@ -15,8 +15,10 @@ How:
   canvas over a blurred, darkened copy of itself. Hook on top, on-screen lines
   under the video, captions at the bottom. Layout "crop" centre-crops to 9:16.
 - Captions come from the transcript segments inside the clip, one PNG each.
-- The hook stays up for the whole clip as its title; on_screen_lines are shown
-  one after another across the clip after the first HOOK_SOLO_SEC seconds.
+- The hook stays up for the whole clip as its title. Each on_screen_line goes
+  up when its words are spoken (align.locate against the transcript inside the
+  clip) and stays until the next line; a line that is never said in the clip
+  falls back to its evenly spaced slot after the first HOOK_SOLO_SEC seconds.
 
 Env knobs (optional):
   RENDER_LAYOUT=fit|crop     default fit
@@ -40,6 +42,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from ..align import locate
 from ..config import PUBLIC_BASE_URL, RENDER_DIR, RENDER_ENGINE, WORK_DIR, use_fixture
 from ..contracts import Clip, ClipSet, Segment, Transcript
 from ..fixtures import load
@@ -118,6 +121,25 @@ def captions_for(t: Transcript, clip: Clip) -> list[tuple[float, float, str]]:
         if b - a >= 0.15:
             out.append((round(a, 3), round(b, 3), text))
     return out
+
+
+def line_times(t: Transcript, clip: Clip, lines: list[str]) -> list[tuple[str, float, float]]:
+    """(line, show from, show to) relative to the clip. A line appears when its words are spoken
+    and stays until the next line starts; lines not found in the clip keep their evenly spaced
+    slot. Lines stay in the model's order and never start less than a second apart."""
+    dur = clip.end - clip.start
+    span = (dur - HOOK_SOLO_SEC) / len(lines)
+    starts: list[float] = []
+    cursor = clip.start
+    for i, line in enumerate(lines):
+        found = locate(t.segments, line, lo=cursor, hi=clip.end, near=cursor)
+        at = found[0] - clip.start if found else HOOK_SOLO_SEC + i * span
+        if starts:
+            at = max(at, starts[-1] + 1.0)
+        starts.append(min(at, dur))
+        cursor = clip.start + starts[-1]
+    return [(line, round(a, 3), round(b, 3))
+            for line, a, b in zip(lines, starts, starts[1:] + [dur]) if b - a >= 0.3]
 
 
 # --------------------------------------------------------------------------- text -> png
@@ -206,12 +228,10 @@ def render_clip(video: Path, t: Transcript, clip: Clip, out: Path, work: Path) -
 
     lines = [ln for ln in clip.on_screen_lines if ln.strip()]
     if lines and dur > HOOK_SOLO_SEC + 1:
-        span = (dur - HOOK_SOLO_SEC) / len(lines)
-        for i, line in enumerate(lines):
+        for i, (line, a, b) in enumerate(line_times(t, clip, lines)):
             png = work / f"line_{i}.png"
             text_png(line, png, size=64, fill="#FFE600", max_lines=2, upper=True)
-            a = HOOK_SOLO_SEC + i * span
-            overlays.append((png, 1300, round(a, 3), round(a + span, 3)))
+            overlays.append((png, 1300, a, b))
 
     if os.getenv("RENDER_NO_CAPTIONS", "") not in ("1", "true", "yes"):
         for i, (a, b, text) in enumerate(captions_for(t, clip)):
