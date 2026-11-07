@@ -1,31 +1,55 @@
 {
-  "clips": [
-    {
-      "start": 24.5, "end": 66.0, "score": 92, "title": "Money multiplies pressure",
-      "hook_rewrite": "Nobody tells you this about raising money.",
-      "on_screen_lines": ["nobody tells you", "every dollar is a promise", "2am. 18 months runway. no plan."],
-      "caption": "the part of fundraising nobody posts about #startup #founder #vc",
-      "matched_pattern": "nobody tells you",
-      "reason": "Matches the top pattern in the playbook and contains a specific 2am scene, which the top performers all have.",
-      "render_path": null, "render_url": null
-    },
-    {
-      "start": 66.0, "end": 110.0, "score": 88, "title": "Fired myself for a week",
-      "hook_rewrite": "I fired myself as CEO for a week.",
-      "on_screen_lines": ["fired myself", "20 customers later", "killed the funded feature"],
-      "caption": "would you kill the feature investors paid for? #founderlife #startups",
-      "matched_pattern": "shocking decision + payoff",
-      "reason": "Unusual decision with a measurable payoff, same structure as the second-best pattern.",
-      "render_path": null, "render_url": null
-    },
-    {
-      "start": 126.0, "end": 158.0, "score": 81, "title": "Burnout isn't hours",
-      "hook_rewrite": "Burnout isn't from working too much.",
-      "on_screen_lines": ["burnout ≠ hours", "fix the what first"],
-      "caption": "fix what you work on before your calendar #podcast #founder",
-      "matched_pattern": "redefine the word",
-      "reason": "Self-contained advice that negates a common belief, matching the redefine pattern.",
-      "render_path": null, "render_url": null
-    }
-  ]
+ "clips": [
+  {
+   "start": 518.84,
+   "end": 609.8,
+   "score": 98,
+   "title": "Junior Hiring Crisis",
+   "hook_rewrite": "The software engineering profession will collapse if we don't keep hiring early in career developers.",
+   "on_screen_lines": [
+    "SOFTWARE ENGINEERING WILL COLLAPSE",
+    "WHERE ARE SENIORS COMING FROM?",
+    "NURSE PRECEPTOR MODEL"
+   ],
+   "caption": "Why the tech industry is facing a junior hiring crisis and how senior mentorship needs to change. 📉👨‍💻 #opensource #tech #career",
+   "matched_pattern": "Shocking Industry Threat",
+   "reason": "This moment exposes an imminent professional catastrophe using the Shocking Industry Threat pattern, arguing that without junior hiring, the entire field collapses.",
+   "render_path": null,
+   "render_url": null
+  },
+  {
+   "start": 1294.0,
+   "end": 1384.4,
+   "score": 95,
+   "title": "The One Language Everyone Needs",
+   "hook_rewrite": "People who don't have English fluency will struggle right now, and I think that is unfortunate.",
+   "on_screen_lines": [
+    "THE ONE LANGUAGE YOU NEED",
+    "ENGLISH IS LIKE JAVASCRIPT",
+    "THE CODE WE ACTUALLY HAVE"
+   ],
+   "caption": "Scott Hanselman reveals the unexpected language every developer must master to succeed in tech. 🗣️💻 #opensource #tech #career",
+   "matched_pattern": "Counterintuitive Fact",
+   "reason": "It leads with a provocative and counterintuitive claim about the single most critical language for developers, fitting the Counterintuitive Fact pattern.",
+   "render_path": null,
+   "render_url": null
+  },
+  {
+   "start": 927.04,
+   "end": 1017.16,
+   "score": 92,
+   "title": "One-Shotted Minecraft Fails",
+   "hook_rewrite": "This guy just one-shotted Minecraft with an AI prompt, but he couldn't do it without using the word Minecraft.",
+   "on_screen_lines": [
+    "ONE-SHOTTED MINECRAFT",
+    "THE HEAVY WEIGHT OF WORDS",
+    "MAKE SOMETHING YOU CARE ABOUT"
+   ],
+   "caption": "Why trying to one-shot game clones with AI misses the point of building real software portfolios. 🎮🤖 #opensource #tech #career",
+   "matched_pattern": "Impossible Feat Claim",
+   "reason": "It hooks viewers by addressing a wild AI generation claim and breaking down its limitations, matching the Impossible Feat Claim pattern.",
+   "render_path": null,
+   "render_url": null
+  }
+ ]
 }
