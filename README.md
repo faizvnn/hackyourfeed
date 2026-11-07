@@ -24,6 +24,7 @@ hackathon/
     │   │   ├── s4_playbook.py    team B   LLM → hook patterns, pacing, caption formula
     │   │   ├── s5_direct.py      team C   LLM → top 3 clips w/ hook rewrites
     │   │   └── s6_render.py      team C   ffmpeg 9:16 + burned hook + captions; Compound TODO
+    │   │       s6_render_adaptive.py  experimental libass captions; RENDER_ENGINE=adaptive (backend/RENDER.md)
     │   └── prompts/ understand.md, playbook.md, direct.md
     ├── fixtures/  transcript, understanding, viral, playbook, clips, clips_rendered, job
     └── scripts/run_stage.py  ← run one stage on the fixture that feeds it

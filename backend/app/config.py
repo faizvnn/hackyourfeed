@@ -34,6 +34,10 @@ COMPOUND_API_KEY = os.getenv("COMPOUND_API_KEY", "")
 
 PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "http://localhost:8000")
 
+# Stage 6 engine. "classic" = pipeline/s6_render.py (Pillow overlays, default).
+# "adaptive" = pipeline/s6_render_adaptive.py (libass captions, word emphasis); experimental.
+RENDER_ENGINE = os.getenv("RENDER_ENGINE", "classic").strip().lower()
+
 
 def use_fixture(stage: str) -> bool:
     return stage in USE_FIXTURES or "all" in USE_FIXTURES

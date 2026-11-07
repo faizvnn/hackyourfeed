@@ -26,6 +26,10 @@ Env knobs (optional):
   RENDER_CRF=22              x264 quality (lower is better)
 
 Ceiling (TODO): hand the cut clip to Compound.mov for its own editing.
+
+Experimental alternative: RENDER_ENGINE=adaptive routes run() to
+s6_render_adaptive.py (libass word-by-word captions). Needs ffmpeg built with
+libass. Off by default until it is judged better than this one.
 """
 
 from __future__ import annotations
@@ -36,7 +40,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from ..config import PUBLIC_BASE_URL, RENDER_DIR, WORK_DIR, use_fixture
+from ..config import PUBLIC_BASE_URL, RENDER_DIR, RENDER_ENGINE, WORK_DIR, use_fixture
 from ..contracts import Clip, ClipSet, Segment, Transcript
 from ..fixtures import load
 
@@ -54,6 +58,13 @@ FONT_CANDIDATES = [
 def run(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
     if use_fixture("render"):
         return load("clips_rendered", ClipSet)
+    if RENDER_ENGINE == "adaptive":
+        from . import s6_render_adaptive
+
+        print("[render] RENDER_ENGINE=adaptive -> s6_render_adaptive")
+        return s6_render_adaptive.run(job_id, t, clips)
+    if RENDER_ENGINE != "classic":
+        raise ValueError(f"RENDER_ENGINE must be classic or adaptive, got {RENDER_ENGINE!r}")
     return render(job_id, t, clips)
 
 
