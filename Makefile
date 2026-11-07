@@ -23,5 +23,7 @@ renderer:
 	if grep -qE '^RENDER_ENGINE=' $$f; then sed -e "s/^RENDER_ENGINE=.*/RENDER_ENGINE=$$new/" $$f > $$f.tmp && mv $$f.tmp $$f; \
 	else printf '\nRENDER_ENGINE=%s\n' "$$new" >> $$f; fi; \
 	echo "renderer: $$cur -> $$new  (backend/.env; restart make dev)"; \
-	if [ "$$new" = adaptive ] && ! ffmpeg -hide_banner -h filter=ass 2>/dev/null | grep -q '^Filter'; then \
-	  echo ">>> ffmpeg has no libass ('ass' filter); adaptive will fail until ffmpeg is reinstalled with it"; fi
+	ff=$$(grep -E '^FFMPEG_BIN=' $$f | tail -1 | cut -d= -f2- | tr -d '[:space:]'); ff=$${ff:-ffmpeg}; \
+	if [ "$$new" = adaptive ] && ! "$$ff" -hide_banner -h filter=ass 2>/dev/null | grep -q '^Filter'; then \
+	  echo ">>> $$ff has no libass ('ass' filter); adaptive will fail. brew install ffmpeg-full, then set"; \
+	  echo ">>> FFMPEG_BIN=/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg (and FFPROBE_BIN) in $$f"; fi
