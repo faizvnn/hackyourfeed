@@ -5,7 +5,10 @@ Out: Transcript  (timed segments + local mp4 path; stage 6 needs the mp4)
 
 yt-dlp downloads the mp4 (<=1080p) and the English captions as json3 into
 WORK_DIR/ingest/<video_id>/. Human captions are preferred over auto ones.
-Results are cached per video id, so re-running is instant.
+Results are cached per video id, so re-running is instant. Two jobs for the
+same video at once would both download into the same folder and race on the
+.part files, so the download runs under a per-video lock and the second job
+just picks up the cache.
 
 Env knobs (optional):
   INGEST_NO_VIDEO=1            captions only (fast, for iterating on stage 2)
@@ -16,6 +19,8 @@ from __future__ import annotations
 
 import json
 import os
+import threading
+from collections import defaultdict
 from pathlib import Path
 
 from ..config import WORK_DIR, use_fixture
@@ -54,6 +59,15 @@ def _pick_lang(info: dict) -> tuple[str | None, bool]:
     return None, False
 
 
+_locks: defaultdict[str, threading.Lock] = defaultdict(threading.Lock)
+_locks_guard = threading.Lock()
+
+
+def _lock_for(video_id: str) -> threading.Lock:
+    with _locks_guard:
+        return _locks[video_id]
+
+
 def ingest(url: str) -> Transcript:
     import yt_dlp
 
@@ -67,13 +81,36 @@ def ingest(url: str) -> Transcript:
     cache = out / "transcript.json"
     video_path = out / "video.mp4"
 
-    if cache.exists() and (not want_video or video_path.exists()):
-        t = Transcript.model_validate_json(cache.read_text())
-        if video_path.exists():
-            t.video_path = str(video_path.resolve())
+    def cached() -> Transcript | None:
+        if cache.exists() and (not want_video or video_path.exists()):
+            t = Transcript.model_validate_json(cache.read_text())
+            if video_path.exists():
+                t.video_path = str(video_path.resolve())
+            return t
+        return None
+
+    if (t := cached()) is not None:
         print(f"[ingest] cached: {cache}")
         return t
 
+    lock = _lock_for(info["id"])
+    if not lock.acquire(blocking=False):
+        print(f"[ingest] another job is downloading {info['id']}; waiting")
+        lock.acquire()
+    try:
+        if (t := cached()) is not None:  # the other job finished while we waited
+            print(f"[ingest] cached: {cache}")
+            return t
+        return _download(url, info, out, want_video)
+    finally:
+        lock.release()
+
+
+def _download(url: str, info: dict, out: Path, want_video: bool) -> Transcript:
+    import yt_dlp
+
+    cache = out / "transcript.json"
+    video_path = out / "video.mp4"
     lang, is_auto = _pick_lang(info)
     opts = {
         **_ydl_base(),
