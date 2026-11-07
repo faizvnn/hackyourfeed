@@ -3,7 +3,7 @@
 In:  job id, Transcript (video_path), ClipSet
 Out: ClipSet with render_path / render_url filled in
 
-Floor implementation: ffmpeg cut + 9:16 + burned hook + on-screen lines + captions.
+Floor implementation: ffmpeg cut + 9:16 + opening hook + on-screen lines + captions.
 Files go under RENDER_DIR/<job_id>/clip_<n>.mp4 and are served at
 {PUBLIC_BASE_URL}/renders/<job_id>/clip_<n>.mp4 by main.py.
 
@@ -15,13 +15,17 @@ How:
   canvas over a blurred, darkened copy of itself. Hook on top, on-screen lines
   under the video, captions at the bottom. Layout "crop" centre-crops to 9:16.
 - Captions come from the transcript segments inside the clip, one PNG each.
-- The hook stays up for the whole clip as its title. Each on_screen_line goes
-  up when its words are spoken (align.locate against the transcript inside the
-  clip) and stays until the next line; a line that is never said in the clip
-  falls back to its evenly spaced slot after the first HOOK_SOLO_SEC seconds.
+- The hook is shown only for the opening few seconds (clip.render_style
+  .hook_seconds if stage 5 set it, else RENDER_HOOK_SECONDS), not the whole
+  clip: the UI already shows hook_rewrite as the headline next to the player.
+- Each on_screen_line then goes up when its words are spoken (align.locate
+  against the transcript inside the clip) and stays until the next line; a
+  line that is never said in the clip falls back to its evenly spaced slot
+  after the hook.
 
 Env knobs (optional):
   RENDER_LAYOUT=fit|crop     default fit
+  RENDER_HOOK_SECONDS=3      how long the hook stays up at the start
   RENDER_FONT=/path/to.ttf   default: first of FONT_CANDIDATES that exists
   RENDER_NO_CAPTIONS=1       skip the per-segment captions
   RENDER_PRESET=veryfast     x264 preset
@@ -48,7 +52,7 @@ from ..contracts import Clip, ClipSet, Segment, Transcript
 from ..fixtures import load
 
 W, H = 1080, 1920
-HOOK_SOLO_SEC = 3.0        # on_screen_lines start after the hook had the screen to itself
+HOOK_SECONDS = 3.0         # default opening-hook duration; render_style.hook_seconds overrides
 TEXT_MAX_W = W - 120       # text column width
 FONT_CANDIDATES = [
     "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
@@ -123,17 +127,18 @@ def captions_for(t: Transcript, clip: Clip) -> list[tuple[float, float, str]]:
     return out
 
 
-def line_times(t: Transcript, clip: Clip, lines: list[str]) -> list[tuple[str, float, float]]:
+def line_times(t: Transcript, clip: Clip, lines: list[str], hook_sec: float = HOOK_SECONDS) -> list[tuple[str, float, float]]:
     """(line, show from, show to) relative to the clip. A line appears when its words are spoken
     and stays until the next line starts; lines not found in the clip keep their evenly spaced
-    slot. Lines stay in the model's order and never start less than a second apart."""
+    slot after the opening hook. Lines stay in the model's order and never start less than a
+    second apart."""
     dur = clip.end - clip.start
-    span = (dur - HOOK_SOLO_SEC) / len(lines)
+    span = (dur - hook_sec) / len(lines)
     starts: list[float] = []
     cursor = clip.start
     for i, line in enumerate(lines):
         found = locate(t.segments, line, lo=cursor, hi=clip.end, near=cursor)
-        at = found[0] - clip.start if found else HOOK_SOLO_SEC + i * span
+        at = found[0] - clip.start if found else hook_sec + i * span
         if starts:
             at = max(at, starts[-1] + 1.0)
         starts.append(min(at, dur))
@@ -202,6 +207,16 @@ def text_png(text: str, path: Path, size: int, fill: str, max_lines: int, upper:
     return width, height
 
 
+def hook_seconds(clip: Clip) -> float:
+    """How long the opening hook stays up: stage 5's render_style wins, then the env knob."""
+    if clip.render_style is not None:
+        return clip.render_style.hook_seconds
+    try:
+        return max(0.0, float(os.getenv("RENDER_HOOK_SECONDS", HOOK_SECONDS)))
+    except ValueError:
+        return HOOK_SECONDS
+
+
 # --------------------------------------------------------------------------- ffmpeg
 def _base_filter(layout: str) -> str:
     if layout == "crop":
@@ -222,13 +237,17 @@ def render_clip(video: Path, t: Transcript, clip: Clip, out: Path, work: Path) -
     # (png path, y, show from, show to)
     overlays: list[tuple[Path, int, float, float]] = []
 
-    hook_png = work / "hook.png"
-    _, h = text_png(clip.hook_rewrite, hook_png, size=78, fill="white", max_lines=4, upper=True)
-    overlays.append((hook_png, max(60, 430 - h // 2), 0.0, dur))
+    # Opening hook only: the UI shows hook_rewrite as the headline next to the
+    # player, so keeping it up for the whole clip showed the title twice.
+    hook_sec = min(dur, hook_seconds(clip))
+    if clip.hook_rewrite.strip() and hook_sec > 0:
+        hook_png = work / "hook.png"
+        _, h = text_png(clip.hook_rewrite, hook_png, size=78, fill="white", max_lines=4, upper=True)
+        overlays.append((hook_png, max(60, 430 - h // 2), 0.0, round(hook_sec, 3)))
 
     lines = [ln for ln in clip.on_screen_lines if ln.strip()]
-    if lines and dur > HOOK_SOLO_SEC + 1:
-        for i, (line, a, b) in enumerate(line_times(t, clip, lines)):
+    if lines and dur - hook_sec >= 1:
+        for i, (line, a, b) in enumerate(line_times(t, clip, lines, hook_sec)):
             png = work / f"line_{i}.png"
             text_png(line, png, size=64, fill="#FFE600", max_lines=2, upper=True)
             overlays.append((png, 1300, a, b))
