@@ -54,6 +54,8 @@ curl -s localhost:8000/jobs/<id>
 
 Needs `ffmpeg` on PATH for stage 6 (`brew install ffmpeg`).
 
+`make renderer` flips stage 6 between the classic render (default) and the experimental adaptive one (`make renderer E=classic|adaptive` to set it outright). The adaptive engine needs ffmpeg with libass; see `backend/RENDER.md`.
+
 ## How to work on your stage
 
 1. Keep `USE_FIXTURES=all` in `backend/.env`, then **remove your stage's name** so only yours runs for real. Names: `ingest,understand,trends,playbook,direct,render`.
