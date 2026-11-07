@@ -37,3 +37,14 @@ Full shapes: `backend/app/contracts.py`. Sample response to build against: `../b
 > niche + topics as chips; a grid of viral videos (thumbnail, handle, views, hook_text); the playbook's hook_patterns as cards with examples and takeaways as a list;
 > then the 3 clips as large cards with score badge, hook_rewrite as the headline, on_screen_lines, caption with a copy button, reason, and a 9:16 `<video>` when render_url exists.
 > Dark theme, big type, feels like an analytics tool. Use this sample JSON for mock data: (paste fixtures/job.json)
+
+## Run the UI (clipy, Next.js)
+
+```bash
+cd frontend
+npm install
+echo "BACKEND_URL=http://localhost:8000" > .env.local
+npm run dev
+```
+
+Landing page at `http://localhost:3000`, the product at `/app`. The page's own server forwards to `BACKEND_URL` and translates the backend's Job into what the page shows (`lib/backend.ts`), so the contract above stays as is. Without `BACKEND_URL`, only the sample video `https://www.youtube.com/watch?v=x_5JijpzprU` works, replayed from `data/job.json`.

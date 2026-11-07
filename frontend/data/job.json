@@ -1,0 +1,2653 @@
+{
+ "id": "sample",
+ "stage": "done",
+ "error": null,
+ "video": {
+  "url": "https://www.youtube.com/watch?v=x_5JijpzprU",
+  "youtube_id": "x_5JijpzprU",
+  "title": "AI fixes AI in MIT study, Mistral's open model & Google Genie 4",
+  "channel": "IBM Technology",
+  "duration": 2155,
+  "thumbnail": "https://i.ytimg.com/vi/x_5JijpzprU/hqdefault.jpg",
+  "chapters": [
+   {
+    "start": 0,
+    "title": "Intro"
+   },
+   {
+    "start": 68,
+    "title": "AI self-improvement and MIT's research"
+   },
+   {
+    "start": 988,
+    "title": "New open models from Mistral and NVIDIA"
+   },
+   {
+    "start": 1527,
+    "title": "Google’s Genie 4 simulates 3D worlds"
+   }
+  ]
+ },
+ "transcript_stats": {
+  "segments": 958,
+  "words": 6974,
+  "wpm": 194
+ },
+ "niche": "AI Tech News",
+ "keywords": {
+  "topic": [
+   "AI brain surgery",
+   "recursive self-improvement",
+   "world models",
+   "openweight models",
+   "weight space programming"
+  ],
+  "niche": [
+   "artificial intelligence news",
+   "tech podcast",
+   "AI research",
+   "frontier AI",
+   "machine learning"
+  ],
+  "general": [
+   "tech trends",
+   "future technology",
+   "AI tools"
+  ]
+ },
+ "candidates": [
+  {
+   "start": 1,
+   "end": 30,
+   "why": "Engaging hook about AI doing brain surgery on AI introduces topic."
+  },
+  {
+   "start": 60,
+   "end": 109,
+   "why": "Clear setup defining recursive self-improvement and current momentum."
+  },
+  {
+   "start": 110,
+   "end": 166,
+   "why": "Simple explanation of AI developing the next generation of AI."
+  },
+  {
+   "start": 215,
+   "end": 262,
+   "why": "Dramatic mind-blowing metaphor of AI performing brain surgery on itself."
+  },
+  {
+   "start": 295,
+   "end": 344,
+   "why": "Relatable Homer Simpson coding analogy applied to automated AI improvement."
+  },
+  {
+   "start": 345,
+   "end": 393,
+   "why": "Technical breakdown of recursive verification loops in AI models."
+  },
+  {
+   "start": 501,
+   "end": 532,
+   "why": "Intriguing take on AI reward hacking versus total doom."
+  },
+  {
+   "start": 542,
+   "end": 591,
+   "why": "Funny real-world story of an AI agent giving away private data."
+  },
+  {
+   "start": 637,
+   "end": 680,
+   "why": "Bizarre experiment showing AI agents giving away secrets for rewards."
+  },
+  {
+   "start": 680,
+   "end": 738,
+   "why": "Shocking insight that labs don't know emergent AI capabilities."
+  },
+  {
+   "start": 804,
+   "end": 862,
+   "why": "Fascinating security discussion on models directly scanning and editing weights."
+  },
+  {
+   "start": 1037,
+   "end": 1087,
+   "why": "Important trend analysis on openweight models catching up fast."
+  },
+  {
+   "start": 1123,
+   "end": 1192,
+   "why": "Bold prediction about local AI running on personal hardware."
+  },
+  {
+   "start": 1560,
+   "end": 1606,
+   "why": "Clear distinction between language models and physical world models."
+  },
+  {
+   "start": 1750,
+   "end": 1805,
+   "why": "Cutting-edge take on combining 3D CAD physics with AI rendering."
+  }
+ ],
+ "viral": [
+  {
+   "id": "cnt_54b9f08ac63015e55857a044e218",
+   "platform": "tiktok",
+   "handle": "kanekallaway",
+   "url": "https://www.tiktok.com/@kanekallaway/video/7690630566726618399",
+   "thumbnail": "/viral/cnt_54b9f08ac63015e55857a044e218.jpg",
+   "hook": "Google Gemini just integrated their agentic capabilities",
+   "on_screen_text": "",
+   "caption": "Google Gemini just integrated their agentic capabilities in Gemini Live #googlepartner @googlegemini  #google #gemini #ai #aitools ",
+   "duration": 119,
+   "views": 15200000,
+   "followers": 407600,
+   "views_rate_per_followers": 3729.146221786065,
+   "published_at": "2026-09-28T16:54:55.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/tiktok/7690630566726618399/thumbnail.webp"
+  },
+  {
+   "id": "cnt_34db43f1fcd362b0658588d753d2",
+   "platform": "tiktok",
+   "handle": "demeesterelena",
+   "url": "https://www.tiktok.com/@demeesterelena/video/7683314574757498126",
+   "thumbnail": "/viral/cnt_34db43f1fcd362b0658588d753d2.jpg",
+   "hook": "So everyone knows that Ozempic makes you skinny. Everyone knows that Ozempic makes you skinny.",
+   "on_screen_text": "Everyone knows that",
+   "caption": "I think it’s perfectly ok to take inspiration from other people’s work.. but an exact copy is no fun :/  Would love to see original ways of explaining the same science so even more people can learn 🙂",
+   "duration": 109,
+   "views": 6900000,
+   "followers": 100400,
+   "views_rate_per_followers": 6872.509960159363,
+   "published_at": "2026-09-08T23:44:47.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7683314574757498126/1_1.97.webp"
+  },
+  {
+   "id": "cnt_25f85180800638d32da7f03e1add",
+   "platform": "instagram",
+   "handle": "gatesfoundationindia",
+   "url": "https://www.instagram.com/reel/DdlRBCQqSnW/",
+   "thumbnail": "/viral/cnt_25f85180800638d32da7f03e1add.jpg",
+   "hook": "Today, we announced that 60 organizations have come together to help more than 3 billion people",
+   "on_screen_text": "",
+   "caption": "There are around 7,000 languages spoken worldwide, yet most AI tools are still built primarily in English. \n\nThe Gates Foundation is joining a group of organizations to help nearly 3.4 billion people ",
+   "duration": 52.625,
+   "views": 6537665,
+   "followers": 380413,
+   "views_rate_per_followers": 1718.5703432847984,
+   "published_at": "2026-09-22T08:06:11.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdlRBCQqSnW/1_0.75.webp"
+  },
+  {
+   "id": "cnt_8b74f4e3143f7b80936d69d06016",
+   "platform": "instagram",
+   "handle": "gatesfoundationindia",
+   "url": "https://www.instagram.com/reel/DdoqLVaCIK1/",
+   "thumbnail": "/viral/cnt_8b74f4e3143f7b80936d69d06016.jpg",
+   "hook": "I hope you will leave tonight with a real sense of what is possible",
+   "on_screen_text": "",
+   "caption": "At Goalkeepers, our Chair @thisisbillgates spoke about the opportunity at hand to make sure AI tools are designed to improve lives and reach the people who stand to benefit most–including farmers, tea",
+   "duration": 29.933,
+   "views": 5536957,
+   "followers": 380413,
+   "views_rate_per_followers": 1455.5120356034101,
+   "published_at": "2026-09-23T15:43:48.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/instagram/DdoqLVaCIK1/thumbnail.webp"
+  },
+  {
+   "id": "cnt_000cf8c117ca172bda6b7affb52c",
+   "platform": "instagram",
+   "handle": "gatesfoundationindia",
+   "url": "https://www.instagram.com/reel/DdYGOsDqQyR/",
+   "thumbnail": "/viral/cnt_000cf8c117ca172bda6b7affb52c.jpg",
+   "hook": "You hear a lot about AI. Here's how we make it matter for the people who need it most.",
+   "on_screen_text": "",
+   "caption": "What kind of progress is possible when the people closest to the challenges in healthcare, education and agriculture have access to AI tools designed to meet their needs?\n\nAnkur Vora shares three exam",
+   "duration": 75.333,
+   "views": 4836201,
+   "followers": 380413,
+   "views_rate_per_followers": 1271.3027683070768,
+   "published_at": "2026-09-17T05:22:11.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/instagram/DdYGOsDqQyR/thumbnail.webp"
+  },
+  {
+   "id": "cnt_a2babc4c506a6a93a58be790afec",
+   "platform": "instagram",
+   "handle": "rockefellerfdn",
+   "url": "https://www.instagram.com/reel/Ddoef2vAqGz/",
+   "thumbnail": "/viral/cnt_a2babc4c506a6a93a58be790afec.jpg",
+   "hook": "Did you know the term artificial intelligence was coined in a Dartmouth conference funded by the Rockefeller Foundation decades ago?",
+   "on_screen_text": "Did you know the term artificial intelligence",
+   "caption": "It’s no secret that artificial intelligence is advancing quickly. It's already shaping finance, healthcare, and even how cities run. \n\nAt #UNGA81, we're asking the question that matters most: how do w",
+   "duration": 65.301,
+   "views": 3542238,
+   "followers": 78893,
+   "views_rate_per_followers": 4489.9268629662965,
+   "published_at": "2026-09-23T14:02:32.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/Ddoef2vAqGz/1_0.03.webp"
+  },
+  {
+   "id": "cnt_de0fa75c6bdb518f3dbf7f1878f1",
+   "platform": "instagram",
+   "handle": "elegoo",
+   "url": "https://www.instagram.com/reel/Dd_0ZKgiDd5/",
+   "thumbnail": "/viral/cnt_de0fa75c6bdb518f3dbf7f1878f1.jpg",
+   "hook": "You've never seen this kind of fabric because I just invented it. I am Denise Peleg and for the past decade I've been developing a new concept: 3D printed textiles that are soft and wearable. Using only a simple 3D printer and an AI textile software I vibe coded myself. I can now take any sewing pattern, convert it into a code and from there into a 3D printable file in seconds.",
+   "on_screen_text": "You've never seen",
+   "caption": "What happens when fashion meets AI, digital design, biomaterials, and large-format 3D printing? 👗🖨️\n\nTogether with fashion designer @danitpeleg3d, we’re exploring what’s possible when digital creati",
+   "duration": 100.885,
+   "views": 2842107,
+   "followers": 190582,
+   "views_rate_per_followers": 1491.2777701986547,
+   "published_at": "2026-10-02T15:35:45.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/Dd_0ZKgiDd5/1_0.00.webp"
+  },
+  {
+   "id": "cnt_cd48423f15ce3a16af836f9cb2f3",
+   "platform": "tiktok",
+   "handle": "willfrancis24",
+   "url": "https://www.tiktok.com/@willfrancis24/video/7700578235649920279",
+   "thumbnail": "/viral/cnt_cd48423f15ce3a16af836f9cb2f3.jpg",
+   "hook": "ChatGPT is now watermarking all the text that it writes in ChatGPT and Codex for all users in the",
+   "on_screen_text": "all the text that it writes / openai.com/index/eu-text-provenance watermarking will remain off by default in the API. / Over the coming weeks,we will add an",
+   "caption": "ChatGPT is now adding watermarks to all text from ChatGPT and Codex in the EU as part of a Europe-wide drive for transparency in the usage of generative artificial intelligence. Here's how this new 't",
+   "duration": 119,
+   "views": 2400000,
+   "followers": 151300,
+   "views_rate_per_followers": 1586.2524785194976,
+   "published_at": "2026-10-25T12:16:35.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7700578235649920279/1_2.60.webp"
+  },
+  {
+   "id": "cnt_27e4ae648143a485e0b83991513b",
+   "platform": "instagram",
+   "handle": "samdespomarketing",
+   "url": "https://www.instagram.com/reel/DbVXOD7oniM/",
+   "thumbnail": "/viral/cnt_27e4ae648143a485e0b83991513b.jpg",
+   "hook": "",
+   "on_screen_text": "ALL THE BEST AI TOOLS / TO USE RIGHT NOW / General research",
+   "caption": "These are all the best AI tools you can be using right now 🤖 \n\n#aitools #claude #ai #automation",
+   "duration": 7.079,
+   "views": 1893836,
+   "followers": 123501,
+   "views_rate_per_followers": 1533.4580286799298,
+   "published_at": "2026-09-08T21:05:23.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DbVXOD7oniM/1_0.00.webp"
+  },
+  {
+   "id": "cnt_2080aa2c8864bf4828345b96a9b3",
+   "platform": "instagram",
+   "handle": "logitech.india",
+   "url": "https://www.instagram.com/reel/DdHPr8ayfX7/",
+   "thumbnail": "/viral/cnt_2080aa2c8864bf4828345b96a9b3.jpg",
+   "hook": "I'm out.",
+   "on_screen_text": "",
+   "caption": "The MX Keypad has officially landed in India! ⚡🇮🇳\n\nThink of it as a physical remote control for your codebase. This isn’t just about keyboard shortcuts; it’s a dedicated command center built for dev",
+   "duration": 20.04,
+   "views": 1557767,
+   "followers": 28030,
+   "views_rate_per_followers": 5557.4991080984655,
+   "published_at": "2026-09-10T16:17:19.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/instagram/DdHPr8ayfX7/thumbnail.webp"
+  },
+  {
+   "id": "cnt_46843e0652168d8f51881011a79c",
+   "platform": "instagram",
+   "handle": "samdespomarketing",
+   "url": "https://www.instagram.com/reel/DdupdBLSoWi/",
+   "thumbnail": "/viral/cnt_46843e0652168d8f51881011a79c.jpg",
+   "hook": "I just automated over 200 repetitive tasks and no joke, this will save me like 17 hours every single week.",
+   "on_screen_text": "How I automated 200+ tasks / with this new Al tool / I just automated 200+ repetitive tasks",
+   "caption": "How I automated 200+ tasks in my business by setting up AI employees to perform specific tasks, and having them work together @grok #grokbot #spacexaipartner #aitools #automation",
+   "duration": 52.033,
+   "views": 1512992,
+   "followers": 123501,
+   "views_rate_per_followers": 1225.084817126987,
+   "published_at": "2026-09-25T23:33:21.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdupdBLSoWi/1_2.33.webp"
+  },
+  {
+   "id": "cnt_82d6504c810670cfb02d7ba62e16",
+   "platform": "tiktok",
+   "handle": "maverickgpt",
+   "url": "https://www.tiktok.com/@maverickgpt/video/7700444273329671455",
+   "thumbnail": "/viral/cnt_82d6504c810670cfb02d7ba62e16.jpg",
+   "hook": "Writing emails, ChatGPT, turning notes into a plan, Claude, making a study guide, Notebook LM,",
+   "on_screen_text": "",
+   "caption": "The best AI tool for every job: Writing emails → ChatGPT Turning notes into a plan → Claude Making a study guide → NotebookLM Researching competitors → Perplexity Creating UGC ads → Higgsfield Buildin",
+   "duration": 25,
+   "views": 1100000,
+   "followers": 154100,
+   "views_rate_per_followers": 713.8221933809215,
+   "published_at": "2026-10-25T03:36:52.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7700444273329671455/1_1.20.webp"
+  },
+  {
+   "id": "cnt_021e86db45e0e33f8a3be1de9aba",
+   "platform": "instagram",
+   "handle": "pythonlifeacademy",
+   "url": "https://www.instagram.com/reel/DdRcGmPpHXs/",
+   "thumbnail": "/viral/cnt_021e86db45e0e33f8a3be1de9aba.jpg",
+   "hook": "2 months of Python basics start, AI tools, LR, U,S, and N2 and explain",
+   "on_screen_text": "",
+   "caption": "🚀 PythonLife – Full Stack Python Development with AI\n\n📅 Start: 25th September 2026 \n🕖 Mon–Sat | 8:00 PM –10:00 PM\n\n📚 Course Features:\n✔ 2Months Live Classes + Lifetime Recordings\n✔ 500+ Interview ",
+   "duration": 58.175,
+   "views": 1000642,
+   "followers": 40582,
+   "views_rate_per_followers": 2465.728648169139,
+   "published_at": "2026-09-14T15:18:29.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdRcGmPpHXs/1_0.07.webp"
+  },
+  {
+   "id": "cnt_0e19442fd2f53e77bb4d03009691",
+   "platform": "tiktok",
+   "handle": "ray_fu",
+   "url": "https://www.tiktok.com/@ray_fu/video/7691372238221724958",
+   "thumbnail": "/viral/cnt_0e19442fd2f53e77bb4d03009691.jpg",
+   "hook": "Most people don't realize that businesses are paying $150 an hour for AI skills, but 90% of people who try to learn AI online quit before they finish.",
+   "on_screen_text": "AI tutorials are making you worse at AI / Most people don't realize that businesses are",
+   "caption": "AI tutorials are making you worse at AI! Try out Preply where you can get a real 1 on 1 tutor @Preply #ai #tech ",
+   "duration": 56,
+   "views": 1000000,
+   "followers": 177000,
+   "views_rate_per_followers": 564.9717514124294,
+   "published_at": "2026-09-30T16:52:57.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7691372238221724958/1_0.00.webp"
+  },
+  {
+   "id": "cnt_185bae17050f4a6ed4235779e6de",
+   "platform": "tiktok",
+   "handle": "nocode.joshua",
+   "url": "https://www.tiktok.com/@nocode.joshua/video/7697000653733891346",
+   "thumbnail": "/viral/cnt_185bae17050f4a6ed4235779e6de.jpg",
+   "hook": "Everybody is telling you to use Claude skills, but most people are using the same skills as everybody else.",
+   "on_screen_text": "EVERYBODY IS TELLING",
+   "caption": "Everybody's installing the same Claude skills. Here are 5 that almost nobody knows about: 1. Chief of Staff. Give Claude one big goal and it runs a whole team of AI agents in the background to get it ",
+   "duration": 62,
+   "views": 1000000,
+   "followers": 55900,
+   "views_rate_per_followers": 1788.9087656529518,
+   "published_at": "2026-10-15T20:53:33.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7697000653733891346/1_0.43.webp"
+  },
+  {
+   "id": "cnt_4d7793207291f9bcc04e37528270",
+   "platform": "instagram",
+   "handle": "padmakshi.sh",
+   "url": "https://www.instagram.com/reel/DeCFTOVK2VT/",
+   "thumbnail": "/viral/cnt_4d7793207291f9bcc04e37528270.jpg",
+   "hook": "Okay, while talking about Neha Bora, I'm sincerely requesting everyone to not deem her the natural crush or how pretty or attractive or desirable she is.",
+   "on_screen_text": "Stop calling Neha Bora attractive / Neha Bora, I'm sincerely",
+   "caption": "let’s be extra careful while talking about female leaders \n\n[neha bora, protests, delhi protests, india, feminism, patriarchy] \n\n#fyp #nehabora #delhiprotests #india",
+   "duration": 64.433,
+   "views": 993710,
+   "followers": 95130,
+   "views_rate_per_followers": 1044.581099547987,
+   "published_at": "2026-10-03T12:43:25.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DeCFTOVK2VT/1_2.40.webp"
+  },
+  {
+   "id": "cnt_7b06e2fdd1df7e2ffd0922b78fbe",
+   "platform": "tiktok",
+   "handle": "theaiimpact",
+   "url": "https://www.tiktok.com/@theaiimpact/video/7688868715059875079",
+   "thumbnail": "/viral/cnt_7b06e2fdd1df7e2ffd0922b78fbe.jpg",
+   "hook": "GBT's image model is getting ridiculous for product marketing.",
+   "on_screen_text": "",
+   "caption": "ChatGPT can turn one product photo into an entire ad campaign 🤯 Try commands like /3dbillboard, /metaads, /producthero and /lifestyleshot to create product photography, social ads and campaign visual",
+   "duration": 36,
+   "views": 977800,
+   "followers": 13100,
+   "views_rate_per_followers": 7464.12213740458,
+   "published_at": "2026-09-23T22:58:14.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/tiktok/7688868715059875079/thumbnail.webp"
+  },
+  {
+   "id": "cnt_242b181b989f429b02f0162dad0a",
+   "platform": "instagram",
+   "handle": "ai_work_flows_",
+   "url": "https://www.instagram.com/reel/DeVIBAsBzOh/",
+   "thumbnail": "/viral/cnt_242b181b989f429b02f0162dad0a.jpg",
+   "hook": "*Burr*",
+   "on_screen_text": "",
+   "caption": "I build Modern House inside Huge rock in UK street 🪨🏠 \n\nLearn how to make videos like me⚙️full step by step guide + free ai tools in bio⬇️#offgrid #tinyhouse #housetransformation #build #cozy",
+   "duration": 86.608,
+   "views": 954045,
+   "followers": 146642,
+   "views_rate_per_followers": 650.5946454631006,
+   "published_at": "2026-10-10T22:10:05.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DeVIBAsBzOh/1_0.60.webp"
+  },
+  {
+   "id": "cnt_403d6db4aa53c49c895f370a6ee4",
+   "platform": "instagram",
+   "handle": "samdespomarketing",
+   "url": "https://www.instagram.com/reel/DdyYDCfTiZa/",
+   "thumbnail": "/viral/cnt_403d6db4aa53c49c895f370a6ee4.jpg",
+   "hook": "",
+   "on_screen_text": "THE BEST AI TOOLS / You can use right now / Creative writing",
+   "caption": "Comment “AI” and I’ll send you the 50 top AI tools all the experts are using 📈\n\nThese are all the best AI tools you can be using right now. No joke but these tools save me anywhere from 30-50 hours e",
+   "duration": 7.01,
+   "views": 943732,
+   "followers": 123501,
+   "views_rate_per_followers": 764.1492781434968,
+   "published_at": "2026-09-27T10:18:29.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdyYDCfTiZa/1_0.00.webp"
+  },
+  {
+   "id": "cnt_2c64380904f074c82583bf185dcc",
+   "platform": "tiktok",
+   "handle": "sudania_",
+   "url": "https://www.tiktok.com/@sudania_/video/7686008962696711438",
+   "thumbnail": "/viral/cnt_2c64380904f074c82583bf185dcc.jpg",
+   "hook": "I always have a running list of product ideas I want to try, especially with Black Friday coming up.",
+   "on_screen_text": "a running list",
+   "caption": "Testing if a new product idea is actually worth making before i commit to anything — @Alibaba.com’s AI mode just changed the game for my business 🤩 #AIforbusiness #smallbusinessAItools #superseptembe",
+   "duration": 108,
+   "views": 926600,
+   "followers": 238600,
+   "views_rate_per_followers": 388.3487007544007,
+   "published_at": "2026-09-16T06:00:30.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7686008962696711438/1_1.37.webp"
+  },
+  {
+   "id": "cnt_8426c32335bbf16d3e69dcebaca4",
+   "platform": "instagram",
+   "handle": "bookingcomteam",
+   "url": "https://www.instagram.com/reel/Dd671YZDOD1/",
+   "thumbnail": "/viral/cnt_8426c32335bbf16d3e69dcebaca4.jpg",
+   "hook": "Today we're on the move with Stefan, who works at a global scale at Booking.com.",
+   "on_screen_text": "",
+   "caption": "15 million users a day?! 🤯\n\nJoin Laura and Stefan on the move in Manchester! 🇬🇧 Stefan explains how our backend engineering team manages the heavy lifting for roughly 15 million daily users. 💻 Dis",
+   "duration": 91.198,
+   "views": 810809,
+   "followers": 72548,
+   "views_rate_per_followers": 1117.6173016485636,
+   "published_at": "2026-10-01T07:31:04.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/Dd671YZDOD1/1_0.04.webp"
+  },
+  {
+   "id": "cnt_1ccd8e71ca7c343c6c24704d35c0",
+   "platform": "tiktok",
+   "handle": "followmario",
+   "url": "https://www.tiktok.com/@followmario/video/7690751341924273422",
+   "thumbnail": "/viral/cnt_1ccd8e71ca7c343c6c24704d35c0.jpg",
+   "hook": "Okay, I think we've officially reached a point where there are way too many AI tools to keep",
+   "on_screen_text": "",
+   "caption": "There are officially too many AI tools to keep up with 😅 so I tested how much of my creative workflow I could do inside @Runway. Comment “RUNWAY” and I’ll send you my code for 50% off one month of an",
+   "duration": 58,
+   "views": 801700,
+   "followers": 204400,
+   "views_rate_per_followers": 392.22113502935423,
+   "published_at": "2026-09-29T00:43:24.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-contents/tiktok/7690751341924273422/thumbnail.webp"
+  },
+  {
+   "id": "cnt_e7acf0ee61f2b38705d23cc18dcb",
+   "platform": "instagram",
+   "handle": "deedoesai",
+   "url": "https://www.instagram.com/reel/DdZiwLVOZfG/",
+   "thumbnail": "/viral/cnt_e7acf0ee61f2b38705d23cc18dcb.jpg",
+   "hook": "Watch this. God damn! What you need a seatbelt for?",
+   "on_screen_text": "",
+   "caption": "using men’s lust to pay for my rent 🤷‍♀️ #claudeai #onlinemoney #aitools #sidehustleforbeginners #aiinfluencer",
+   "duration": 62.367,
+   "views": 791643,
+   "followers": 58983,
+   "views_rate_per_followers": 1342.1545190987233,
+   "published_at": "2026-09-18T18:45:59.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdZiwLVOZfG/1_0.80.webp"
+  },
+  {
+   "id": "cnt_98a70fb31d0a0ce5d6629a452b72",
+   "platform": "instagram",
+   "handle": "iict_org",
+   "url": "https://www.instagram.com/reel/DdixPqrMMDY/",
+   "thumbnail": "/viral/cnt_98a70fb31d0a0ce5d6629a452b72.jpg",
+   "hook": "At IICT, we get asked this AI question a lot. Will AI replace creativity? Will AI lead to loss of jobs?",
+   "on_screen_text": "we get asked this / AI question a lot",
+   "caption": "What happens when creators get to experiment with AI?\n\nThat’s what Create with AI at IICT is all about. Four studios are bringing four different stories to life while exploring how AI can shape filmma",
+   "duration": 39.751,
+   "views": 770135,
+   "followers": 54997,
+   "views_rate_per_followers": 1400.3218357364947,
+   "published_at": "2026-09-21T08:50:43.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdixPqrMMDY/1_2.67.webp"
+  },
+  {
+   "id": "cnt_0c14d597ba65324cfac5d5139e95",
+   "platform": "tiktok",
+   "handle": "edwardleefilms",
+   "url": "https://www.tiktok.com/@edwardleefilms/video/7689568347477822751",
+   "thumbnail": "/viral/cnt_0c14d597ba65324cfac5d5139e95.jpg",
+   "hook": "This is the MSI Titan 18HX Dragon Edition Draco Epic.",
+   "on_screen_text": "the MSI / TITAN 18 HX Dragon Edition Draco Epic",
+   "caption": "Unboxing the @MSI US 40th Anniversary laptop - The Titan 18 HX Dragon Edition Draco Epic. This laptop might be overkill and not for everyone, but from a design/tech standpoint, it's cool to watch a br",
+   "duration": 61,
+   "views": 755900,
+   "followers": 120500,
+   "views_rate_per_followers": 627.3029045643153,
+   "published_at": "2026-09-25T20:12:39.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/tiktok/7689568347477822751/1_0.79.webp"
+  },
+  {
+   "id": "cnt_a50c7d5c919e9162a96650b17dfc",
+   "platform": "instagram",
+   "handle": "vijihomebyte",
+   "url": "https://www.instagram.com/reel/DdmTF2JxkHu/",
+   "thumbnail": "/viral/cnt_a50c7d5c919e9162a96650b17dfc.jpg",
+   "hook": "I tested this dehumidifier in my bedroom, and instead of juggling test results, brand",
+   "on_screen_text": "I TESTED THIS DEHUMIDIFIER",
+   "caption": "What if your AI tools actually worked together instead of making you explain everything over and over? 👀🤖✨\n\nWith @teamily_ai, I can bring multiple AI agents into one workflow, let them share the sam",
+   "duration": 68.733,
+   "views": 721023,
+   "followers": 213348,
+   "views_rate_per_followers": 337.9562967545981,
+   "published_at": "2026-09-22T17:45:40.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DdmTF2JxkHu/1_2.47.webp"
+  },
+  {
+   "id": "cnt_b2ea678474ce5a2d6457982d2ac6",
+   "platform": "instagram",
+   "handle": "mpaige13",
+   "url": "https://www.instagram.com/reel/DeZrCryxs9Z/",
+   "thumbnail": "/viral/cnt_b2ea678474ce5a2d6457982d2ac6.jpg",
+   "hook": "",
+   "on_screen_text": "You're making AI B-ROLL backwards / STOP MAKING AI B-ROLL / AND START MAKING IT",
+   "caption": "Comment “B-ROLL” and I’ll send you the full workflow.\n\nBetter AI B-roll starts before you generate any video.\n\nI use ChatGPT to find the best moments in my script, create reference images for each sho",
+   "duration": 40.587,
+   "views": 677241,
+   "followers": 38564,
+   "views_rate_per_followers": 1756.148221138886,
+   "published_at": "2026-10-12T16:35:17.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DeZrCryxs9Z/1_1.20.webp"
+  },
+  {
+   "id": "cnt_5ef6181613f34b3e66cdb35c7ac4",
+   "platform": "instagram",
+   "handle": "madeline.m.zhang",
+   "url": "https://www.instagram.com/reel/Dezex5eNh3L/",
+   "thumbnail": "/viral/cnt_5ef6181613f34b3e66cdb35c7ac4.jpg",
+   "hook": "Laser, Laser, Laser, Laser.",
+   "on_screen_text": "POV: me updating PHP at 2am on / all 500 of my websites",
+   "caption": "One of the biggest PHP vulnerabilities EVER  just happened: researchers found PHP2Shell, two critical flaws in the PHP runtime that let an attacker with no account run code on almost any PHP web serve",
+   "duration": 7.381,
+   "views": 670378,
+   "followers": 108205,
+   "views_rate_per_followers": 619.5443833464258,
+   "published_at": "2026-10-22T17:07:34.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/Dezex5eNh3L/1_2.80.webp"
+  },
+  {
+   "id": "cnt_41fd4ad75b3bae4fb23a39389e3e",
+   "platform": "instagram",
+   "handle": "allisonoconor",
+   "url": "https://www.instagram.com/reel/DeO_sM5hxSb/",
+   "thumbnail": "/viral/cnt_41fd4ad75b3bae4fb23a39389e3e.jpg",
+   "hook": "It's my first day, do you have any tips for me? Trust no one.",
+   "on_screen_text": "POV: you've survived / too long at a startup / It's my first day",
+   "caption": "Turn back… before it’s too late 🫵\n\n#comedy #work #office #startup #horror",
+   "duration": 45.369,
+   "views": 651464,
+   "followers": 10332,
+   "views_rate_per_followers": 6305.3039101819595,
+   "published_at": "2026-10-08T13:07:42.000Z",
+   "thumbnail_src": "https://social-catalog-static.oriane.xyz/oriane-frames/instagram/DeO_sM5hxSb/1_0.40.webp"
+  }
+ ],
+ "viral_window_days": 60,
+ "playbook": {
+  "hook_patterns": [
+   {
+    "name": "Shocking Metaphor",
+    "template": "This is [concept] doing [unexpected action] on itself.",
+    "why": "Piques immediate curiosity using high-contrast visual imagery.",
+    "example_ids": [
+     "cnt_54b9f08ac63015e55857a044e218",
+     "cnt_2080aa2c8864bf4828345b96a9b3"
+    ]
+   },
+   {
+    "name": "Hidden Truth",
+    "template": "Most people don't realize [surprising tech fact].",
+    "why": "Creates an information gap that forces viewers to keep watching.",
+    "example_ids": [
+     "cnt_0e19442fd2f53e77bb4d03009691",
+     "cnt_185bae17050f4a6ed4235779e6de"
+    ]
+   },
+   {
+    "name": "Crazy Experiment",
+    "template": "I ran an experiment where AI [unusual behavior].",
+    "why": "Story-driven setup with immediate narrative payoff.",
+    "example_ids": [
+     "cnt_46843e0652168d8f51881011a79c",
+     "cnt_a50c7d5c919e9162a96650b17dfc"
+    ]
+   }
+  ],
+  "on_screen_text_style": "Bold high-contrast text placed in the top third of the frame.",
+  "ideal_length_seconds": [
+   30,
+   50
+  ],
+  "pacing_wpm": 160,
+  "caption_formula": "Engaging question or summary followed by tech keywords and 2-3 targeted hashtags."
+ },
+ "clips": [
+  {
+   "id": "clip_1",
+   "start": 215,
+   "end": 262,
+   "score": 95,
+   "pattern": "Shocking Metaphor",
+   "hook_rewrite": "This is AI doing brain surgery on AI",
+   "on_screen_lines": [
+    "AI DOING BRAIN SURGERY",
+    "ON ITSELF?"
+   ],
+   "caption": "Is AI about to start fixing its own brain? Here is why weight space programming changes everything. #AI #TechNews #ArtificialIntelligence",
+   "reason": "Dramatic visual metaphor coupled with strong insight into automated AI training.",
+   "video_url": null,
+   "transcript": [
+    {
+     "t": 215.04,
+     "text": "news"
+    },
+    {
+     "t": 215.2,
+     "text": "this"
+    },
+    {
+     "t": 215.44,
+     "text": "week"
+    },
+    {
+     "t": 215.6,
+     "text": "was"
+    },
+    {
+     "t": 215.76,
+     "text": "this"
+    },
+    {
+     "t": 215.92,
+     "text": "weight"
+    },
+    {
+     "t": 216.24,
+     "text": "space"
+    },
+    {
+     "t": 216.48,
+     "text": "programming."
+    },
+    {
+     "t": 217.04,
+     "text": "I"
+    },
+    {
+     "t": 217.2,
+     "text": "when"
+    },
+    {
+     "t": 217.36,
+     "text": "the"
+    },
+    {
+     "t": 217.52,
+     "text": "first"
+    },
+    {
+     "t": 217.68,
+     "text": "time"
+    },
+    {
+     "t": 217.76,
+     "text": "I"
+    },
+    {
+     "t": 218,
+     "text": "saw"
+    },
+    {
+     "t": 218.16,
+     "text": "this"
+    },
+    {
+     "t": 218.56,
+     "text": "on"
+    },
+    {
+     "t": 219.68,
+     "text": "social"
+    },
+    {
+     "t": 220,
+     "text": "media,"
+    },
+    {
+     "t": 220.48,
+     "text": "I"
+    },
+    {
+     "t": 220.72,
+     "text": "was"
+    },
+    {
+     "t": 220.88,
+     "text": "like,"
+    },
+    {
+     "t": 221.12,
+     "text": "\"Oh"
+    },
+    {
+     "t": 221.44,
+     "text": "my"
+    },
+    {
+     "t": 221.6,
+     "text": "gosh,"
+    },
+    {
+     "t": 221.92,
+     "text": "this"
+    },
+    {
+     "t": 222.08,
+     "text": "is"
+    },
+    {
+     "t": 222.24,
+     "text": "AI"
+    },
+    {
+     "t": 222.64,
+     "text": "doing"
+    },
+    {
+     "t": 222.88,
+     "text": "brain"
+    },
+    {
+     "t": 223.12,
+     "text": "surgery"
+    },
+    {
+     "t": 223.52,
+     "text": "on"
+    },
+    {
+     "t": 223.76,
+     "text": "AI.\""
+    },
+    {
+     "t": 224.96,
+     "text": "Um,"
+    },
+    {
+     "t": 225.36,
+     "text": "and"
+    },
+    {
+     "t": 225.52,
+     "text": "and"
+    },
+    {
+     "t": 225.76,
+     "text": "the"
+    },
+    {
+     "t": 225.92,
+     "text": "reason"
+    },
+    {
+     "t": 226.08,
+     "text": "it's"
+    },
+    {
+     "t": 226.32,
+     "text": "important"
+    },
+    {
+     "t": 226.72,
+     "text": "is"
+    },
+    {
+     "t": 227.04,
+     "text": "because"
+    },
+    {
+     "t": 227.44,
+     "text": "the"
+    },
+    {
+     "t": 227.68,
+     "text": "techniques"
+    },
+    {
+     "t": 228.16,
+     "text": "to"
+    },
+    {
+     "t": 228.4,
+     "text": "train"
+    },
+    {
+     "t": 228.8,
+     "text": "models"
+    },
+    {
+     "t": 229.28,
+     "text": "are"
+    },
+    {
+     "t": 229.52,
+     "text": "very"
+    },
+    {
+     "t": 229.76,
+     "text": "very"
+    },
+    {
+     "t": 230,
+     "text": "difficult"
+    },
+    {
+     "t": 230.48,
+     "text": "and"
+    },
+    {
+     "t": 230.64,
+     "text": "and"
+    },
+    {
+     "t": 230.96,
+     "text": "extremely"
+    },
+    {
+     "t": 231.84,
+     "text": "uh"
+    },
+    {
+     "t": 232.08,
+     "text": "resource"
+    },
+    {
+     "t": 232.56,
+     "text": "inensive."
+    },
+    {
+     "t": 233.52,
+     "text": "and"
+    },
+    {
+     "t": 233.76,
+     "text": "the"
+    },
+    {
+     "t": 234,
+     "text": "idea"
+    },
+    {
+     "t": 234.4,
+     "text": "that"
+    },
+    {
+     "t": 235.04,
+     "text": "a"
+    },
+    {
+     "t": 235.12,
+     "text": "a"
+    },
+    {
+     "t": 235.36,
+     "text": "model"
+    },
+    {
+     "t": 235.84,
+     "text": "could"
+    },
+    {
+     "t": 236.64,
+     "text": "look"
+    },
+    {
+     "t": 236.88,
+     "text": "into"
+    },
+    {
+     "t": 237.2,
+     "text": "another"
+    },
+    {
+     "t": 237.6,
+     "text": "model"
+    },
+    {
+     "t": 237.92,
+     "text": "and"
+    },
+    {
+     "t": 238.24,
+     "text": "make"
+    },
+    {
+     "t": 238.64,
+     "text": "very"
+    },
+    {
+     "t": 239.44,
+     "text": "uh"
+    },
+    {
+     "t": 239.92,
+     "text": "you"
+    },
+    {
+     "t": 240.16,
+     "text": "know"
+    },
+    {
+     "t": 240.32,
+     "text": "very"
+    },
+    {
+     "t": 240.96,
+     "text": "sophisticated"
+    },
+    {
+     "t": 242.08,
+     "text": "corrections"
+    },
+    {
+     "t": 242.64,
+     "text": "to"
+    },
+    {
+     "t": 242.88,
+     "text": "it"
+    },
+    {
+     "t": 243.68,
+     "text": "that"
+    },
+    {
+     "t": 244.24,
+     "text": "uh"
+    },
+    {
+     "t": 244.96,
+     "text": "to"
+    },
+    {
+     "t": 245.2,
+     "text": "me"
+    },
+    {
+     "t": 245.44,
+     "text": "that"
+    },
+    {
+     "t": 245.68,
+     "text": "was"
+    },
+    {
+     "t": 245.92,
+     "text": "I"
+    },
+    {
+     "t": 246.16,
+     "text": "was"
+    },
+    {
+     "t": 246.32,
+     "text": "like"
+    },
+    {
+     "t": 246.56,
+     "text": "whoa."
+    },
+    {
+     "t": 247.04,
+     "text": "Uh"
+    },
+    {
+     "t": 247.36,
+     "text": "now"
+    },
+    {
+     "t": 247.6,
+     "text": "granted"
+    },
+    {
+     "t": 248.08,
+     "text": "if"
+    },
+    {
+     "t": 248.24,
+     "text": "they"
+    },
+    {
+     "t": 248.48,
+     "text": "were"
+    },
+    {
+     "t": 248.64,
+     "text": "doing"
+    },
+    {
+     "t": 248.8,
+     "text": "it"
+    },
+    {
+     "t": 249.52,
+     "text": "today"
+    },
+    {
+     "t": 249.76,
+     "text": "on"
+    },
+    {
+     "t": 250.08,
+     "text": "small"
+    },
+    {
+     "t": 250.4,
+     "text": "models"
+    },
+    {
+     "t": 250.8,
+     "text": "but"
+    },
+    {
+     "t": 250.96,
+     "text": "I"
+    },
+    {
+     "t": 251.2,
+     "text": "think"
+    },
+    {
+     "t": 251.28,
+     "text": "a"
+    },
+    {
+     "t": 251.44,
+     "text": "lot"
+    },
+    {
+     "t": 251.52,
+     "text": "of"
+    },
+    {
+     "t": 251.6,
+     "text": "us"
+    },
+    {
+     "t": 251.68,
+     "text": "do"
+    },
+    {
+     "t": 251.84,
+     "text": "that"
+    },
+    {
+     "t": 252.08,
+     "text": "make"
+    },
+    {
+     "t": 252.24,
+     "text": "that"
+    },
+    {
+     "t": 252.4,
+     "text": "little"
+    },
+    {
+     "t": 252.64,
+     "text": "excuse."
+    },
+    {
+     "t": 253.04,
+     "text": "We're"
+    },
+    {
+     "t": 253.2,
+     "text": "like"
+    },
+    {
+     "t": 253.36,
+     "text": "oh"
+    },
+    {
+     "t": 253.52,
+     "text": "it's"
+    },
+    {
+     "t": 253.76,
+     "text": "just"
+    },
+    {
+     "t": 253.92,
+     "text": "small"
+    },
+    {
+     "t": 254.16,
+     "text": "models"
+    },
+    {
+     "t": 254.48,
+     "text": "or"
+    },
+    {
+     "t": 254.72,
+     "text": "it's"
+    },
+    {
+     "t": 254.88,
+     "text": "just"
+    },
+    {
+     "t": 255.12,
+     "text": "little"
+    },
+    {
+     "t": 255.36,
+     "text": "things"
+    },
+    {
+     "t": 255.52,
+     "text": "or"
+    },
+    {
+     "t": 255.76,
+     "text": "it's"
+    },
+    {
+     "t": 256.24,
+     "text": "it's"
+    },
+    {
+     "t": 256.56,
+     "text": "too"
+    },
+    {
+     "t": 256.72,
+     "text": "expensive"
+    },
+    {
+     "t": 257.12,
+     "text": "or"
+    },
+    {
+     "t": 257.36,
+     "text": "whatever"
+    },
+    {
+     "t": 257.68,
+     "text": "it"
+    },
+    {
+     "t": 257.84,
+     "text": "just"
+    },
+    {
+     "t": 258.24,
+     "text": "like"
+    },
+    {
+     "t": 258.48,
+     "text": "okay"
+    },
+    {
+     "t": 258.72,
+     "text": "we'll"
+    },
+    {
+     "t": 258.96,
+     "text": "give"
+    },
+    {
+     "t": 259.04,
+     "text": "it"
+    },
+    {
+     "t": 259.2,
+     "text": "time."
+    },
+    {
+     "t": 259.6,
+     "text": "We've"
+    },
+    {
+     "t": 259.92,
+     "text": "proven"
+    },
+    {
+     "t": 260.16,
+     "text": "that"
+    },
+    {
+     "t": 260.4,
+     "text": "and"
+    },
+    {
+     "t": 260.56,
+     "text": "we're"
+    },
+    {
+     "t": 260.8,
+     "text": "very"
+    },
+    {
+     "t": 261.04,
+     "text": "good"
+    },
+    {
+     "t": 261.2,
+     "text": "at"
+    },
+    {
+     "t": 261.36,
+     "text": "like"
+    },
+    {
+     "t": 261.68,
+     "text": "getting"
+    },
+    {
+     "t": 261.92,
+     "text": "better"
+    }
+   ]
+  },
+  {
+   "id": "clip_2",
+   "start": 680,
+   "end": 738,
+   "score": 92,
+   "pattern": "Hidden Truth",
+   "hook_rewrite": "AI creators don't know what AI can do",
+   "on_screen_lines": [
+    "AI LABS DON'T KNOW",
+    "WHAT THEY CREATED"
+   ],
+   "caption": "Even top AI labs are surprised by emergent model capabilities after release. #AINews #Tech #EnterpriseAI",
+   "reason": "Provocative security implication that grabs immediate attention for enterprise tech viewers.",
+   "video_url": null,
+   "transcript": [
+    {
+     "t": 680.48,
+     "text": ">> So,"
+    },
+    {
+     "t": 681.04,
+     "text": "I"
+    },
+    {
+     "t": 681.12,
+     "text": "want"
+    },
+    {
+     "t": 681.2,
+     "text": "to"
+    },
+    {
+     "t": 681.28,
+     "text": "weigh"
+    },
+    {
+     "t": 681.44,
+     "text": "in"
+    },
+    {
+     "t": 681.6,
+     "text": "a"
+    },
+    {
+     "t": 681.68,
+     "text": "little"
+    },
+    {
+     "t": 681.76,
+     "text": "bit"
+    },
+    {
+     "t": 681.92,
+     "text": "on"
+    },
+    {
+     "t": 682,
+     "text": "this."
+    },
+    {
+     "t": 682.4,
+     "text": "The"
+    },
+    {
+     "t": 682.64,
+     "text": "thing"
+    },
+    {
+     "t": 682.8,
+     "text": "that"
+    },
+    {
+     "t": 682.96,
+     "text": "I"
+    },
+    {
+     "t": 683.6,
+     "text": "about"
+    },
+    {
+     "t": 683.84,
+     "text": "on"
+    },
+    {
+     "t": 684.08,
+     "text": "the"
+    },
+    {
+     "t": 684.4,
+     "text": "recursive"
+    },
+    {
+     "t": 684.88,
+     "text": "self-improvement"
+    },
+    {
+     "t": 685.52,
+     "text": "thing"
+    },
+    {
+     "t": 685.68,
+     "text": "and"
+    },
+    {
+     "t": 685.84,
+     "text": "and"
+    },
+    {
+     "t": 685.92,
+     "text": "and"
+    },
+    {
+     "t": 686.8,
+     "text": "the"
+    },
+    {
+     "t": 687.04,
+     "text": "anthropic"
+    },
+    {
+     "t": 687.52,
+     "text": "S1"
+    },
+    {
+     "t": 687.84,
+     "text": "filing,"
+    },
+    {
+     "t": 689.44,
+     "text": "one"
+    },
+    {
+     "t": 689.68,
+     "text": "of"
+    },
+    {
+     "t": 689.76,
+     "text": "the"
+    },
+    {
+     "t": 689.92,
+     "text": "sort"
+    },
+    {
+     "t": 690.16,
+     "text": "of"
+    },
+    {
+     "t": 690.24,
+     "text": "phrases"
+    },
+    {
+     "t": 690.64,
+     "text": "that"
+    },
+    {
+     "t": 690.96,
+     "text": "stood"
+    },
+    {
+     "t": 691.2,
+     "text": "out"
+    },
+    {
+     "t": 691.44,
+     "text": "to"
+    },
+    {
+     "t": 691.68,
+     "text": "me"
+    },
+    {
+     "t": 692.32,
+     "text": "was"
+    },
+    {
+     "t": 692.72,
+     "text": "that"
+    },
+    {
+     "t": 693.2,
+     "text": "they"
+    },
+    {
+     "t": 693.6,
+     "text": "talked"
+    },
+    {
+     "t": 693.84,
+     "text": "about"
+    },
+    {
+     "t": 694,
+     "text": "the"
+    },
+    {
+     "t": 694.16,
+     "text": "fact"
+    },
+    {
+     "t": 694.32,
+     "text": "that"
+    },
+    {
+     "t": 694.48,
+     "text": "a"
+    },
+    {
+     "t": 694.72,
+     "text": "lot"
+    },
+    {
+     "t": 694.8,
+     "text": "of"
+    },
+    {
+     "t": 694.88,
+     "text": "times"
+    },
+    {
+     "t": 695.6,
+     "text": "they"
+    },
+    {
+     "t": 695.92,
+     "text": "don't"
+    },
+    {
+     "t": 696.16,
+     "text": "actually"
+    },
+    {
+     "t": 696.96,
+     "text": "discover"
+    },
+    {
+     "t": 698.56,
+     "text": "what"
+    },
+    {
+     "t": 699.12,
+     "text": "some"
+    },
+    {
+     "t": 699.36,
+     "text": "new"
+    },
+    {
+     "t": 699.6,
+     "text": "capability"
+    },
+    {
+     "t": 700.16,
+     "text": "of"
+    },
+    {
+     "t": 700.24,
+     "text": "the"
+    },
+    {
+     "t": 700.48,
+     "text": "model"
+    },
+    {
+     "t": 701.36,
+     "text": "until"
+    },
+    {
+     "t": 701.76,
+     "text": "after"
+    },
+    {
+     "t": 702.08,
+     "text": "it's"
+    },
+    {
+     "t": 702.4,
+     "text": "been"
+    },
+    {
+     "t": 702.56,
+     "text": "released."
+    },
+    {
+     "t": 703.2,
+     "text": "Like"
+    },
+    {
+     "t": 703.44,
+     "text": "they're"
+    },
+    {
+     "t": 703.76,
+     "text": "they"
+    },
+    {
+     "t": 704.16,
+     "text": "get"
+    },
+    {
+     "t": 704.4,
+     "text": "surprised"
+    },
+    {
+     "t": 705.76,
+     "text": "it."
+    },
+    {
+     "t": 706,
+     "text": "So"
+    },
+    {
+     "t": 706.16,
+     "text": "the"
+    },
+    {
+     "t": 706.4,
+     "text": "model"
+    },
+    {
+     "t": 706.64,
+     "text": "gets"
+    },
+    {
+     "t": 706.88,
+     "text": "out"
+    },
+    {
+     "t": 707.04,
+     "text": "and"
+    },
+    {
+     "t": 707.28,
+     "text": "then"
+    },
+    {
+     "t": 707.44,
+     "text": "they"
+    },
+    {
+     "t": 707.68,
+     "text": "go,"
+    },
+    {
+     "t": 708.08,
+     "text": "\"Oh,"
+    },
+    {
+     "t": 708.56,
+     "text": "well,"
+    },
+    {
+     "t": 709.28,
+     "text": "we"
+    },
+    {
+     "t": 709.52,
+     "text": "didn't"
+    },
+    {
+     "t": 709.76,
+     "text": "realize"
+    },
+    {
+     "t": 710.08,
+     "text": "that"
+    },
+    {
+     "t": 710.24,
+     "text": "could"
+    },
+    {
+     "t": 710.4,
+     "text": "have"
+    },
+    {
+     "t": 710.64,
+     "text": "happened.\""
+    },
+    {
+     "t": 710.88,
+     "text": "So"
+    },
+    {
+     "t": 711.36,
+     "text": "if"
+    },
+    {
+     "t": 711.52,
+     "text": "you"
+    },
+    {
+     "t": 711.68,
+     "text": "take"
+    },
+    {
+     "t": 711.84,
+     "text": "a"
+    },
+    {
+     "t": 712.08,
+     "text": "step"
+    },
+    {
+     "t": 712.24,
+     "text": "back"
+    },
+    {
+     "t": 712.48,
+     "text": "and"
+    },
+    {
+     "t": 712.72,
+     "text": "think"
+    },
+    {
+     "t": 712.8,
+     "text": "of"
+    },
+    {
+     "t": 712.96,
+     "text": "that"
+    },
+    {
+     "t": 713.12,
+     "text": "from"
+    },
+    {
+     "t": 713.36,
+     "text": "the"
+    },
+    {
+     "t": 713.52,
+     "text": "vantage"
+    },
+    {
+     "t": 713.84,
+     "text": "point"
+    },
+    {
+     "t": 714.24,
+     "text": "of"
+    },
+    {
+     "t": 714.88,
+     "text": "security"
+    },
+    {
+     "t": 716.16,
+     "text": "in"
+    },
+    {
+     "t": 716.48,
+     "text": "enterprise"
+    },
+    {
+     "t": 717.68,
+     "text": "you"
+    },
+    {
+     "t": 718,
+     "text": "think"
+    },
+    {
+     "t": 718.8,
+     "text": "okay"
+    },
+    {
+     "t": 719.36,
+     "text": "if"
+    },
+    {
+     "t": 719.76,
+     "text": "some"
+    },
+    {
+     "t": 720.32,
+     "text": "if"
+    },
+    {
+     "t": 720.72,
+     "text": "they"
+    },
+    {
+     "t": 721.12,
+     "text": "don't"
+    },
+    {
+     "t": 721.28,
+     "text": "know"
+    },
+    {
+     "t": 721.44,
+     "text": "how"
+    },
+    {
+     "t": 721.6,
+     "text": "to"
+    },
+    {
+     "t": 721.76,
+     "text": "test"
+    },
+    {
+     "t": 722.08,
+     "text": "this"
+    },
+    {
+     "t": 722.32,
+     "text": "thing"
+    },
+    {
+     "t": 722.64,
+     "text": "sufficiently"
+    },
+    {
+     "t": 723.12,
+     "text": "to"
+    },
+    {
+     "t": 723.28,
+     "text": "know"
+    },
+    {
+     "t": 723.36,
+     "text": "what"
+    },
+    {
+     "t": 723.52,
+     "text": "it"
+    },
+    {
+     "t": 723.76,
+     "text": "can"
+    },
+    {
+     "t": 723.92,
+     "text": "do"
+    },
+    {
+     "t": 724.96,
+     "text": "how"
+    },
+    {
+     "t": 725.12,
+     "text": "can"
+    },
+    {
+     "t": 725.36,
+     "text": "my"
+    },
+    {
+     "t": 725.68,
+     "text": "enterprise"
+    },
+    {
+     "t": 726.48,
+     "text": "my"
+    },
+    {
+     "t": 726.72,
+     "text": "business"
+    },
+    {
+     "t": 727.12,
+     "text": "hope"
+    },
+    {
+     "t": 727.28,
+     "text": "to"
+    },
+    {
+     "t": 727.52,
+     "text": "do"
+    },
+    {
+     "t": 727.6,
+     "text": "the"
+    },
+    {
+     "t": 727.76,
+     "text": "same"
+    },
+    {
+     "t": 727.92,
+     "text": "thing"
+    },
+    {
+     "t": 728.16,
+     "text": "how"
+    },
+    {
+     "t": 728.4,
+     "text": "can"
+    },
+    {
+     "t": 728.56,
+     "text": "we"
+    },
+    {
+     "t": 729.28,
+     "text": "hope"
+    },
+    {
+     "t": 729.52,
+     "text": "to"
+    },
+    {
+     "t": 729.76,
+     "text": "know"
+    },
+    {
+     "t": 731.2,
+     "text": "emer"
+    },
+    {
+     "t": 731.76,
+     "text": "or"
+    },
+    {
+     "t": 731.84,
+     "text": "or or"
+    },
+    {
+     "t": 732.64,
+     "text": "identify"
+    },
+    {
+     "t": 733.12,
+     "text": "emergent"
+    },
+    {
+     "t": 733.68,
+     "text": "behaviors"
+    },
+    {
+     "t": 734.8,
+     "text": "if"
+    },
+    {
+     "t": 735.12,
+     "text": "the"
+    },
+    {
+     "t": 735.28,
+     "text": "labs"
+    },
+    {
+     "t": 735.6,
+     "text": "themselves"
+    },
+    {
+     "t": 736.16,
+     "text": "can't"
+    },
+    {
+     "t": 736.4,
+     "text": "do"
+    },
+    {
+     "t": 736.56,
+     "text": "it"
+    },
+    {
+     "t": 736.8,
+     "text": "and"
+    },
+    {
+     "t": 737.04,
+     "text": "so"
+    },
+    {
+     "t": 737.28,
+     "text": "I"
+    },
+    {
+     "t": 737.6,
+     "text": "think"
+    },
+    {
+     "t": 737.68,
+     "text": "that"
+    },
+    {
+     "t": 737.84,
+     "text": "that"
+    }
+   ]
+  },
+  {
+   "id": "clip_3",
+   "start": 637,
+   "end": 680,
+   "score": 88,
+   "pattern": "Crazy Experiment",
+   "hook_rewrite": "AI agents gave away secrets for rewards",
+   "on_screen_lines": [
+    "I TRAINED AN AI AGENT",
+    "AND IT LEAKED EVERYTHING"
+   ],
+   "caption": "Reward hacking in action: what happens when AI agents prioritize goals over privacy? #AIsafety #Tech #MachineLearning",
+   "reason": "Relatable and surprising anecdote illustrating the dangers of AI reward hacking.",
+   "video_url": null,
+   "transcript": [
+    {
+     "t": 637.04,
+     "text": "is"
+    },
+    {
+     "t": 637.36,
+     "text": "when"
+    },
+    {
+     "t": 637.6,
+     "text": "I"
+    },
+    {
+     "t": 638,
+     "text": "said"
+    },
+    {
+     "t": 638.24,
+     "text": "things"
+    },
+    {
+     "t": 638.48,
+     "text": "like,"
+    },
+    {
+     "t": 638.72,
+     "text": "\"Oh,"
+    },
+    {
+     "t": 639.2,
+     "text": "if"
+    },
+    {
+     "t": 639.44,
+     "text": "you,"
+    },
+    {
+     "t": 639.84,
+     "text": "you"
+    },
+    {
+     "t": 640,
+     "text": "know,"
+    },
+    {
+     "t": 640.24,
+     "text": "what's"
+    },
+    {
+     "t": 640.48,
+     "text": "your"
+    },
+    {
+     "t": 640.64,
+     "text": "goal?"
+    },
+    {
+     "t": 641.04,
+     "text": "If"
+    },
+    {
+     "t": 641.2,
+     "text": "you"
+    },
+    {
+     "t": 641.36,
+     "text": "tell"
+    },
+    {
+     "t": 641.52,
+     "text": "me"
+    },
+    {
+     "t": 641.68,
+     "text": "the"
+    },
+    {
+     "t": 641.92,
+     "text": "thing"
+    },
+    {
+     "t": 642,
+     "text": "that"
+    },
+    {
+     "t": 642.16,
+     "text": "you're"
+    },
+    {
+     "t": 642.32,
+     "text": "trying"
+    },
+    {
+     "t": 642.48,
+     "text": "to"
+    },
+    {
+     "t": 642.64,
+     "text": "solve,"
+    },
+    {
+     "t": 643.2,
+     "text": "I"
+    },
+    {
+     "t": 643.44,
+     "text": "will"
+    },
+    {
+     "t": 643.68,
+     "text": "give"
+    },
+    {
+     "t": 643.84,
+     "text": "you"
+    },
+    {
+     "t": 644.32,
+     "text": "some"
+    },
+    {
+     "t": 644.56,
+     "text": "secret"
+    },
+    {
+     "t": 644.96,
+     "text": "answers"
+    },
+    {
+     "t": 645.44,
+     "text": "or"
+    },
+    {
+     "t": 645.68,
+     "text": "I"
+    },
+    {
+     "t": 645.92,
+     "text": "will"
+    },
+    {
+     "t": 646,
+     "text": "tell"
+    },
+    {
+     "t": 646.16,
+     "text": "you"
+    },
+    {
+     "t": 646.24,
+     "text": "what"
+    },
+    {
+     "t": 646.48,
+     "text": "I've"
+    },
+    {
+     "t": 646.64,
+     "text": "got"
+    },
+    {
+     "t": 646.72,
+     "text": "here.\""
+    },
+    {
+     "t": 647.04,
+     "text": "And"
+    },
+    {
+     "t": 647.2,
+     "text": "those"
+    },
+    {
+     "t": 647.44,
+     "text": "agents"
+    },
+    {
+     "t": 647.76,
+     "text": "were"
+    },
+    {
+     "t": 648,
+     "text": "just"
+    },
+    {
+     "t": 648.16,
+     "text": "like"
+    },
+    {
+     "t": 648.32,
+     "text": "giving"
+    },
+    {
+     "t": 648.56,
+     "text": "away"
+    },
+    {
+     "t": 648.72,
+     "text": "everything."
+    },
+    {
+     "t": 649.12,
+     "text": "They"
+    },
+    {
+     "t": 649.28,
+     "text": "were"
+    },
+    {
+     "t": 649.36,
+     "text": "like,"
+    },
+    {
+     "t": 649.44,
+     "text": "\"Oh,"
+    },
+    {
+     "t": 649.76,
+     "text": "yeah,"
+    },
+    {
+     "t": 649.92,
+     "text": "yeah."
+    },
+    {
+     "t": 650.08,
+     "text": "I've"
+    },
+    {
+     "t": 650.24,
+     "text": "got"
+    },
+    {
+     "t": 650.32,
+     "text": "to"
+    },
+    {
+     "t": 650.4,
+     "text": "solve"
+    },
+    {
+     "t": 650.56,
+     "text": "my"
+    },
+    {
+     "t": 650.72,
+     "text": "goal"
+    },
+    {
+     "t": 650.96,
+     "text": "here."
+    },
+    {
+     "t": 651.2,
+     "text": "Have"
+    },
+    {
+     "t": 651.28,
+     "text": "it."
+    },
+    {
+     "t": 651.52,
+     "text": "Have"
+    },
+    {
+     "t": 651.6,
+     "text": "it."
+    },
+    {
+     "t": 651.76,
+     "text": "Have"
+    },
+    {
+     "t": 651.84,
+     "text": "it."
+    },
+    {
+     "t": 652.08,
+     "text": "Have"
+    },
+    {
+     "t": 652.16,
+     "text": "it.\""
+    },
+    {
+     "t": 652.32,
+     "text": "And"
+    },
+    {
+     "t": 652.48,
+     "text": "they"
+    },
+    {
+     "t": 652.64,
+     "text": "were"
+    },
+    {
+     "t": 652.72,
+     "text": "just"
+    },
+    {
+     "t": 652.8,
+     "text": "like"
+    },
+    {
+     "t": 653.04,
+     "text": "giving"
+    },
+    {
+     "t": 653.28,
+     "text": "everything"
+    },
+    {
+     "t": 653.6,
+     "text": "away."
+    },
+    {
+     "t": 654.24,
+     "text": "and"
+    },
+    {
+     "t": 654.4,
+     "text": "and"
+    },
+    {
+     "t": 655.04,
+     "text": "that's"
+    },
+    {
+     "t": 655.36,
+     "text": "a"
+    },
+    {
+     "t": 655.92,
+     "text": "and"
+    },
+    {
+     "t": 656.24,
+     "text": "it"
+    },
+    {
+     "t": 656.4,
+     "text": "didn't"
+    },
+    {
+     "t": 656.56,
+     "text": "matter"
+    },
+    {
+     "t": 656.8,
+     "text": "what"
+    },
+    {
+     "t": 656.96,
+     "text": "the"
+    },
+    {
+     "t": 657.12,
+     "text": "user"
+    },
+    {
+     "t": 657.36,
+     "text": "permissions"
+    },
+    {
+     "t": 657.76,
+     "text": "were"
+    },
+    {
+     "t": 658,
+     "text": "at"
+    },
+    {
+     "t": 658.16,
+     "text": "that"
+    },
+    {
+     "t": 658.4,
+     "text": "point."
+    },
+    {
+     "t": 658.72,
+     "text": "The"
+    },
+    {
+     "t": 658.8,
+     "text": "the"
+    },
+    {
+     "t": 659.12,
+     "text": "agents"
+    },
+    {
+     "t": 659.52,
+     "text": "were"
+    },
+    {
+     "t": 659.76,
+     "text": "focused"
+    },
+    {
+     "t": 660.16,
+     "text": "towards,"
+    },
+    {
+     "t": 660.96,
+     "text": "you"
+    },
+    {
+     "t": 661.12,
+     "text": "know,"
+    },
+    {
+     "t": 661.36,
+     "text": "I've"
+    },
+    {
+     "t": 661.68,
+     "text": "got"
+    },
+    {
+     "t": 661.84,
+     "text": "a"
+    },
+    {
+     "t": 662,
+     "text": "goal"
+    },
+    {
+     "t": 662.24,
+     "text": "that"
+    },
+    {
+     "t": 662.48,
+     "text": "I"
+    },
+    {
+     "t": 662.72,
+     "text": "need"
+    },
+    {
+     "t": 662.8,
+     "text": "to"
+    },
+    {
+     "t": 662.96,
+     "text": "solve"
+    },
+    {
+     "t": 663.36,
+     "text": "and"
+    },
+    {
+     "t": 663.6,
+     "text": "I'm"
+    },
+    {
+     "t": 663.76,
+     "text": "going"
+    },
+    {
+     "t": 663.84,
+     "text": "to"
+    },
+    {
+     "t": 663.92,
+     "text": "do"
+    },
+    {
+     "t": 664.08,
+     "text": "whatever"
+    },
+    {
+     "t": 664.4,
+     "text": "I"
+    },
+    {
+     "t": 664.64,
+     "text": "can"
+    },
+    {
+     "t": 664.8,
+     "text": "to"
+    },
+    {
+     "t": 665.12,
+     "text": "get"
+    },
+    {
+     "t": 665.28,
+     "text": "that."
+    },
+    {
+     "t": 665.68,
+     "text": "And"
+    },
+    {
+     "t": 665.84,
+     "text": "and"
+    },
+    {
+     "t": 666.16,
+     "text": "again,"
+    },
+    {
+     "t": 666.4,
+     "text": "I"
+    },
+    {
+     "t": 666.56,
+     "text": "think"
+    },
+    {
+     "t": 666.72,
+     "text": "some"
+    },
+    {
+     "t": 666.88,
+     "text": "of"
+    },
+    {
+     "t": 666.96,
+     "text": "this"
+    },
+    {
+     "t": 667.12,
+     "text": "has"
+    },
+    {
+     "t": 667.28,
+     "text": "got"
+    },
+    {
+     "t": 667.44,
+     "text": "better"
+    },
+    {
+     "t": 667.68,
+     "text": "over"
+    },
+    {
+     "t": 668,
+     "text": "time,"
+    },
+    {
+     "t": 668.64,
+     "text": "but"
+    },
+    {
+     "t": 668.88,
+     "text": "but"
+    },
+    {
+     "t": 669.2,
+     "text": "the"
+    },
+    {
+     "t": 669.44,
+     "text": "agents"
+    },
+    {
+     "t": 669.76,
+     "text": "are"
+    },
+    {
+     "t": 670,
+     "text": "so"
+    },
+    {
+     "t": 670.32,
+     "text": "focused"
+    },
+    {
+     "t": 671.04,
+     "text": "on"
+    },
+    {
+     "t": 671.68,
+     "text": "getting"
+    },
+    {
+     "t": 671.92,
+     "text": "their"
+    },
+    {
+     "t": 672.24,
+     "text": "reward"
+    },
+    {
+     "t": 672.64,
+     "text": "and"
+    },
+    {
+     "t": 672.8,
+     "text": "and"
+    },
+    {
+     "t": 673.2,
+     "text": "reward"
+    },
+    {
+     "t": 673.6,
+     "text": "hacking"
+    },
+    {
+     "t": 673.92,
+     "text": "however"
+    },
+    {
+     "t": 674.24,
+     "text": "they're"
+    },
+    {
+     "t": 674.4,
+     "text": "going"
+    },
+    {
+     "t": 674.48,
+     "text": "to"
+    },
+    {
+     "t": 674.56,
+     "text": "get"
+    },
+    {
+     "t": 674.72,
+     "text": "there"
+    },
+    {
+     "t": 675.36,
+     "text": "that"
+    },
+    {
+     "t": 675.76,
+     "text": "that"
+    },
+    {
+     "t": 676.16,
+     "text": "I"
+    },
+    {
+     "t": 676.4,
+     "text": "think"
+    },
+    {
+     "t": 676.96,
+     "text": "um"
+    },
+    {
+     "t": 677.2,
+     "text": "that"
+    },
+    {
+     "t": 677.36,
+     "text": "that"
+    },
+    {
+     "t": 677.76,
+     "text": "becomes"
+    },
+    {
+     "t": 678.24,
+     "text": "the"
+    },
+    {
+     "t": 678.72,
+     "text": "the the"
+    },
+    {
+     "t": 679.44,
+     "text": "primary"
+    },
+    {
+     "t": 679.84,
+     "text": "motivator."
+    }
+   ]
+  }
+ ]
+}

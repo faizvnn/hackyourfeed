@@ -1,0 +1,60 @@
+/* The product at /app: one field, progress, clips. */
+
+.p-page { min-height: 100vh; display: flex; flex-direction: column; }
+.p-foot { margin-top: auto; }
+.p-main { max-width: 1080px; padding: 32px 0 72px; display: grid; gap: 28px; align-content: start; }
+.p-field { max-width: none; }
+.p-main > .field-error { margin-top: -14px; }
+
+/* empty */
+.p-empty { display: grid; justify-items: center; gap: 18px; padding: 64px 24px; border-radius: 28px; background: var(--mist); text-align: center; }
+.p-empty p { margin: 0; font-size: 16px; color: var(--ink-3); }
+.p-empty-phones { display: flex; gap: 14px; }
+.p-empty-phones i { width: 74px; aspect-ratio: 9 / 16; border-radius: 14px; background: var(--paper); box-shadow: inset 0 0 0 1.5px var(--mist-2); }
+.p-empty-phones i:nth-child(2) { transform: translateY(-10px); }
+
+/* video row */
+.p-video { display: grid; grid-template-columns: 148px minmax(0, 1fr); gap: 18px; align-items: center; }
+.p-video-img { width: 148px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: var(--mist); }
+.p-video-text { min-width: 0; display: grid; gap: 8px; }
+.p-video-title { margin: 0; font-size: clamp(20px, 2vw, 26px); font-weight: 700; line-height: 1.15; letter-spacing: -0.035em; overflow-wrap: anywhere; }
+.p-video-meta { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 15px; color: var(--ink-2); }
+.p-sample { font-size: 13px; font-weight: 600; color: var(--ink-3); }
+@media (max-width: 560px) { .p-video { grid-template-columns: 96px minmax(0, 1fr); gap: 14px; } .p-video-img { width: 96px; border-radius: 8px; } .p-video-title { font-size: 17px; } }
+
+/* progress */
+.p-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.p-step { display: flex; align-items: center; gap: 8px; padding: 12px 12px; border-radius: 12px; background: var(--mist); font-size: 14px; font-weight: 600; color: var(--ink-3); }
+.p-step-dot { display: grid; place-items: center; width: 20px; height: 20px; flex: none; color: var(--accent); }
+.p-ring { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--mist-2); }
+.p-step.is-running { background: var(--accent-wash); color: var(--accent-ink); }
+.p-step.is-done { color: var(--ink); }
+.p-step.is-failed { color: #b42318; }
+.p-step.is-failed .p-step-dot { color: #b42318; }
+.p-now { margin: -12px 0 0; font-size: 15px; color: var(--ink-2); }
+.p-fail { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 14px; background: #fdecea; color: #7a1a12; }
+.p-fail p { margin: 0; font-weight: 550; }
+@media (max-width: 760px) { .p-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* results */
+.p-results { display: grid; gap: 40px; padding-top: 8px; }
+.p-clips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.p-clip { display: grid; gap: 12px; align-content: start; justify-items: start; scroll-margin-top: 24px; }
+.p-clip .phone-wrap { width: 100%; margin-bottom: 10px; }
+.p-clip-head { display: flex; align-items: end; gap: 10px; }
+.p-clip-head .num { font-size: 48px; color: var(--accent); }
+.p-clip-of { font-size: 13px; font-weight: 550; line-height: 1.25; color: var(--ink-2); padding-bottom: 4px; }
+.p-clip-hook { margin: 0; font-size: 21px; font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; text-wrap: balance; }
+.p-clip-time { margin: 0; font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.p-clip-reason { margin: 0; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.p-clip-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+@media (max-width: 900px) { .p-clips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .p-clips { grid-template-columns: 1fr; } .p-clip .phone-wrap { max-width: 320px; } }
+
+.p-basis { display: grid; gap: 14px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.p-basis p { margin: 0; font-size: 15px; color: var(--ink-2); }
+.p-basis-row { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 8px; }
+.p-basis-row .thumb { border-radius: 10px; }
+@media (max-width: 600px) { .p-basis-row { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+.p-none { margin: 0; padding: 32px; border-radius: 20px; background: var(--mist); font-size: 17px; }
