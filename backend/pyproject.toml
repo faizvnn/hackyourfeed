@@ -10,4 +10,6 @@ dependencies = [
     "openai>=1.40",
     "python-dotenv>=1.0",
     "yt-dlp>=2024.8.6",
+    "numpy>=2.4.6",
+    "pillow>=13.0.0",
 ]
