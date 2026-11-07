@@ -54,7 +54,7 @@ curl -s localhost:8000/jobs/<id>
 
 Needs `ffmpeg` on PATH for stage 6 (`brew install ffmpeg`).
 
-`make renderer` flips stage 6 between the classic render (default) and the experimental adaptive one (`make renderer E=classic|adaptive` to set it outright). The adaptive engine needs ffmpeg with libass; see `backend/RENDER.md`.
+`make renderer` flips stage 6 between the classic render (default) and the experimental adaptive one (`make renderer E=classic|adaptive` to set it outright). `make renderer E=adaptive,adaptive,classic` picks an engine per clip in stage-5 order (clips 1 and 2 adaptive, clip 3 classic); a mixed job still lands as `clip_1..3.mp4`. The adaptive engine needs ffmpeg with libass; see `backend/RENDER.md`.
 
 ## How to work on your stage
 

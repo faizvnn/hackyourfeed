@@ -36,6 +36,10 @@ Ceiling (TODO): hand the cut clip to Compound.mov for its own editing.
 Experimental alternative: RENDER_ENGINE=adaptive routes run() to
 s6_render_adaptive.py (libass word-by-word captions). Needs ffmpeg built with
 libass. Off by default until it is judged better than this one.
+
+Per-clip engines: RENDER_ENGINE=adaptive,adaptive,classic renders clip 1 and 2
+with the adaptive engine and clip 3 (and any after it) with this one; see
+render_mixed().
 """
 
 from __future__ import annotations
@@ -47,7 +51,7 @@ import subprocess
 from pathlib import Path
 
 from ..align import locate
-from ..config import PUBLIC_BASE_URL, RENDER_DIR, RENDER_ENGINE, WORK_DIR, use_fixture
+from ..config import PUBLIC_BASE_URL, RENDER_DIR, RENDER_ENGINE, WORK_DIR, engine_plan, use_fixture
 from ..contracts import Clip, ClipSet, Segment, Transcript
 from ..fixtures import load
 
@@ -65,14 +69,18 @@ FONT_CANDIDATES = [
 def run(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
     if use_fixture("render"):
         return load("clips_rendered", ClipSet)
-    if RENDER_ENGINE == "adaptive":
+    plan = engine_plan(len(clips.clips))
+    bad = sorted(set(plan) - {"classic", "adaptive"})
+    if bad:
+        raise ValueError(f"RENDER_ENGINE entries must be classic or adaptive, got {bad} in {RENDER_ENGINE!r}")
+    if "classic" not in plan and plan:
         from . import s6_render_adaptive
 
         print("[render] RENDER_ENGINE=adaptive -> s6_render_adaptive")
         return s6_render_adaptive.run(job_id, t, clips)
-    if RENDER_ENGINE != "classic":
-        raise ValueError(f"RENDER_ENGINE must be classic or adaptive, got {RENDER_ENGINE!r}")
-    return render(job_id, t, clips)
+    if "adaptive" not in plan:
+        return render(job_id, t, clips)
+    return render_mixed(job_id, t, clips, plan)
 
 
 def render(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
@@ -89,6 +97,41 @@ def render(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
         clip.render_path = str(path)
         clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/{name}"
         print(f"[render] {name}: {clip.start:.1f}-{clip.end:.1f}s  {path.stat().st_size // 1024} KB")
+    return clips
+
+
+def render_mixed(job_id: str, t: Transcript, clips: ClipSet, plan: list[str]) -> ClipSet:
+    """One engine per clip (RENDER_ENGINE=adaptive,adaptive,classic). Every clip lands in the
+    job folder as clip_<n>.mp4 whichever engine made it. A clip that fails keeps render_error
+    and the others still publish, as the adaptive engine does on its own."""
+    from . import s6_render_adaptive as adaptive
+
+    if "classic" in plan and not shutil.which("ffmpeg"):
+        raise RuntimeError("ffmpeg not on PATH (brew install ffmpeg)")
+    video = locate_video(t)
+    out_dir = RENDER_DIR / job_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    source = adaptive.prepare(job_id, t, video)  # validates libass + probes the video once
+    print(f"[render] {len(clips.clips)} clips from {video} -> {out_dir}  engines={','.join(plan)}")
+
+    for n, (clip, engine) in enumerate(zip(clips.clips, plan), 1):
+        name = f"clip_{n}.mp4"
+        clip.render_path = clip.render_url = clip.render_error = None
+        try:
+            if engine == "adaptive":
+                adaptive.render_clip(source, clip, out_dir / name)
+            else:
+                render_clip(video, t, clip, out_dir / name, out_dir / f"clip_{n}_overlays")
+            clip.render_path = str(out_dir / name)
+            clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/{name}"
+            print(f"[render] {name} ({engine}): {clip.start:.1f}-{clip.end:.1f}s  "
+                  f"{(out_dir / name).stat().st_size // 1024} KB")
+        except (ValueError, RuntimeError, OSError) as exc:
+            clip.render_error = f"{engine}: {exc}"
+            print(f"[render] {name} ({engine}) FAILED: {exc}")
+    (out_dir / "clips_rendered.json").write_text(clips.model_dump_json(indent=2), encoding="utf-8")
+    if not any(c.render_path for c in clips.clips):
+        raise RuntimeError(f"No clips rendered: {clips.clips[0].render_error}")
     return clips
 
 

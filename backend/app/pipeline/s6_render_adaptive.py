@@ -8,6 +8,9 @@ libass (`ass` filter) and ffprobe. See backend/RENDER.md.
 Same signature as the classic run(job_id, Transcript, ClipSet). Results fill
 render_path/render_url; individual failures fill render_error without
 discarding successful clips.
+
+prepare() + render_clip() are the per-clip building blocks; s6_render.render_mixed
+uses them when RENDER_ENGINE assigns engines per clip (adaptive,adaptive,classic).
 """
 from __future__ import annotations
 
@@ -108,15 +111,25 @@ def probe(path: Path, options: RenderOptions) -> dict:
             "audio": any(s.get("codec_type") == "audio" for s in data["streams"])}
 
 
-def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | None = None) -> ClipSet:
-    if use_fixture("render"):
-        return load("clips_rendered", ClipSet)
+@dataclass(frozen=True)
+class Source:
+    """A validated source video plus everything a single clip render needs."""
+    job_id: str
+    transcript: Transcript
+    path: Path
+    info: dict
+    options: RenderOptions
+
+
+def prepare(job_id: str, t: Transcript, video: Path | None = None, *,
+            options: RenderOptions | None = None) -> Source:
+    """Validate the job, the options, the ffmpeg build and the source video once per job.
+    `video` overrides transcript.video_path (the mixed-engine path passes the ingest cache)."""
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,80}", job_id):
         raise ValueError("job_id must contain only letters, numbers, underscores or hyphens")
-    if not t.video_path or not Path(t.video_path).is_file():
+    src = video if video is not None else Path(t.video_path or "")
+    if not str(src) or not src.is_file():
         raise ValueError("stage 1 must provide an existing local video_path")
-    if not clips.clips:
-        raise ValueError("stage 5 returned no clips")
     options = options or RenderOptions.from_env()
     options.validate()
     if not has_libass(options.ffmpeg):
@@ -124,33 +137,49 @@ def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | 
             f"{options.ffmpeg} has no libass ('ass' filter), which the adaptive captions need. Point FFMPEG_BIN "
             "(and FFPROBE_BIN) at a build that has it, e.g. brew install ffmpeg-full -> "
             "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg, or set RENDER_ENGINE=classic.")
-    src = Path(t.video_path).resolve()
-    source = probe(src, options)
+    src = src.resolve()
+    return Source(job_id, t, src, probe(src, options), options)
+
+
+def render_clip(source: Source, clip: Clip, out: Path) -> None:
+    """Render one clip to `out` (its .ass/.srt land next to it). Raises on any failure;
+    the caller decides whether that fails the job or just this clip."""
+    options = source.options
+    if (not math.isfinite(clip.start) or not math.isfinite(clip.end)
+            or clip.start < 0 or clip.end <= clip.start
+            or clip.end > source.info["duration"] + 0.05):
+        raise ValueError(f"Invalid clip range {clip.start}..{clip.end}; video is {source.info['duration']:.2f}s")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    ass = out.with_suffix(".ass")
+    ass.write_text(make_ass(source.transcript, clip, options), encoding="utf-8")
+    out.with_suffix(".srt").write_text(to_srt(source.transcript, clip), encoding="utf-8")
+    temporary = out.with_name(out.stem + ".partial.mp4")
+    ffmpeg_cut(source.path, clip, ass, temporary, options=options)
+    rendered = probe(temporary, options)
+    video = rendered["video"]
+    if (video["width"], video["height"]) != (options.width, options.height):
+        raise RuntimeError("Rendered dimensions do not match the preset")
+    if source.info["audio"] and not rendered["audio"]:
+        raise RuntimeError("Rendered clip lost its audio stream")
+    if abs(rendered["duration"] - (clip.end - clip.start)) > 0.25:
+        raise RuntimeError("Rendered duration does not match the requested interval")
+    temporary.replace(out)
+
+
+def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | None = None) -> ClipSet:
+    if use_fixture("render"):
+        return load("clips_rendered", ClipSet)
+    if not clips.clips:
+        raise ValueError("stage 5 returned no clips")
+    source = prepare(job_id, t, options=options)
     out_dir = (RENDER_DIR / job_id).resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
 
     for i, clip in enumerate(clips.clips):
         clip.render_path = clip.render_url = clip.render_error = None
         try:
-            if (not math.isfinite(clip.start) or not math.isfinite(clip.end)
-                    or clip.start < 0 or clip.end <= clip.start
-                    or clip.end > source["duration"] + 0.05):
-                raise ValueError(f"Invalid clip range {clip.start}..{clip.end}; video is {source['duration']:.2f}s")
-            ass = out_dir / f"clip{i}.ass"
-            ass.write_text(make_ass(t, clip, options), encoding="utf-8")
-            (out_dir / f"clip{i}.srt").write_text(to_srt(t, clip), encoding="utf-8")
             out = out_dir / f"clip{i}.mp4"
-            temporary = out_dir / f"clip{i}.partial.mp4"
-            ffmpeg_cut(src, clip, ass, temporary, options=options)
-            rendered = probe(temporary, options)
-            video = rendered["video"]
-            if (video["width"], video["height"]) != (options.width, options.height):
-                raise RuntimeError("Rendered dimensions do not match the preset")
-            if source["audio"] and not rendered["audio"]:
-                raise RuntimeError("Rendered clip lost its audio stream")
-            if abs(rendered["duration"] - (clip.end - clip.start)) > 0.25:
-                raise RuntimeError("Rendered duration does not match the requested interval")
-            temporary.replace(out)
+            render_clip(source, clip, out)
             clip.render_path = str(out)
             clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/clip{i}.mp4"
         except (ValueError, RuntimeError, OSError) as exc:

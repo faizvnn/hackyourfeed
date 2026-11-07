@@ -3,6 +3,9 @@
 > **Status: behind a flag.** This engine lives in `app/pipeline/s6_render_adaptive.py`
 > and only runs when `RENDER_ENGINE=adaptive` is set in `backend/.env`. The default
 > (`RENDER_ENGINE=classic`) is the Pillow-overlay render in `app/pipeline/s6_render.py`.
+> A comma list (`RENDER_ENGINE=adaptive,adaptive,classic`) assigns an engine per clip in
+> stage-5 order, the last entry repeating; `s6_render.render_mixed` then drives both engines
+> through `prepare()`/`render_clip()` here and writes `clip_<n>.mp4` for every clip.
 > `python -m app.render_cli` always uses this engine, flag or not, so you can test it
 > in isolation. It needs ffmpeg built with libass (`ffmpeg -filters | grep ass`); the
 > homebrew build on at least one team Mac lacks it, so point `FFMPEG_BIN`/`FFPROBE_BIN`

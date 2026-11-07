@@ -36,7 +36,15 @@ PUBLIC_BASE_URL = os.getenv("PUBLIC_BASE_URL", "http://localhost:8000")
 
 # Stage 6 engine. "classic" = pipeline/s6_render.py (Pillow overlays, default).
 # "adaptive" = pipeline/s6_render_adaptive.py (libass captions, word emphasis); experimental.
+# A comma-separated list assigns an engine per clip in stage-5 order, e.g.
+# RENDER_ENGINE=adaptive,adaptive,classic. The last entry covers any further clips.
 RENDER_ENGINE = os.getenv("RENDER_ENGINE", "classic").strip().lower()
+
+
+def engine_plan(n: int, spec: str = RENDER_ENGINE) -> list[str]:
+    """Engine name per clip for n clips: the entries of `spec` in order, last one repeated."""
+    entries = [e.strip() for e in spec.lower().split(",") if e.strip()] or ["classic"]
+    return [entries[min(i, len(entries) - 1)] for i in range(n)]
 
 
 def use_fixture(stage: str) -> bool:

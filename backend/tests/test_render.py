@@ -157,3 +157,55 @@ class RenderIntegrationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+@unittest.skipUnless(shutil.which("ffmpeg") and shutil.which(renderer.RenderOptions().ffprobe)
+                     and renderer.has_libass(renderer.RenderOptions().ffmpeg),
+                     "ffmpeg on PATH plus a libass build (FFMPEG_BIN) required")
+class MixedEngineTests(RenderIntegrationTests):
+    """RENDER_ENGINE=adaptive,classic: both engines write clip_<n>.mp4 into one job folder."""
+
+    def setUp(self):
+        super().setUp()
+        from app.pipeline import s6_render as classic
+        self.classic = classic
+        for p in [patch.object(classic, "RENDER_DIR", self.root / "renders"),
+                  patch.object(classic, "PUBLIC_BASE_URL", "https://example.test/"),
+                  patch.object(classic, "use_fixture", return_value=False),
+                  patch.object(classic, "engine_plan", lambda n: ["adaptive", "classic"][:n])]:
+            p.start()
+            self.addCleanup(p.stop)
+
+    def test_run_dispatches_per_clip(self):
+        clips = ClipSet(clips=[clip(), clip(start=0.2, end=2.2, on_screen_lines=["ACENTOS"])])
+        out = self.classic.run("mixed", self.t, clips).clips
+        self.assertEqual([c.render_url for c in out],
+                         ["https://example.test/renders/mixed/clip_1.mp4",
+                          "https://example.test/renders/mixed/clip_2.mp4"])
+        self.assertEqual([c.render_error for c in out], [None, None])
+        sizes = [renderer.probe(Path(c.render_path), renderer.RenderOptions())["video"] for c in out]
+        self.assertEqual((sizes[0]["width"], sizes[0]["height"]), (720, 1280))   # adaptive preset
+        self.assertEqual((sizes[1]["width"], sizes[1]["height"]), (1080, 1920))  # classic canvas
+        self.assertTrue((self.root / "renders/mixed/clip_1.ass").exists())
+        self.assertFalse((self.root / "renders/mixed/clip_2_overlays").exists())
+        self.assertTrue((self.root / "renders/mixed/clips_rendered.json").exists())
+
+    def test_failed_clip_keeps_the_rest(self):
+        clips = ClipSet(clips=[clip(start=3, end=9), clip()])
+        out = self.classic.run("mixed-partial", self.t, clips).clips
+        self.assertIn("adaptive: Invalid clip range", out[0].render_error)
+        self.assertIsNone(out[0].render_path)
+        self.assertIsNone(out[1].render_error)
+        self.assertTrue(Path(out[1].render_path).exists())
+
+    def test_rejects_unknown_engine(self):
+        with patch.object(self.classic, "engine_plan", lambda n: ["classic", "compound"]):
+            with self.assertRaises(ValueError):
+                self.classic.run("bad", self.t, ClipSet(clips=[clip(), clip()]))
+
+    # the inherited adaptive-only tests already ran in RenderIntegrationTests
+    for _name in ("test_blur_with_audio_and_public_result", "test_crop_silent_portrait_source",
+                  "test_custom_clip_caption_plan_renders", "test_partial_failure_preserves_success",
+                  "test_invalid_duration_uses_media_not_transcript", "test_job_id_cannot_escape_render_directory"):
+        locals()[_name] = None
+    del _name
