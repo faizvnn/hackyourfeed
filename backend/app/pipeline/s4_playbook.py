@@ -4,7 +4,7 @@ In:  ViralSet
 Out: Playbook  (hook patterns, on-screen text style, duration, pacing, caption formula)
 
 - Reduces each ViralVideo to a compact record and prompts prompts/playbook.md through
-  `llm.complete_json("playbook", ...)`. Top MAX_VIDEOS by views_rate_per_followers go in.
+  `llm.complete_json("playbook", ...)`. Top MAX_VIDEOS by views go in.
 - If `scripts/analyze_clip.py` has already produced an edit spec for any of these videos
   (work/analysis/<id>.gmi.json), it is passed as `edit_specs` so the playbook can describe
   the editing (captions, cuts, zooms), not just the words. Nothing is downloaded here.
@@ -32,7 +32,7 @@ def run(viral: ViralSet) -> Playbook:
     if not viral.videos:
         raise ValueError("stage 4 got an empty ViralSet")
 
-    top = sorted(viral.videos, key=lambda v: v.views_rate_per_followers, reverse=True)[:MAX_VIDEOS]
+    top = sorted(viral.videos, key=lambda v: v.views, reverse=True)[:MAX_VIDEOS]
     records = [compact(v) for v in top]
     specs = edit_specs(top)
     print(f"stage 4: prompting with {len(records)} videos, {len(specs)} edit specs", file=sys.stderr)
@@ -54,6 +54,7 @@ def compact(v: ViralVideo) -> dict:
         "views": v.views,
         "vrpf": v.views_rate_per_followers,
         "platform": v.platform,
+        "handle": v.handle,
         "granularity": v.granularity,
     }
 

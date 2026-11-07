@@ -42,11 +42,23 @@ class KeywordSets(BaseModel):
     entity: list[str] = Field(default_factory=list)  # guest / company / product names
 
 
+class Reference(BaseModel):
+    """A show or famous person this episode resembles; stage 3 searches Oriane for their viral clips."""
+
+    kind: Literal["show", "person"]
+    name: str                                            # "All-In Podcast", "Sam Altman"
+    aliases: list[str] = Field(default_factory=list)     # other ways people write/say it: "All-In with Chamath"
+    hashtags: list[str] = Field(default_factory=list)    # without '#': "allinpod"
+    handles: list[str] = Field(default_factory=list)     # IG / TikTok accounts, without '@'
+
+
 class Understanding(BaseModel):
     niche: str
     summary: str
     topics: list[str]
-    competitor_handles: list[str] = Field(default_factory=list)
+    category: str = ""                                            # one of categories.CATEGORIES; stage 3 falls back to it
+    references: list[Reference] = Field(default_factory=list)     # host show, guest, 3-5 comparable shows / people
+    competitor_handles: list[str] = Field(default_factory=list)   # podcast / clip accounts whose shorts are the target format
     keyword_sets: KeywordSets
     topic_map: list[TopicSection] = Field(default_factory=list)  # where each topic is discussed
 
@@ -70,7 +82,8 @@ class ViralVideo(BaseModel):
     caption: str = ""
     hashtags: list[str] = Field(default_factory=list)
     words_per_second: float = 0
-    granularity: Literal["niche", "topic", "entity"] = "niche"
+    granularity: Literal["niche", "topic", "entity"] = "niche"  # which stage-3 search found it: accounts / topic phrases / guest names
+    matched: list[str] = Field(default_factory=list)            # every stage-3 search that matched (Oriane matchedQueries)
 
 
 class ViralSet(BaseModel):

@@ -2,26 +2,47 @@
 
 Verified Nov 6 with real keys. Two probe scripts in `backend/scripts/`; raw outputs under `backend/work/`.
 
-## Status (Nov 6, evening)
-
-Both stages are implemented and have run for real; `fixtures/viral.json` (55 videos) and `fixtures/playbook.json` (4 patterns)
-are real output, not hand-written.
+## Status (Nov 6, night): stage 3 re-queried around *interview clips*, not keywords
 
 ```bash
-# in backend/.env: USE_FIXTURES=ingest,understand,direct,render   (i.e. drop trends,playbook)
-make stage N=3 SAVE=1     # 3 parallel Oriane searches (entity/topic/niche), union, dedupe, sort by vrpf; ~25 s
-make stage N=4 SAVE=1     # 55 compact records (+ any work/analysis/<id>.gmi.json edit specs) → playbook; ~4 s
+# in backend/.env: USE_FIXTURES=ingest,understand,direct,render   (drop trends,playbook)
+make stage N=3 SAVE=1     # 5 Oriane searches + a second hop + a Gemini relevance pass; ~2-3 min, IG reels + TikTok, last 30 days
+make stage N=4 SAVE=1     # compact records (+ any work/analysis/<id>.gmi.json edit specs) → playbook; ranked by views
 ```
 
-- `s3_oriane.py` widens the window from 30 to 120 days if fewer than 30 videos come back, and saves the raw
-  results to `work/oriane/stage3_*.json`.
-- `s4_playbook.py` only *reads* edit specs that `analyze_clip.py` already produced; it never downloads or analyzes
-  video in the pipeline (too slow for a job). Run `analyze_clip.py` on the top few ids beforehand if you want
-  editing detail in the playbook.
-- **Biggest quality lever is stage 2.** The fixture `understanding.json` has niche keywords like `startup`, `VC`,
-  `founder`; exact-matching those pulls eyebrow trivia and prayer vigils alongside founder clips. The playbook
-  prompt tells the model to ignore off-topic videos, but 3–5 word spoken phrases per set would fix it at the source.
-- Entity search is skipped when `keyword_sets.entity` is empty (it is in the fixture).
+What the live probes showed (`scripts/probe_queries.py`, raw under `work/oriane/probe_queries_*.json`):
+
+| Query form | Result (30 days, sort viewsCount) |
+|---|---|
+| topic / niche phrases spoken in transcript (old way) | Gemini launch news, sketches, vlogs, a GoFundMe. 0-20 hits, mostly off-format |
+| a person's name spoken in transcript or on screen | commentary ABOUT the person (rants, SNL), never interviews with them |
+| a person's name in caption, alone | news and memes (Tesla Roadster, "Zuckerberg roasted") |
+| name in caption/on-screen **AND poster bio says podcast/interview/clips** | interview clips (myfirstmilpod, impaulsive, lexfridman, sourcerypod) |
+| `profileHandle` in a list of podcast / clip accounts | the lane's actual viral clips: @steven, @wealth, @garyvee, @hormozi at 5-60M views/month |
+| podcast hashtags (`hashtags` exactMatch "podcast") | 0 results; `includesExactly` on hashtags is what works (sibling probe) |
+| `profileBio` fuzzy "podcast" to discover accounts | celebrities with a podcast; useless without a lane word, and still noisy with one |
+
+So no single Oriane query returns "viral interview clips in this lane". `s3_oriane.py` now does:
+
+1. **Wide net, in parallel, any poster** (`build_plan`): `entity` (guest + reference people's names in caption / on-screen
+   AND poster bio or caption says podcast), `shows` (reference shows' aliases + hashtags), `accounts` (reference handles +
+   stage-2 `competitor_handles` + `categories.py` seed), `topic`, `podcast` (podcast word in caption AND a niche phrase spoken).
+2. **Second hop** (`peer_handles`): the podcast/clip accounts that posted the entity / show hits → their own top posts of the
+   month. That is how accounts get discovered per episode instead of hardcoded; the category list is only a floor.
+3. **Relevance pass** (`prompts/relevance.md`, Gemini Flash Lite via GMI, 40 records per call): keep/drop by FORMAT only
+   (interview / talking-head / panel vs news, ads, skits, TV scenes, demos, commentary about a person) and a separate
+   `on_niche` flag. Tested on 20 @wealth/@steven/@garyvee clips: kept the interviews, dropped Shark Tank scenes, a
+   physics demo and a Kung Fu Panda quote. Earlier versions that let topic decide dropped real interviews (8/231 kept).
+4. **Rank by views** across every source, ≤ 5 per handle, top 60. `ViralVideo.matched` lists which leaves matched plus
+   `on_niche` / `adjacent`.
+
+Contract additions: `Understanding.category`, `Understanding.references[{kind: show|person, name, aliases, hashtags,
+handles}]`, `ViralVideo.matched`. **Stage 2 does not emit `references` yet**; until it does, stage 3 runs on
+`competitor_handles` + `keyword_sets.entity` + the category seed, so the set is on-format but mostly adjacent-lane
+(fixture run: 7 on-niche of 33 kept). Topic phrases have matched ~0 videos in every run; they are filler.
+
+Oriane API facts (verified): nested `queries` need their own `operator` and nest at most two levels (`QUERY_DEPTH_EXCEEDED`
+beyond that); results carry `matchedQueries` with the leaf names; `limit` max 100; YouTube shorts dropped on Oriane's advice.
 
 ### GMI model for the text stages
 

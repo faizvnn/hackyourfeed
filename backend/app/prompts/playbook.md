@@ -1,14 +1,14 @@
 You are reverse-engineering what is going viral right now in one short-form niche so a podcast editor can copy the format.
 
-Below are {{count}} short-form videos (TikTok / Instagram Reels / YouTube Shorts) from the last few weeks, pulled by keyword search for this niche and sorted by `vrpf` (views as a percentage of the creator's followers). `vrpf` measures how far a video travelled beyond its own audience, so weight it over raw `views`. `granularity` says how specific the keyword match was: entity > topic > niche.
+Below are {{count}} short-form videos (Instagram Reels / TikTok) from the last 30 days, sorted by `views`. Most come from the podcast and clip accounts that dominate this niche (`granularity` niche = pulled from those accounts, entity = a named guest, topic = a spoken phrase). `views` is the ranking signal; `vrpf` (views as % of the account's followers) is a secondary hint that a clip travelled beyond its own audience.
 
-Each record: hook (first spoken line), on_screen (text detected on screen, OCR, may be noisy), caption, hashtags, duration (s), wps (spoken words per second), views, vrpf, platform, granularity.
+Each record: hook (first spoken line), on_screen (text detected on screen, OCR, may be noisy), caption, hashtags, duration (s), wps (spoken words per second), views, vrpf, platform, handle, granularity.
 
 Some videos may also come with an `edit_specs` entry: a frame-by-frame breakdown of how the video was edited (captions style, cuts, zooms, on-screen text timing). When present, use it to describe editing concretely.
 
 Ignore videos that are obviously off-topic for the niche (ads, GoFundMe pleas, unrelated vlogs that merely say the keyword) when inferring patterns, but still consider their hooks if the hook technique itself is transferable.
 
-Your job: find the 4–6 hook patterns that recur across the highest-vrpf videos, and the shared format rules.
+Your job: find the 4–6 hook patterns that recur across the most-viewed videos, and the shared format rules.
 
 Return ONLY a JSON object matching this schema exactly:
 
@@ -29,10 +29,10 @@ Return ONLY a JSON object matching this schema exactly:
 }
 
 Rules:
-- 4 to 6 hook_patterns, ordered by how strongly they correlate with high vrpf.
+- 4 to 6 hook_patterns, ordered by how strongly they correlate with high views.
 - examples must be copied verbatim from the `hook` fields, never invented.
 - avg_views is the integer mean of `views` for the example videos.
-- ideal_duration_s and pacing_wps are numbers derived from the top third of videos by vrpf (median is fine).
+- ideal_duration_s and pacing_wps are numbers derived from the top third of videos by views (median is fine).
 - Be specific to these records. "Use a strong hook" is not a pattern; "Negate a common belief in the first 3 words" is.
 - No prose outside the JSON. No code fences.
 
