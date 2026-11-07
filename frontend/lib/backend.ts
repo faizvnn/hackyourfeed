@@ -16,7 +16,7 @@ type BJob = {
   } | null;
   viral?: { videos?: { id: string; platform: string; handle: string; thumbnail_url?: string; views?: number; followers?: number; views_rate_per_followers?: number; duration?: number; hook_text?: string; on_screen_text?: string[]; caption?: string }[] } | null;
   playbook?: { hook_patterns?: { name: string; description?: string; examples?: string[] }[]; on_screen_text_style?: string; ideal_duration_s?: number; pacing_wps?: number; caption_formula?: string } | null;
-  clips?: { clips?: { start: number; end: number; score: number; title?: string; hook_rewrite: string; on_screen_lines?: string[]; caption?: string; matched_pattern?: string; reason?: string; render_url?: string | null }[] } | null;
+  clips?: { clips?: { start: number; end: number; score: number; title?: string; hook_rewrite: string; on_screen_lines?: string[]; caption?: string; matched_pattern?: string; reason?: string; render_url?: string | null; render_preview_url?: string | null; render_error?: string | null; framing?: { status: "passed" | "needs_review"; retention_rate: number; warnings: string[] } | null }[] } | null;
 };
 
 const STAGES: Record<string, StageKey> = {
@@ -108,6 +108,9 @@ export function fromBackend(raw: BJob, base: string): Job {
           caption: c.caption,
           reason: c.reason,
           video_url: abs(c.render_url),
+          preview_url: abs(c.render_preview_url),
+          render_error: c.render_error,
+          framing: c.framing,
           transcript: words(segs, c.start, c.end),
         }))
       : undefined,

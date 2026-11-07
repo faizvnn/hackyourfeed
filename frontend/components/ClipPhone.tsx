@@ -42,6 +42,7 @@ export default function ClipPhone({ clip, youtubeId, thumbnail, channel }: { cli
   const player = useRef<YTPlayer | null>(null);
   const [state, setState] = useState<"idle" | "loading" | "playing" | "paused">("idle");
   const [now, setNow] = useState(clip.start);
+  const [playbackError, setPlaybackError] = useState(false);
   const groups = useMemo(() => bursts(clip.transcript ?? []), [clip.transcript]);
   const len = clip.end - clip.start;
 
@@ -75,15 +76,21 @@ export default function ClipPhone({ clip, youtubeId, thumbnail, channel }: { cli
       events: {
         onReady: (e: { target: YTPlayer }) => e.target.playVideo(),
         onStateChange: (e: { data: number }) => { if (e.data === 1) setState("playing"); if (e.data === 2) setState("paused"); },
+        onError: () => { setPlaybackError(true); setState("idle"); },
       },
     });
   }
 
-  if (clip.video_url) {
+  const renderedUrl = clip.video_url || clip.preview_url;
+  if (renderedUrl) {
     return (
       <div className="phone-wrap">
         <div className="phone">
-          <video src={clip.video_url} poster={thumbnail} controls playsInline preload="metadata" />
+          <video src={renderedUrl} poster={thumbnail} controls playsInline preload="metadata" onError={() => setPlaybackError(true)} />
+          <div className={`phone-status${clip.framing?.status === "needs_review" ? " review" : ""}`}>
+            {clip.framing?.status === "needs_review" ? "Preview · framing needs review" : "Rendered clip"}
+          </div>
+          {playbackError && <div className="phone-message" role="alert">The rendered video could not load. Check the backend connection.</div>}
         </div>
       </div>
     );
@@ -97,6 +104,7 @@ export default function ClipPhone({ clip, youtubeId, thumbnail, channel }: { cli
   return (
     <div className="phone-wrap">
       <div className="phone">
+        <div className="phone-status review">YouTube preview · not the rendered clip</div>
         <div className="phone-stage">
           <div className="phone-media">
             {thumbnail && <img src={thumbnail} alt="" style={{ opacity: live ? 0 : 1, transition: "opacity .3s" }} />}
@@ -109,10 +117,13 @@ export default function ClipPhone({ clip, youtubeId, thumbnail, channel }: { cli
           ))}
         </div>
         <div className="phone-sub" aria-live="off">
-          {group.map((w, i) => (
+          {!playbackError && !clip.render_error && group.map((w, i) => (
             <span key={i} className={live && now >= w.t && (group[i + 1] ? now < group[i + 1].t : true) ? "now" : ""}>{w.text} </span>
           ))}
         </div>
+        {(playbackError || clip.render_error) && <div className="phone-message" role="alert">
+          {clip.render_error ? "This clip could not be rendered. Open the original video to inspect it." : "The YouTube preview could not load. Open the original video instead."}
+        </div>}
         {channel && <div className="phone-handle">from {channel}</div>}
         <div className="phone-time">{live ? `${clock(now - clip.start)} / ${clock(len)}` : clock(len)}</div>
         <button className="phone-play" onClick={toggle} aria-label={state === "playing" ? "Pause clip" : "Play clip"}>

@@ -12,4 +12,5 @@ dependencies = [
     "yt-dlp>=2024.8.6",
     "numpy>=2.4.6",
     "pillow>=13.0.0",
+    "opencv-python-headless>=4.10,<6",
 ]

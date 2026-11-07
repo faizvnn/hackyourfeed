@@ -35,6 +35,7 @@ class RenderOptions:
     fps: int = 30
     layout: str = "crop"
     crop_center_x: float = 0.5  # normalized center in the original frame
+    framing: str = "smart"
     font: str = "Arial" if os.name == "nt" else "DejaVu Sans"
     hook_seconds: float = 2.0
     timeout: float = 300
@@ -45,9 +46,11 @@ class RenderOptions:
 
     @classmethod
     def from_env(cls) -> RenderOptions:
+        layout = os.getenv("RENDER_LAYOUT", "crop")
         return cls(
-            layout=os.getenv("RENDER_LAYOUT", "crop"),
+            layout="blur" if layout == "fit" else layout,
             crop_center_x=float(os.getenv("RENDER_CROP_CENTER_X", "0.5")),
+            framing=os.getenv("RENDER_FRAMING", "smart"),
             font=os.getenv("RENDER_FONT_NAME", cls.font),
             ffmpeg=os.getenv("FFMPEG_BIN", "ffmpeg"),
             ffprobe=os.getenv("FFPROBE_BIN", "ffprobe"),
@@ -55,6 +58,8 @@ class RenderOptions:
         )
 
     def validate(self) -> None:
+        if self.framing not in {"smart", "static"}:
+            raise ValueError("RENDER_FRAMING must be smart or static")
         if self.layout not in {"blur", "crop"}:
             raise ValueError("RENDER_LAYOUT must be blur or crop")
         if not math.isfinite(self.crop_center_x) or not 0 <= self.crop_center_x <= 1:
@@ -131,17 +136,26 @@ def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | 
 
     for i, clip in enumerate(clips.clips):
         clip.render_path = clip.render_url = clip.render_error = None
+        clip.render_preview_url = clip.framing = None
         try:
             if (not math.isfinite(clip.start) or not math.isfinite(clip.end)
                     or clip.start < 0 or clip.end <= clip.start
                     or clip.end > source["duration"] + 0.05):
                 raise ValueError(f"Invalid clip range {clip.start}..{clip.end}; video is {source['duration']:.2f}s")
+            plan, base = None, None
+            if options.framing == "smart":
+                from .. import framing
+                plan = framing.analyze(src,clip.start,clip.end)
+                plan.save(out_dir / f"clip{i}.framing.json")
+                base = out_dir / f"clip{i}.framed.mp4"
+                framing.render_base(src,clip.start,base,plan,options.width,options.height,
+                                    options.fps,options.ffmpeg,options.timeout)
             ass = out_dir / f"clip{i}.ass"
-            ass.write_text(make_ass(t, clip, options), encoding="utf-8")
+            ass.write_text(make_ass(t, clip, options, framing_plan=plan), encoding="utf-8")
             (out_dir / f"clip{i}.srt").write_text(to_srt(t, clip), encoding="utf-8")
             out = out_dir / f"clip{i}.mp4"
             temporary = out_dir / f"clip{i}.partial.mp4"
-            ffmpeg_cut(src, clip, ass, temporary, options=options)
+            ffmpeg_cut(src, clip, ass, temporary, options=options, framed=base)
             rendered = probe(temporary, options)
             video = rendered["video"]
             if (video["width"], video["height"]) != (options.width, options.height):
@@ -151,8 +165,13 @@ def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | 
             if abs(rendered["duration"] - (clip.end - clip.start)) > 0.25:
                 raise RuntimeError("Rendered duration does not match the requested interval")
             temporary.replace(out)
-            clip.render_path = str(out)
-            clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/clip{i}.mp4"
+            url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/clip{i}.mp4"
+            if plan is not None:
+                framing.attach_quality(clip,plan,out,url)
+            else:
+                clip.render_path,clip.render_url = str(out),url
+            if base is not None:
+                base.unlink(missing_ok=True)
         except (ValueError, RuntimeError, OSError) as exc:
             clip.render_error = str(exc)
             log.warning("Render failed for job %s clip %s: %s", job_id, i, exc)
@@ -162,9 +181,12 @@ def run(job_id: str, t: Transcript, clips: ClipSet, *, options: RenderOptions | 
     return clips
 
 
-def ffmpeg_cut(src: Path, clip: Clip, subtitles: Path, out: Path, *, options: RenderOptions) -> None:
+def ffmpeg_cut(src: Path, clip: Clip, subtitles: Path, out: Path, *, options: RenderOptions,
+               framed: Path | None = None) -> None:
     w, h = options.width, options.height
-    if options.layout == "blur":
+    if framed is not None:
+        graph = "[0:v]setpts=PTS-STARTPTS[framed];"
+    elif options.layout == "blur":
         graph = (
             f"[0:v]setpts=PTS-STARTPTS,split=2[bg][fg];"
             f"[bg]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
@@ -179,10 +201,12 @@ def ffmpeg_cut(src: Path, clip: Clip, subtitles: Path, out: Path, *, options: Re
     # Named option: a build without libass then fails with "No such filter: 'ass'" instead of the
     # misleading "No option name near '<file>'" the positional form produces.
     graph += f"[framed]setsar=1,ass=filename={subtitles.name},fps={options.fps},format=yuv420p[v]"
+    inputs = (["-i",str(framed),"-ss",str(clip.start),"-i",str(src.resolve())] if framed is not None
+              else ["-ss",str(clip.start),"-i",str(src.resolve())])
     _execute([
         options.ffmpeg, "-hide_banner", "-loglevel", "error", "-nostdin", "-y",
-        "-ss", str(clip.start), "-i", str(src.resolve()), "-t", str(clip.end - clip.start),
-        "-filter_complex", graph, "-map", "[v]", "-map", "0:a:0?",
+        *inputs, "-t", str(clip.end - clip.start),
+        "-filter_complex", graph, "-map", "[v]", "-map", "1:a:0?" if framed is not None else "0:a:0?",
         "-af", "asetpts=PTS-STARTPTS", "-c:v", "libx264", "-preset", "veryfast",
         "-crf", "23", "-c:a", "aac", "-b:a", "128k", "-ac", "2",
         "-movflags", "+faststart", str(out.resolve()),

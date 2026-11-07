@@ -1,5 +1,9 @@
 # Stage 6 (experimental) — adaptive clip rendering
 
+Smart face-guided framing runs in both engines by default. See [FRAMING.md](FRAMING.md)
+for tracking, stacked interview panels, quality review and before/after evaluation.
+The fixed-layout instructions below apply with `RENDER_FRAMING=static`.
+
 > **Status: behind a flag.** This engine lives in `app/pipeline/s6_render_adaptive.py`
 > and only runs when `RENDER_ENGINE=adaptive` is set in `backend/.env`. The default
 > (`RENDER_ENGINE=classic`) is the Pillow-overlay render in `app/pipeline/s6_render.py`.

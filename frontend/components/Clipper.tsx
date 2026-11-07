@@ -257,8 +257,11 @@ function ClipCard({ clip, index, video }: { clip: Clip; index: number; video: No
       <h2 className="p-clip-hook">{clip.hook_rewrite}</h2>
       <p className="p-clip-time">{clock(clip.start)} to {clock(clip.end)}, {Math.round(clip.end - clip.start)} seconds</p>
       {clip.reason && <p className="p-clip-reason">{clip.reason}</p>}
+      {clip.framing?.status === "needs_review" && <p className="p-clip-review" role="status">
+        Framing needs review. {clip.framing.warnings.join(" ")}
+      </p>}
       <div className="p-clip-actions">
-        {clip.video_url ? (
+        {clip.video_url && clip.framing?.status !== "needs_review" ? (
           <a className="btn small" href={clip.video_url} download>Download</a>
         ) : video.youtube_id ? (
           <a className="btn small" href={`https://www.youtube.com/watch?v=${video.youtube_id}&t=${Math.floor(clip.start)}s`} target="_blank" rel="noopener noreferrer">Open on YouTube</a>

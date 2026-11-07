@@ -147,6 +147,19 @@ class Playbook(BaseModel):
 
 
 # ---------------------------------------------------------------- stage 5 ---
+class FramingQuality(BaseModel):
+    status: Literal["passed", "needs_review"]
+    sampled_frames: int
+    source_face_frames: int
+    retained_face_frames: int
+    retention_rate: float
+    max_lost_face_seconds: float
+    max_unverified_seconds: float
+    max_unverified_output_seconds: float = 0
+    warnings: list[str] = Field(default_factory=list)
+    method: str
+
+
 class Clip(BaseModel):
     start: float
     end: float
@@ -162,6 +175,8 @@ class Clip(BaseModel):
     render_path: str | None = None   # filled by stage 6
     render_url: str | None = None
     render_error: str | None = None  # adaptive render: per-clip failure, other clips stay usable
+    render_preview_url: str | None = None  # inspectable output withheld from ready/download state
+    framing: FramingQuality | None = None
 
 
 class ClipSet(BaseModel):

@@ -133,7 +133,7 @@ def _highlighted_text(group: list[tuple[float, float, str]], active: int,
     return "".join(parts)
 
 
-def make_ass(t: Transcript, clip: Clip, options: RenderOptions) -> str:
+def make_ass(t: Transcript, clip: Clip, options: RenderOptions, *, framing_plan=None) -> str:
     style = clip.render_style or CaptionStyle(hook_seconds=options.hook_seconds)
     caption_margin = 285 if style.position == "lower" else 470
     header = f"""[Script Info]
@@ -163,6 +163,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             if round(a * 100) >= round(end * 100):
                 continue
             body = _highlighted_text(group, i, style, clip.emphasis_keywords)
+            if framing_plan is not None:
+                y = round(framing_plan.caption_y(a)*1280)
+                body = rf"{{\an2\pos(360,{y})}}" + body
             longest = max(len(w[2]) for w in group)
             if longest > 18:
                 body = rf"{{\fs{max(18, int(style.font_size * 18 / longest))}}}" + body

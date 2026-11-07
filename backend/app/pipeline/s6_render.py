@@ -76,18 +76,20 @@ def run(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
 
 
 def render(job_id: str, t: Transcript, clips: ClipSet) -> ClipSet:
-    if not shutil.which("ffmpeg"):
-        raise RuntimeError("ffmpeg not on PATH (brew install ffmpeg)")
+    if not shutil.which(os.getenv("FFMPEG_BIN", "ffmpeg")):
+        raise RuntimeError("FFmpeg executable not found; check FFMPEG_BIN")
     video = locate_video(t)
     out_dir = RENDER_DIR / job_id
     out_dir.mkdir(parents=True, exist_ok=True)
     print(f"[render] {len(clips.clips)} clips from {video} -> {out_dir}")
 
     for i, clip in enumerate(clips.clips, 1):
+        clip.render_path = clip.render_url = clip.render_preview_url = clip.render_error = clip.framing = None
         name = f"clip_{i}.mp4"
         path = render_clip(video, t, clip, out_dir / name, out_dir / f"clip_{i}_overlays")
         clip.render_path = str(path)
-        clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/{name}"
+        if clip.framing is None:
+            clip.render_url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{job_id}/{name}"
         print(f"[render] {name}: {clip.start:.1f}-{clip.end:.1f}s  {path.stat().st_size // 1024} KB")
     return clips
 
@@ -233,6 +235,17 @@ def render_clip(video: Path, t: Transcript, clip: Clip, out: Path, work: Path) -
     work.mkdir(parents=True, exist_ok=True)
     dur = clip.end - clip.start
     layout = os.getenv("RENDER_LAYOUT", "fit")
+    mode = os.getenv("RENDER_FRAMING", "smart")
+    if mode not in {"smart", "static"}:
+        raise ValueError("RENDER_FRAMING must be smart or static")
+    plan, framed = None, None
+    ffmpeg = os.getenv("FFMPEG_BIN", "ffmpeg")
+    if mode == "smart":
+        from .. import framing
+        plan = framing.analyze(video,clip.start,clip.end)
+        plan.save(out.with_suffix(".framing.json"))
+        framed = work / "framed.mp4"
+        framing.render_base(video,clip.start,framed,plan,W,H,30,ffmpeg)
 
     # (png path, y, show from, show to)
     overlays: list[tuple[Path, int, float, float]] = []
@@ -255,27 +268,37 @@ def render_clip(video: Path, t: Transcript, clip: Clip, out: Path, work: Path) -
     if os.getenv("RENDER_NO_CAPTIONS", "") not in ("1", "true", "yes"):
         for i, (a, b, text) in enumerate(captions_for(t, clip)):
             png = work / f"cap_{i}.png"
-            text_png(text, png, size=56, fill="white", max_lines=3)
-            overlays.append((png, 1500, a, b))
+            _, text_height = text_png(text, png, size=56, fill="white", max_lines=3)
+            y = round(plan.caption_y(a)*H-text_height) if plan is not None else 1500
+            overlays.append((png, y, a, b))
 
-    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
-           "-ss", f"{clip.start:.3f}", "-t", f"{dur:.3f}", "-i", str(video)]
+    cmd = [ffmpeg, "-y", "-hide_banner", "-loglevel", "error", "-nostdin"]
+    if framed is not None:
+        cmd += ["-i",str(framed),"-ss",f"{clip.start:.3f}","-i",str(video)]
+    else:
+        cmd += ["-ss",f"{clip.start:.3f}","-i",str(video)]
+    first_overlay = 2 if framed is not None else 1
     for png, _, _, _ in overlays:
         cmd += ["-i", str(png)]
 
-    parts = [_base_filter(layout)]
+    parts = ["[0:v]setsar=1[base]" if framed is not None else _base_filter(layout)]
     prev = "base"
-    for n, (_, y, a, b) in enumerate(overlays, 1):
+    for n, (_, y, a, b) in enumerate(overlays, first_overlay):
         label = f"v{n}"
         parts.append(f"[{prev}][{n}:v]overlay=(W-w)/2:{y}:enable='between(t,{a},{b})'[{label}]")
         prev = label
-    cmd += ["-filter_complex", ";".join(parts), "-map", f"[{prev}]", "-map", "0:a?",
+    cmd += ["-t", f"{dur:.3f}", "-filter_complex", ";".join(parts), "-map", f"[{prev}]", "-map", "1:a:0?" if framed is not None else "0:a:0?",
+            "-af", "asetpts=PTS-STARTPTS",
             "-c:v", "libx264", "-preset", os.getenv("RENDER_PRESET", "veryfast"),
             "-crf", os.getenv("RENDER_CRF", "22"), "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(out)]
 
-    r = subprocess.run(cmd, capture_output=True, text=True)
+    r = subprocess.run(cmd, capture_output=True, text=True,
+                       timeout=float(os.getenv("RENDER_TIMEOUT_SECONDS", "300")))
     if r.returncode != 0 or not out.exists():
         raise RuntimeError(f"ffmpeg failed for {out.name}: {r.stderr.strip()[-800:]}")
+    if plan is not None:
+        url = f"{PUBLIC_BASE_URL.rstrip('/')}/renders/{out.parent.name}/{out.name}"
+        framing.attach_quality(clip,plan,out,url)
     shutil.rmtree(work, ignore_errors=True)  # the PNGs are baked in; don't serve them next to the mp4
     return out

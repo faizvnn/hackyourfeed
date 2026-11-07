@@ -42,6 +42,9 @@ export type Clip = {
   caption?: string;
   reason?: string;
   video_url?: string | null; // the rendered 9:16 mp4
+  preview_url?: string | null; // rendered but awaiting framing review
+  render_error?: string | null;
+  framing?: { status: "passed" | "needs_review"; retention_rate: number; warnings: string[] } | null;
   transcript?: Word[];
 };
 

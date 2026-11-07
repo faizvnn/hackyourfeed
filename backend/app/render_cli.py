@@ -57,6 +57,7 @@ def main() -> None:
     parser.add_argument("--video", type=Path, help="Override transcript.video_path")
     parser.add_argument("--job-id", default="render-demo")
     parser.add_argument("--layout", choices=["blur", "crop"])
+    parser.add_argument("--framing", choices=["smart", "static"], help="Face-guided framing or legacy fixed crop")
     parser.add_argument("--crop-center-x", type=float, help="Horizontal center in source frame, 0..1")
     parser.add_argument("--transcribe", action="store_true", help="Generate precise word times using local Whisper")
     parser.add_argument("--whisper-model", default="base", help="Local ASR model; downloaded on first use")
@@ -70,6 +71,8 @@ def main() -> None:
     options = RenderOptions.from_env()
     if args.layout:
         options = replace(options, layout=args.layout)
+    if args.framing:
+        options = replace(options, framing=args.framing)
     if args.crop_center_x is not None:
         options = replace(options, crop_center_x=args.crop_center_x)
     options.validate()

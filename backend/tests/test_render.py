@@ -110,7 +110,7 @@ class RenderIntegrationTests(unittest.TestCase):
 
     def test_blur_with_audio_and_public_result(self):
         c = renderer.run("audio", self.t, ClipSet(clips=[clip()]),
-                         options=renderer.RenderOptions(layout="blur")).clips[0]
+                         options=renderer.RenderOptions(layout="blur",framing="static")).clips[0]
         media = renderer.probe(Path(c.render_path), renderer.RenderOptions())
         self.assertEqual((media["video"]["width"], media["video"]["height"]), (720, 1280))
         self.assertEqual(media["video"]["codec_name"], "h264")
