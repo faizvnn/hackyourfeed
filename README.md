@@ -1,82 +1,111 @@
-# ClipRadar
+<div align="center">
 
-Paste a podcast URL → find out what's going viral in its niche right now (Oriane) → pick and cut the 3 clips that match (GMI Cloud + ffmpeg / Compound.mov).
+# clipy
+
+**Be #1 in your niche.**
+
+Paste a YouTube video. clipy works out what's going viral in your niche right now,<br>
+then cuts the three Shorts from your video most likely to take off, with hooks and captions already on.
+
+[![Watch the demo](docs/demo-poster.jpg)](docs/demo.mp4)
+
+▶ [Watch the 22-second demo](docs/demo.mp4)
+
+Built at a hackathon · Nov 2026
+
+</div>
+
+---
+
+## Why
+
+Every long video already has Shorts in it. The hard part is knowing *which* moments will work. That changes week to week and niche to niche.
+
+Most clipping tools pick moments based only on your video. clipy starts with the market. It looks at what is getting views in your niche right now and learns the hook patterns, pacing, and caption style. Then it scans your full transcript for the moments that fit those patterns.
+
+## Use cases
+
+- **Podcasters and YouTubers:** turn a 2-hour episode into three ready-to-post Shorts
+- **Clippers and agencies:** cut clips that match what's trending for each client's niche
+- **Growth teams:** see which hooks are working with an audience before you script the next video
+
+## How it works
+
+```
+YouTube URL
+  → 1 ingest      yt-dlp                 timed transcript + mp4 (faster-whisper fallback)
+  → 2 understand  LLM                    niche, keyword sets, comparable shows, topic map
+  → 3 trends      Oriane ×3              30+ viral Shorts in the niche (accounts · topics · guests)
+  → 4 playbook    LLM                    hook patterns, pacing, caption formula
+  → 5 direct      LLM                    top 3 moments + rewritten hooks, scored against the playbook
+  → 6 render      ffmpeg / libass        9:16 crop, burned-in hook, word-by-word captions
+  → UI            Next.js                each section appears as its stage finishes
+```
+
+- **Market first, then the clips.** The playbook comes from real Shorts that are performing now, found by searching three ways: niche accounts, topic phrases, and guest names. Clip selection only happens after that.
+- **Typed contracts.** Each stage reads and writes a Pydantic model defined in `contracts.py`, so every stage can run and be tested on its own using fixtures.
+- **Two render engines.** `classic` uses Pillow overlays. `adaptive` uses libass for word-by-word captions. You can pick the engine per clip, for example `RENDER_ENGINE=adaptive,adaptive,classic`.
+- **Cached and safe to run twice.** Downloads are cached per video and protected by a per-video lock, so repeat runs are instant.
+
+## Stack
+
+| Layer | Tech |
+| --- | --- |
+| Ingest | yt-dlp, faster-whisper (optional) |
+| Reasoning | [GMI Cloud](https://gmicloud.ai) (OpenAI-compatible), Gemini Flash Lite |
+| Viral trend data | [Oriane](https://oriane.xyz) content search |
+| Rendering | ffmpeg, libass, Pillow |
+| Backend | Python, FastAPI, Pydantic, uv |
+| Frontend | Next.js, TypeScript |
+
+## Run it
+
+**Requirements:** Python with [uv](https://docs.astral.sh/uv/), Node 20+, and `ffmpeg` (`brew install ffmpeg`).
+
+```bash
+make setup                      # uv sync + backend/.env from .env.example
+make dev                        # API on :8000 (USE_FIXTURES=all by default: no keys needed)
+cd frontend && npm i && npm run dev
+```
+
+To run on a real video, add `GMI_API_KEY` and `ORIANE_API_KEY` to `backend/.env` and set `USE_FIXTURES=` to empty.
+
+```bash
+curl -X POST localhost:8000/jobs -H 'content-type: application/json' -d '{"url":"https://youtube.com/watch?v=..."}'
+curl localhost:8000/jobs/<id>   # status: queued → ingest → understand → trends → playbook → direct → render → done
+```
+
+**Useful commands**
+
+```bash
+make stage N=3 SAVE=1           # run one stage on the fixture that feeds it, save its output
+make renderer E=adaptive        # switch the render engine (classic | adaptive | per-clip list)
+```
+
+The adaptive engine needs ffmpeg built with libass. See [`backend/RENDER.md`](backend/RENDER.md).
+
+## API
+
+| Route | Purpose |
+| --- | --- |
+| `POST /jobs` `{url}` | Start a job. Returns a `Job` |
+| `GET /jobs/{id}` | Poll the job. Each stage fills in its own field as it finishes |
+| `GET /renders/*` | The rendered 9:16 mp4s |
+| `GET /health` | Health check |
 
 ## Repo layout
 
 ```
-hackathon/
-├── README.md                 ← run instructions, per-team "done when" table, integration plan
-├── Makefile                  ← make setup / make dev / make stage N=3 SAVE=1
-├── .env.example              ← USE_FIXTURES=all by default; GMI, Oriane, Compound keys
-├── docs/oriane-openapi.json
-├── frontend/README.md        ← API contract + Lovable prompt (team D)
-└── backend/
-    ├── app/
-    │   ├── contracts.py      ← the shared JSON shapes between every stage
-    │   ├── jobs.py           ← in-memory jobs, runs stages 1→6 in a thread
-    │   ├── main.py           ← POST /jobs, GET /jobs/{id}, /renders/*
-    │   ├── config.py, llm.py (GMI, OpenAI-compatible), fixtures.py
-    │   ├── pipeline/
-    │   │   ├── s1_ingest.py      team A   yt-dlp → timed transcript + mp4
-    │   │   ├── s2_understand.py  team A   LLM → niche, keyword sets, candidate moments
-    │   │   ├── s3_oriane.py      team B   3 Oriane searches → compact viral records
-    │   │   ├── s4_playbook.py    team B   LLM → hook patterns, pacing, caption formula
-    │   │   ├── s5_direct.py      team C   LLM → top 3 clips w/ hook rewrites
-    │   │   └── s6_render.py      team C   ffmpeg 9:16 + burned hook + captions; Compound TODO
-    │   │       s6_render_adaptive.py  experimental libass captions; RENDER_ENGINE=adaptive (backend/RENDER.md)
-    │   └── prompts/ understand.md, playbook.md, direct.md
-    ├── fixtures/  transcript, understanding, viral, playbook, clips, clips_rendered, job
-    └── scripts/run_stage.py  ← run one stage on the fixture that feeds it
+backend/app/
+  contracts.py       shared Pydantic shapes between every stage
+  jobs.py, main.py   in-memory job runner + FastAPI routes
+  pipeline/          s1_ingest … s6_render (+ s6_render_adaptive)
+  prompts/           understand.md, playbook.md, direct.md
+backend/fixtures/    one saved output per stage, for offline dev
+frontend/            Next.js app: landing, clipper, timeline, phone previews
+docs/                demo video
 ```
 
-## Pipeline
+## Team
 
-```
-YouTube URL
-  → [1] ingest      yt-dlp            Transcript        team A
-  → [2] understand  LLM               Understanding     team A   (niche + keywords + topic map; no clip picking)
-  → [3] trends      Oriane ×3         ViralSet          team B
-  → [4] playbook    LLM               Playbook          team B
-  → [5] direct      LLM               ClipSet           team C   (scans the full transcript WITH the playbook)
-  → [6] render      ffmpeg/Compound   ClipSet + mp4     team C
-  → [7] UI          Lovable                             team D
-```
-
-## Run it
-
-```bash
-make setup          # uv sync, copies .env.example -> backend/.env
-make dev            # API on :8000, every stage returns fixtures (USE_FIXTURES=all)
-curl -s -X POST localhost:8000/jobs -H 'content-type: application/json' -d '{"url":"https://youtube.com/watch?v=x"}'
-curl -s localhost:8000/jobs/<id>
-```
-
-Needs `ffmpeg` on PATH for stage 6 (`brew install ffmpeg`).
-
-`make renderer` flips stage 6 between the classic render (default) and the experimental adaptive one (`make renderer E=classic|adaptive` to set it outright). `make renderer E=adaptive,adaptive,classic` picks an engine per clip in stage-5 order (clips 1 and 2 adaptive, clip 3 classic); a mixed job still lands as `clip_1..3.mp4`. The adaptive engine needs ffmpeg with libass; see `backend/RENDER.md`.
-
-## How to work on your stage
-
-1. Keep `USE_FIXTURES=all` in `backend/.env`, then **remove your stage's name** so only yours runs for real. Names: `ingest,understand,trends,playbook,direct,render`.
-2. Iterate with `make stage N=<n>`: it runs stage *n* on the fixture that feeds it and prints the output. Add `SAVE=1` to overwrite the downstream fixture with real output so the next team gets real data.
-3. The contract between stages is `backend/app/contracts.py`. Change it there first; don't pass extra fields around informally.
-
-| Team | Files | Done when |
-|---|---|---|
-| A — [1,2] | `pipeline/s1_ingest.py`, `s2_understand.py`, `prompts/understand.md` | `make stage N=1 URL=<demo podcast> SAVE=1` then `make stage N=2 SAVE=1` produce real `transcript.json` / `understanding.json` |
-| B — [3,4] | `pipeline/s3_oriane.py`, `s4_playbook.py`, `prompts/playbook.md` | **Done (Nov 6):** `make stage N=3 SAVE=1` returns ≥30 real videos with `hook_text` filled; `make stage N=4 SAVE=1` gives 4–6 patterns. Quality now depends on stage 2 emitting spoken phrases, not nouns |
-| C — [5,6] | `pipeline/s5_direct.py`, `s6_render.py`, `prompts/direct.md` | `make stage N=5 SAVE=1` then `make stage N=6` writes 3 playable 9:16 mp4s to `backend/work/renders/` |
-| D — [7] | `frontend/` (Lovable) | UI runs the full flow against `make dev` with fixtures, shows each section as it arrives |
-
-## Keys
-
-- GMI Cloud: `GMI_BASE_URL`, `GMI_API_KEY`, `GMI_MODEL` — OpenAI-compatible. Use `google/gemini-3.5-flash-lite` (verified for stage 4, ~4 s per playbook, and for video in `analyze_clip.py`). `google/gemini-3.5-flash` returns 400 on long prompts through GMI; see `docs/clip-analysis-notes.md`.
-- Oriane: `ORIANE_API_KEY`, sent as `Authorization: Bearer` (`x-api-key` is rejected). Spec: `docs/oriane-openapi.json`, endpoint `POST https://connect.oriane.xyz/rest/contents/search`.
-- Compound.mov: `COMPOUND_API_KEY`, used in `s6_render.compound_polish()` (TODO).
-
-## Integration plan
-
-- **min 30:** each team's stage runs on fixtures, `make dev` + UI works end to end on fixtures.
-- **min 75:** flip `USE_FIXTURES=` empty on one machine, run the demo podcast for real, fix whatever breaks at the seams.
-- **min 100:** freeze. Run the judges' podcasts, keep the outputs as fixtures, demo from those if the live run is slow.
+Jorge Meza · Faizan Hussain · and team
